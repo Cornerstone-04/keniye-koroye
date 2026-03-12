@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/keniye-og.png",
-        width: 1200,
-        height: 630,
+        width: 2000,
+        height: 2000,
         alt: "Keniye — Product Manager, Developer & Researcher",
       },
     ],
