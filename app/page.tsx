@@ -306,6 +306,9 @@ export default function HomePage() {
               src="/keniye-pic.png"
               fill
               style={{ objectFit: "cover" }}
+              priority
+              blurDataURL="data:..."
+              placeholder="blur"
             />
             <span
               className="absolute bottom-4 left-4 text-[0.58rem] tracking-[0.15em] uppercase"
