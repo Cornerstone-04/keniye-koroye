@@ -3,7 +3,28 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Cursor from "@/components/ui/Cursor";
 import Footer from "@/components/layout/Footer";
+import { Playfair_Display, DM_Mono, Fraunces } from "next/font/google";
 
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  style: ["normal", "italic"],
+});
+
+const dmMono = DM_Mono({
+  variable: "--font-dm-mono",
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  style: ["normal", "italic"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -77,20 +98,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body style={{ fontFamily: "'DM Mono', monospace", fontWeight: 300 }}>
+    <html
+      lang="en"
+      className={`${playfairDisplay.variable} ${dmMono.variable} ${fraunces.variable}`}
+    >
+      <body>
         <Cursor />
         <Navbar />
         <main>{children}</main>

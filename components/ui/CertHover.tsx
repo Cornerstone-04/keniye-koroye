@@ -26,55 +26,31 @@ export default function CertHover({
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = containerRef.current?.getBoundingClientRect();
     if (!rect) return;
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
+    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   };
 
   return (
     <div
       ref={containerRef}
-      className="relative pb-4"
-      style={{ borderBottom: "1px solid var(--rule)" }}
+      className="relative pb-4 border-b border-rule"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onMouseMove={handleMouseMove}
       data-hover
     >
-      {/* Card content */}
-      <div
-        className="text-[0.7rem] tracking-[0.15em] uppercase font-bold"
-        style={{ fontFamily: "'DM Mono', monospace", color: "var(--accent)" }}
-      >
+      <div className="text-[0.7rem] tracking-[0.15em] uppercase font-bold font-mono text-accent">
         {institution}
       </div>
-      <div
-        className="text-[0.85rem] font-bold mt-1"
-        style={{ fontFamily: "'Playfair Display', serif" }}
-      >
-        {full}
-      </div>
-      <div
-        className="text-[0.65rem] tracking-widest mt-1"
-        style={{ color: "var(--muted)", fontFamily: "'DM Mono', monospace" }}
-      >
+      <div className="text-[0.85rem] font-bold mt-1 font-playfair">{full}</div>
+      <div className="text-[0.65rem] tracking-widest mt-1 text-muted font-mono">
         {subject} · {year}
       </div>
 
-      {/* Floating certificate image */}
       <AnimatePresence>
         {hovered && (
           <motion.div
-            className="absolute pointer-events-none z-50 overflow-hidden w-55 h-38.25"
-            style={{
-              // width: 440,
-              // height: 310,
-              left: mousePos.x + 16,
-              top: mousePos.y - 80,
-              border: "1px solid var(--rule)",
-              boxShadow: "4px 4px 24px rgba(0,0,0,0.12)",
-            }}
+            className="absolute pointer-events-none z-50 overflow-hidden w-55 h-38 border border-rule shadow-[4px_4px_24px_rgba(0,0,0,0.12)]"
+            style={{ left: mousePos.x + 16, top: mousePos.y - 80 }}
             initial={{ opacity: 0, scale: 0.88, rotate: -2 }}
             animate={{ opacity: 1, scale: 1, rotate: 1.5 }}
             exit={{ opacity: 0, scale: 0.88 }}

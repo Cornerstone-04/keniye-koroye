@@ -129,12 +129,11 @@ export default function ContactPage() {
 
       {/* Contact info */}
       <div className="grid grid-cols-1 md:grid-cols-2 min-h-125">
-        
         {/* Left — Initials (hidden on mobile) */}
         <div className="hidden md:block">
           <Initials />
         </div>
-      
+
         {/* Right — contact info */}
         <div className="px-6 md:px-12 py-10 md:py-14 max-w-2xl">
           <FadeIn delay={0.2}>
@@ -147,7 +146,7 @@ export default function ContactPage() {
             >
               Contact Details
             </h3>
-  
+
             {contactItems.map((item, i) => (
               <motion.div
                 key={item.label}
@@ -169,7 +168,7 @@ export default function ContactPage() {
                 >
                   {item.label}
                 </span>
-  
+
                 {item.label === "Email" ? (
                   <a
                     href={`mailto:${item.value}`}
@@ -213,7 +212,7 @@ export default function ContactPage() {
               </motion.div>
             ))}
           </FadeIn>
-  
+
           <FadeIn delay={0.65}>
             <div
               className="mt-10 pt-8"
@@ -243,15 +242,14 @@ export default function ContactPage() {
                   color: "var(--muted)",
                 }}
               >
-                &ldquo;I respond to every message within 24 hours. If your matter
-                is urgent, say so — I&apos;ll prioritise accordingly.&rdquo;
+                &ldquo;I respond to every message within 24 hours. If your
+                matter is urgent, say so — I&apos;ll prioritise
+                accordingly.&rdquo;
               </p>
             </div>
           </FadeIn>
         </div>
-      
       </div>
-      
     </div>
   );
 }

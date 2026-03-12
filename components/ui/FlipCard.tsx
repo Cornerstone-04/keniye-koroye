@@ -1,5 +1,5 @@
+// FlipCard.tsx
 "use client";
-
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -36,71 +36,40 @@ export default function FlipCard({
       >
         {/* Front */}
         <div
-          className="absolute inset-0 flex flex-col justify-between p-5"
+          className="absolute inset-0 flex flex-col justify-between p-5 border border-rule bg-paper"
           style={{
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
-            border: "1px solid var(--rule)",
-            background: "var(--paper)",
           }}
         >
           <div>
-            <div
-              className="text-[0.7rem] tracking-[0.15em] uppercase font-bold mb-1"
-              style={{
-                fontFamily: "'DM Mono', monospace",
-                color: "var(--accent)",
-              }}
-            >
+            <div className="text-[0.7rem] tracking-[0.15em] uppercase font-bold font-mono text-accent mb-1">
               {institution}
             </div>
-            <div
-              className="text-[1rem] font-bold leading-snug"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
+            <div className="text-[1rem] font-bold leading-snug font-playfair">
               {full}
             </div>
-            <div
-              className="text-[0.65rem] tracking-widest mt-2"
-              style={{
-                color: "var(--muted)",
-                fontFamily: "'DM Mono', monospace",
-              }}
-            >
+            <div className="text-[0.65rem] tracking-widest mt-2 text-muted font-mono">
               {subject}
             </div>
           </div>
           <div className="flex items-center justify-between">
-            <span
-              className="text-[0.6rem] tracking-[0.15em] uppercase"
-              style={{
-                color: "var(--muted)",
-                fontFamily: "'DM Mono', monospace",
-              }}
-            >
+            <span className="text-[0.6rem] tracking-[0.15em] uppercase text-muted font-mono">
               {year}
             </span>
-            <span
-              className="text-[0.6rem] tracking-[0.15em] uppercase"
-              style={{
-                color: "var(--muted)",
-                fontFamily: "'DM Mono', monospace",
-              }}
-            >
+            <span className="text-[0.6rem] tracking-[0.15em] uppercase text-muted font-mono">
               Hover to view ↗
             </span>
           </div>
         </div>
 
-        {/* Back — certificate image */}
+        {/* Back */}
         <div
-          className="absolute inset-0 overflow-hidden"
+          className="absolute inset-0 overflow-hidden border border-rule"
           style={{
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
-            rotate: "180deg",
             transform: "rotateY(180deg)",
-            border: "1px solid var(--rule)",
           }}
         >
           <Image
@@ -109,15 +78,8 @@ export default function FlipCard({
             fill
             style={{ objectFit: "cover" }}
           />
-          {/* Overlay label */}
-          <div
-            className="absolute bottom-0 left-0 right-0 px-4 py-2"
-            style={{ background: "rgba(13,13,11,0.7)" }}
-          >
-            <span
-              className="text-[0.6rem] tracking-[0.15em] uppercase text-white"
-              style={{ fontFamily: "'DM Mono', monospace" }}
-            >
+          <div className="absolute bottom-0 left-0 right-0 px-4 py-2 bg-ink/70">
+            <span className="text-[0.6rem] tracking-[0.15em] uppercase text-white font-mono">
               {institution} — {year}
             </span>
           </div>

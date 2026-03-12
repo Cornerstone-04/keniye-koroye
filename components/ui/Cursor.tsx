@@ -50,21 +50,17 @@ export default function Cursor() {
     <>
       {/* Dot */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] rounded-full"
+        className="fixed top-0 left-0 pointer-events-none z-9999 rounded-full bg-accent mix-blend-multiply -translate-x-[50%] -tracking-y-[50%]"
         style={{
           x: dotX,
           y: dotY,
-          translateX: "-50%",
-          translateY: "-50%",
-          backgroundColor: "var(--accent)",
-          mixBlendMode: "multiply",
         }}
         animate={{ width: hovered ? 20 : 12, height: hovered ? 20 : 12 }}
         transition={{ duration: 0.15 }}
       />
       {/* Ring */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9998] rounded-full border border-[var(--ink)]"
+        className="fixed top-0 left-0 pointer-events-none z-9998 rounded-full border border-ink"
         style={{
           x: ringX,
           y: ringY,
