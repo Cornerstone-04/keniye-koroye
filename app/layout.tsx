@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Keniye Portfolio",
     images: [
       {
-        url: "/keniye-og.png",
+        url: "https://keniye-koroye.vercel.app/keniye-og.png",
         width: 2000,
         height: 2000,
         alt: "Keniye — Product Manager, Developer & Researcher",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description:
       "Funfere B. Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
     creator: "@keniyekoroye",
-    images: ["/keniye-og.png"],
+    images: ["https://keniye-koroye.vercel.app/keniye-og.png"],
   },
   robots: {
     index: true,
