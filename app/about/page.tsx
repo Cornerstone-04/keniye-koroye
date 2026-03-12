@@ -17,7 +17,7 @@ import CertHover from "@/components/ui/CertHover";
 export default function AboutPage() {
   return (
     <div
-      className="min-h-screen pt-[57px]"
+      className="min-h-screen pt-14.25"
       style={{ background: "var(--paper)" }}
     >
       {/* Header */}
@@ -350,7 +350,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.6, delay: 0.55 + i * 0.1 }}
                   >
                     <span
-                      className="text-[0.8rem] font-bold pt-[2px]"
+                      className="text-[0.8rem] font-bold pt-0.5"
                       style={{
                         fontFamily: "'Playfair Display', serif",
                         color: "var(--muted)",
@@ -363,7 +363,7 @@ export default function AboutPage() {
                       style={{ background: "var(--rule)" }}
                     >
                       <span
-                        className="absolute top-[6px] -left-[3px] w-[6px] h-[6px] rounded-full"
+                        className="absolute top-1.5 -left-0.75 w-1.5 h-1.5 rounded-full"
                         style={{ background: "var(--accent)" }}
                       />
                     </div>
@@ -391,8 +391,6 @@ export default function AboutPage() {
           </FadeIn>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

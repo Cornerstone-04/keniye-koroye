@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Cursor from "@/components/ui/Cursor";
+import Footer from "@/components/layout/Footer";
+
 
 export const metadata: Metadata = {
   title: {
@@ -92,6 +94,7 @@ export default function RootLayout({
         <Cursor />
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

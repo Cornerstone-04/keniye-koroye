@@ -2,14 +2,13 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import Footer from "@/components/layout/Footer";
 import { stats, disciplines, personal, bio } from "@/lib/data";
 import Image from "next/image";
 
 export default function HomePage() {
   return (
     <div
-      className="min-h-screen pt-[57px] flex flex-col"
+      className="min-h-screen pt-14.25 flex flex-col"
       style={{ background: "var(--paper)" }}
     >
       {/* Masthead */}
@@ -417,8 +416,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

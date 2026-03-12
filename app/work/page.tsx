@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
 import { projects, ProjectTag } from "@/lib/data";
 import Image from "next/image";
@@ -21,7 +20,7 @@ export default function WorkPage() {
 
   return (
     <div
-      className="min-h-screen pt-[57px]"
+      className="min-h-screen pt-14.25"
       style={{ background: "var(--paper)" }}
     >
       <div
@@ -215,8 +214,6 @@ export default function WorkPage() {
           ))}
         </AnimatePresence>
       </div>
-
-      <Footer />
     </div>
   );
 }
