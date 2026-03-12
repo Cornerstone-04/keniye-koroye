@@ -26,23 +26,23 @@ export const metadata: Metadata = {
     "Nupe Energy",
   ],
   authors: [
-    { name: "Funfere B. Koroye", url: "https://keniye-koroye.vercel.app" },
+    { name: "Funfere B. Koroye", url: "https://keniyekoroye.vercel.app" },
   ],
   creator: "Funfere B. Koroye",
-  metadataBase: new URL("https://keniye-koroye.vercel.app"),
+  metadataBase: new URL("https://keniyekoroye.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    url: "https://keniye-koroye.vercel.app",
+    url: "https://keniyekoroye.vercel.app",
     title: "Keniye — Product Manager, Developer & Researcher",
     description:
       "Funfere B. Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
     siteName: "Keniye Portfolio",
     images: [
       {
-        url: "https://keniye-koroye.vercel.app/keniye-og.png",
+        url: "https://keniyekoroye.vercel.app/keniye-og.png",
         width: 2000,
         height: 2000,
         alt: "Keniye — Product Manager, Developer & Researcher",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description:
       "Funfere B. Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
     creator: "@keniyekoroye",
-    images: ["https://keniye-koroye.vercel.app/keniye-og.png"],
+    images: ["https://keniyekoroye.vercel.app/keniye-og.png"],
   },
   robots: {
     index: true,
