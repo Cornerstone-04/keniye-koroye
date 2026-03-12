@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0d0d0b;
+  --paper: #f5f0e8;
+  --cream: #ede7d5;
+  --accent: #c8392b;
+  --muted: #7a7468;
+  --rule: #c8bfaa;
+}
+
+* { cursor: none !important; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--rule); }
+::selection { background: var(--accent); color: var(--paper); }
