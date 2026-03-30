@@ -60,10 +60,7 @@ export default function AboutPage() {
                   <p key={i}>{p}</p>
                 ))}
               </div>
-              <div
-                className="hidden md:block"
-                style={{ columns: 2, columnGap: "2rem", maxWidth: "60ch" }}
-              >
+              <div className="hidden md:block columns-2 gap-x-8">
                 {bio.paragraphs.map((p, i) => (
                   <p key={i} className="mb-4">
                     {p}
@@ -234,7 +231,7 @@ export default function AboutPage() {
                       {t.year}
                     </span>
                     <div className="relative bg-rule">
-                      <span className="absolute top-1.5 -left-0.75 w-1.5 h-1.5 rounded-full bg-accent" />
+                      <span className="absolute top-2 left-1/2 -translate-x-11/20 md:-translate-x-9/20 w-2 h-2 rounded-full bg-accent" />
                     </div>
                     <div>
                       <div className="text-[0.85rem] font-bold font-playfair">

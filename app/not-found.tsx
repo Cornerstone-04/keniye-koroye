@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function NotFound() {
   return (
@@ -47,7 +48,10 @@ export default function NotFound() {
             (e.currentTarget.style.background = "var(--ink)")
           }
         >
-          Back to Home <span>→</span>
+          Back to Home{" "}
+          <span>
+            <BsArrowRight />
+          </span>
         </Link>
       </motion.div>
     </div>

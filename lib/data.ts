@@ -1,10 +1,10 @@
 export const personal = {
-  name: "Funfere B. Koroye",
+  name: "Funfere Keniye Koroye",
   preferredName: "Ken",
-  email: "keniye@nupe.london",
-  phone: "+44 7487 566 216",
+  email: "keniye@koroye.com",
   instagram: "https://instagram.com/keniyekoroye",
   twitter: "https://twitter.com/keniyekoroye",
+  linkedin: "https://linkedin.com/in/keniyekoroye/",
   location: "London, UK",
   tagline: "Reach out if you want to create impactful technology together.",
 };
@@ -13,7 +13,7 @@ export const bio = {
   intro:
     "A certified Product Manager and Design Engineer with a strong foundation in Industrial, Service, and UX design.",
   paragraphs: [
-    "Funfere brings extensive experience in product development, sales consultancy, and project management, leveraging user empathy, product strategy, and stakeholder collaboration to deliver impactful, market-driven solutions.",
+    "Funfere Keniye Koroye brings extensive experience in product development, sales consultancy, and project management, leveraging user empathy, product strategy, and stakeholder collaboration to deliver impactful, market-driven solutions.",
     "With degrees in Industrial & Service Design from SCAD and Domus Academy, and a UX Research/Design certification from the UX Design Institute, he specialises in creating functional, aesthetically-pleasing, and user-centred products.",
     "Awarded the prestigious Global Talent Visa by Tech Nation in 2021, he excels in agile environments and leading cross-functional teams to successfully execute product roadmaps that enhance user experiences.",
   ],
@@ -27,11 +27,11 @@ export const stats = [
 ];
 
 export const disciplines = [
-  "Product Management",
+  "Hardware",
+  "Software",
   "Product Development",
-  "Product Research",
-  "UX / Service Design",
-  "Stakeholder Collaboration",
+  "UI/UX Design",
+  "AML",
 ];
 
 export const education = [
@@ -79,15 +79,20 @@ export const timeline = [
     role: "Global Talent Visa Recipient",
     company: "Tech Nation",
   },
+  {
+    year: "2016",
+    role: "Industrial Design Lead",
+    company: "Tecno Mobile",
+  },
   { year: "2011", role: "BFA Industrial Design", company: "SCAD" },
 ];
 
 export const skills = [
-  { name: "Product Strategy", pct: 92 },
-  { name: "User Research", pct: 90 },
-  { name: "UX / Service Design", pct: 88 },
-  { name: "Product Development", pct: 80 },
-  { name: "Stakeholder Mgmt", pct: 85 },
+  { name: "Hardware", pct: 92 },
+  { name: "Software", pct: 90 },
+  { name: "Product Development", pct: 90 },
+  { name: "UI/UX Design", pct: 90 },
+  { name: "AML", pct: 85 },
 ];
 
 export const tools = [

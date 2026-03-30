@@ -50,7 +50,7 @@ export default function Cursor() {
     <>
       {/* Dot */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-9999 rounded-full bg-accent mix-blend-multiply -translate-x-[50%] -tracking-y-[50%]"
+        className="hidden md:block fixed top-0 left-0 pointer-events-none z-9999 rounded-full bg-accent mix-blend-multiply -translate-x-[50%] -tracking-y-[50%]"
         style={{
           x: dotX,
           y: dotY,
@@ -60,7 +60,7 @@ export default function Cursor() {
       />
       {/* Ring */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-9998 rounded-full border border-ink"
+        className="hidden md:block fixed top-0 left-0 pointer-events-none z-9998 rounded-full border border-ink"
         style={{
           x: ringX,
           y: ringY,

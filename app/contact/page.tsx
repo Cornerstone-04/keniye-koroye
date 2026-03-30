@@ -8,7 +8,6 @@ import Initials from "@/components/ui/Initials";
 
 const contactItems = [
   { label: "Email", value: personal.email, icon: null },
-  { label: "Phone", value: personal.phone, icon: null },
   { label: "Location", value: personal.location, icon: null },
   {
     label: "Instagram",

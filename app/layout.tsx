@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/layout/navbar/navbar";
 import Cursor from "@/components/ui/Cursor";
 import Footer from "@/components/layout/Footer";
 import { Playfair_Display, DM_Mono, Fraunces } from "next/font/google";
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Keniye",
   },
   description:
-    "Funfere B. Koroye is a certified Product Manager and Design Engineer with expertise in Industrial, Service, and UX design. Global Talent Visa recipient. Based in London.",
+    "Funfere Keniye Koroye is a certified Product Manager and Design Engineer with expertise in Industrial, Service, and UX design. Global Talent Visa recipient. Based in London.",
   keywords: [
     "Product Manager",
     "Product Developer",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     "Nupe Energy",
   ],
   authors: [
-    { name: "Funfere B. Koroye", url: "https://keniyekoroye.vercel.app" },
+    { name: "Funfere Keniye Koroye", url: "https://keniyekoroye.vercel.app" },
   ],
-  creator: "Funfere B. Koroye",
+  creator: "Funfere Keniye Koroye",
   metadataBase: new URL("https://keniyekoroye.vercel.app"),
   alternates: {
     canonical: "/",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     url: "https://keniyekoroye.vercel.app",
     title: "Keniye — Product Manager, Developer & Researcher",
     description:
-      "Funfere B. Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
+      "Funfere Keniye Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
     siteName: "Keniye Portfolio",
     images: [
       {
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Keniye — Product Manager, Developer & Researcher",
     description:
-      "Funfere B. Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
+      "Funfere Keniye Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
     creator: "@keniyekoroye",
     images: ["https://keniyekoroye.vercel.app/keniye-og.png"],
   },
@@ -102,7 +102,7 @@ export default function RootLayout({
       lang="en"
       className={`${playfairDisplay.variable} ${dmMono.variable} ${fraunces.variable}`}
     >
-      <body>
+      <body className="overflow-x-hidden">
         <Cursor />
         <Navbar />
         <main>{children}</main>

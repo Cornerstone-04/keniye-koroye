@@ -12,16 +12,16 @@ export default function Initials() {
         className="select-none text-center leading-none"
       >
         <div
-          className="font-black font-playfair -tracking-[0.04em] text-transparent leading-[0.9em]"
+          className="font-black font-playfair -tracking-[0.04em] text-transparent leading-[0.9em] animate-pulse"
           style={{
             fontSize: "clamp(6rem, 14vw, 12rem)",
             WebkitTextStroke: "1px var(--rule)",
           }}
         >
-          F<br />B<br />K
+          F<br />K<br />K
         </div>
         <div className="mt-6 text-[0.6rem] tracking-[0.3em] uppercase font-mono text-rule">
-          Funfere · Bodiawei · Koroye
+          Funfere · Keniye · Koroye
         </div>
       </motion.div>
 
