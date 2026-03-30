@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import Image from "next/image";
 import type { projects } from "@/lib/data";
@@ -15,58 +16,65 @@ type WorkCardProps = {
 
 export function WorkCard({ project, totalProjects }: WorkCardProps) {
   return (
-    <motion.article
+    <motion.div
       layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
-      className="overflow-hidden border-r border-b border-rule"
+      className="border-r border-b border-rule"
       data-hover
     >
       <div
-        className="relative overflow-hidden aspect-4/3"
-        style={{ background: project.bg }}
+        // href={`/work/${project.slug}`}
+        className="block overflow-hidden no-underline"
       >
-        {project.thumbnail ? (
-          <Image
-            src={project.thumbnail}
-            alt={project.title}
-            fill
-            className="object-cover"
-          />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center font-black select-none font-playfair text-[5rem] text-white/5">
-            {project.num}
-          </div>
-        )}
+        <div
+          className="relative overflow-hidden aspect-4/3"
+          style={{ background: project.bg }}
+        >
+          {project.thumbnail ? (
+            <Image
+              src={project.thumbnail}
+              alt={project.title}
+              fill
+              className="object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center font-black select-none font-playfair text-[5rem] text-white/5">
+              {project.num}
+            </div>
+          )}
 
-        <span className="absolute top-3 left-3 z-10 text-[0.58rem] tracking-[0.15em] uppercase text-white/35 font-mono">
-          {project.num} / 0{totalProjects}
-        </span>
+          <span className="absolute top-3 left-3 z-10 text-[0.58rem] tracking-[0.15em] uppercase text-white/35 font-mono">
+            {project.num} / 0{totalProjects}
+          </span>
 
-        <span className="absolute top-3 right-3 z-10 px-2 py-[0.2rem] text-[0.55rem] tracking-[0.15em] uppercase text-white bg-accent font-mono">
-          {project.tagLabel}
-        </span>
-      </div>
-
-      <div className="p-5 md:p-6">
-        <div className="text-[0.6rem] tracking-[0.15em] uppercase mb-1 text-muted font-mono">
-          {project.year} · {project.client}
+          <span className="absolute top-3 right-3 z-10 px-2 py-[0.2rem] text-[0.55rem] tracking-[0.15em] uppercase text-white bg-accent font-mono">
+            {project.tagLabel}
+          </span>
         </div>
 
-        <h3 className="font-bold text-[1rem] md:text-[1.1rem] leading-snug mb-2 font-playfair">
-          {project.title}
-        </h3>
+        <div className="p-5 md:p-6">
+          <div className="text-[0.6rem] tracking-[0.15em] uppercase mb-1 text-muted font-mono">
+            {project.year} · {project.client}
+          </div>
 
-        <p className="text-[0.72rem] leading-[1.7] mb-4 text-[#3a3730]">
-          {project.desc}
-        </p>
+          <h3 className="font-bold text-[1rem] md:text-[1.1rem] leading-snug mb-2 font-playfair">
+            {project.title}
+          </h3>
 
-        {project.outcomes ? <WorkOutcomes outcomes={project.outcomes} /> : null}
+          <p className="text-[0.72rem] leading-[1.7] mb-4 text-[#3a3730]">
+            {project.desc}
+          </p>
 
-        <WorkPills pills={project.pills} />
+          {project.outcomes ? (
+            <WorkOutcomes outcomes={project.outcomes} />
+          ) : null}
+
+          <WorkPills pills={project.pills} />
+        </div>
       </div>
-    </motion.article>
+    </motion.div>
   );
 }

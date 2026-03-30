@@ -131,23 +131,34 @@ export const toolkit = {
 
 export type ProjectTag = "hardware" | "software" | "product";
 
+export interface ProjectOutcome {
+  pct: string;
+  label: string;
+}
+
 export interface Project {
   num: string;
+  slug?: string;
   tag: ProjectTag;
   tagLabel: string;
   year: string;
   title: string;
   client: string;
   desc?: string;
+  overview?: string;
+  challenge?: string;
+  solution?: string;
+  impact?: string;
   pills: string[];
   bg: string;
-  outcomes?: { pct: string; label: string }[];
+  outcomes?: ProjectOutcome[];
   thumbnail?: string;
 }
 
 export const projects: Project[] = [
   {
     num: "01",
+    slug: "cradle-health",
     tag: "product",
     tagLabel: "Product",
     year: "2023",
@@ -159,6 +170,7 @@ export const projects: Project[] = [
   },
   {
     num: "02",
+    slug: "eight-medical",
     tag: "product",
     tagLabel: "Product",
     year: "2023",
@@ -170,6 +182,7 @@ export const projects: Project[] = [
   },
   {
     num: "03",
+    slug: "nupe-energy",
     tag: "product",
     tagLabel: "Product",
     year: "2023",
