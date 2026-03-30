@@ -73,9 +73,9 @@ export function NavbarMobileMenu({
                                   {label}
                                 </span>
 
-                                <span className="mt-2 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-muted">
+                                {/* <span className="mt-2 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-muted">
                                   {active ? "Current page" : "Open page"}
-                                </span>
+                                </span> */}
                               </div>
                             </div>
 
