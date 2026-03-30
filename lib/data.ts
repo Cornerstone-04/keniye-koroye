@@ -129,7 +129,7 @@ export const toolkit = {
   ],
 };
 
-export type ProjectTag = "pm" | "dev" | "research";
+export type ProjectTag = "hardware" | "software" | "product";
 
 export interface Project {
   num: string;
@@ -148,44 +148,33 @@ export interface Project {
 export const projects: Project[] = [
   {
     num: "01",
-    tag: "research",
-    tagLabel: "Research",
+    tag: "product",
+    tagLabel: "Product",
     year: "2023",
     title: "Cradle Health — UX Research",
     client: "Cradle Health",
-    // desc: "Oversaw a year-long research initiative to optimise the Cradle Health platform for pregnant women and new mothers, covering both web and mobile applications across 4 phases.",
     pills: ["Healthcare", "Femtech", "Mixed Methods", "Longitudinal"],
     bg: "#0d2b3e",
-    // outcomes: [
-    //   {
-    //     pct: "75%",
-    //     label: "More intuitive platform with streamlined navigation",
-    //   },
-    //   { pct: "95%", label: "Increased user engagement and retention" },
-    //   { pct: "85%", label: "Seamless cross-platform experience" },
-    // ],
     thumbnail: "/images/projects/cradle.png",
   },
   {
     num: "02",
-    tag: "pm",
-    tagLabel: "PM",
+    tag: "product",
+    tagLabel: "Product",
     year: "2023",
     title: "Eight Medical — Product Management",
     client: "Eight Medical",
-    // desc: "Led product management for an on-demand urgent and emergency care platform, providing care when it matters most.",
     pills: ["HealthTech", "Emergency Care", "0 to 1", "Mobile"],
     bg: "#1a1a2e",
     thumbnail: "/images/projects/eight-medical.png",
   },
   {
     num: "03",
-    tag: "pm",
-    tagLabel: "PM",
+    tag: "product",
+    tagLabel: "Product",
     year: "2023",
     title: "Nupe Energy — Product Management",
     client: "Nupe Energy",
-    // desc: "Managed product development for an energy platform, going above and beyond the defined scope to deliver a market-ready solution.",
     pills: ["Energy", "CleanTech", "Strategy", "Roadmapping"],
     bg: "#1a2a1a",
     thumbnail: "/images/projects/nupe.png",
