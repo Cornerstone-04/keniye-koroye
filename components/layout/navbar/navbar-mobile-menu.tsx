@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion} from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { navLinks } from "./nav-links";
 import { itemVariants, overlayVariants, panelVariants } from "./nav-animations";
 
@@ -11,13 +11,14 @@ type NavbarMobileMenuProps = {
   closeAction: () => void;
 };
 
-
-
 export function NavbarMobileMenu({
   open,
   pathname,
   closeAction,
 }: NavbarMobileMenuProps) {
+  const activeIndex = navLinks.findIndex((link) => link.href === pathname);
+  const displayIndex = activeIndex >= 0 ? `0${activeIndex + 1}` : "01";
+
   return (
     <AnimatePresence mode="wait">
       {open && (
@@ -34,8 +35,9 @@ export function NavbarMobileMenu({
           >
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,0,0,0.04),transparent_38%)]" />
-              <div className="absolute -right-10 top-28 font-playfair text-[7rem] leading-none italic text-ink/5">
-                01
+              {/*nav tracker*/}
+              <div className="absolute right-5 top-28 font-playfair text-[7rem] leading-none italic text-ink/5">
+                {displayIndex}
               </div>
             </div>
 
