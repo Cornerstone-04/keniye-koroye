@@ -30,7 +30,8 @@ export const disciplines = [
   "Hardware",
   "Software",
   "Product Development",
-  "UI/UX Design",
+  "UI/UX Researcher",
+  "Industrial Designer",
   "AML",
 ];
 
@@ -88,11 +89,12 @@ export const timeline = [
 ];
 
 export const skills = [
-  { name: "Hardware", pct: 92 },
+  { name: "Hardware", pct: 90 },
   { name: "Software", pct: 90 },
   { name: "Product Development", pct: 90 },
-  { name: "UI/UX Design", pct: 90 },
-  { name: "AML", pct: 85 },
+  { name: "UI/UX Research", pct: 92 },
+  { name: "Industrial Design", pct: 92 },
+  { name: "AML", pct: 87 },
 ];
 
 export const tools = [

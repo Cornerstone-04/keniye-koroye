@@ -31,8 +31,16 @@ export function HomeMasthead() {
           Building impactful technology
         </p>
 
-        <div className="mt-2 text-[0.6rem] tracking-[0.12em] uppercase text-muted">
-          Product Manager · Developer · Researcher
+        <div className="mt-2 flex flex-col items-center gap-0.5">
+          <span className="text-[0.6rem] tracking-[0.12em] uppercase text-muted">
+            Product Manager
+          </span>
+          <span className="text-[0.6rem] tracking-[0.12em] uppercase text-muted">
+            Product Developer
+          </span>
+          <span className="text-[0.6rem] tracking-[0.12em] uppercase text-muted">
+            Product Researcher
+          </span>
         </div>
       </div>
 
