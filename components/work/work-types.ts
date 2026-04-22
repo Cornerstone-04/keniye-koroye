@@ -7,4 +7,7 @@ export const filters: { key: Filter; label: string }[] = [
   { key: "hardware", label: "Hardware" },
   { key: "software", label: "Software" },
   { key: "product", label: "Product" },
+  { key: "art", label: "Art" },
+  { key: "tech", label: "Tech" },
+  { key: "fashion", label: "Fashion" },
 ];
