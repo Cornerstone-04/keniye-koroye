@@ -131,7 +131,13 @@ export const toolkit = {
   ],
 };
 
-export type ProjectTag = "hardware" | "software" | "product";
+export type ProjectTag =
+  | "hardware"
+  | "software"
+  | "product"
+  | "art"
+  | "tech"
+  | "fashion";
 
 export interface ProjectOutcome {
   pct: string;
