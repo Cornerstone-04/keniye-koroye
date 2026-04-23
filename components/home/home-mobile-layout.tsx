@@ -16,7 +16,7 @@ export function HomeMobileLayout() {
       </div>
 
       <div className="px-6 pb-8 border-b border-rule">
-        <HomeBio mobile />
+        <HomeBio />
         <HomeCta />
       </div>
 
