@@ -13,7 +13,7 @@ export const bio = {
   intro:
     "A certified Product Manager and Design Engineer with a strong foundation in Industrial, Service, and UX design.",
   paragraphs: [
-    "Funfere Keniyē Koroye brings extensive experience in product development, sales consultancy, and project management, leveraging user empathy, product strategy, and stakeholder collaboration to deliver impactful, market-driven solutions.",
+    "Funfere Keniye Koroye brings extensive experience in product development, sales consultancy, and project management, leveraging user empathy, product strategy, and stakeholder collaboration to deliver impactful, market-driven solutions.",
     "With degrees in Industrial & Service Design from SCAD and Domus Academy, and a UX Research/Design certification from the UX Design Institute, he specialises in creating functional, aesthetically-pleasing, and user-centred products.",
     "Awarded the prestigious Global Talent Visa by Tech Nation in 2021, he excels in agile environments and leading cross-functional teams to successfully execute product roadmaps that enhance user experiences.",
   ],

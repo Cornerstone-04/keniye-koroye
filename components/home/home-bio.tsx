@@ -3,18 +3,18 @@
 import { motion } from "motion/react";
 import { bio } from "@/lib/data";
 
-type HomeBioProps = {
-  mobile?: boolean;
-};
+// type HomeBioProps = {
+//   mobile?: boolean;
+// };
 
-export function HomeBio({ mobile = false }: HomeBioProps) {
-  if (mobile) {
-    return (
-      <p className="text-[0.88rem] leading-[1.8] mb-6 font-fraunces">
-        {bio.intro} {bio.paragraphs[0]}
-      </p>
-    );
-  }
+export function HomeBio() {
+  // if (mobile) {
+  //   return (
+  //     <p className="text-[0.88rem] leading-[1.8] mb-6 font-fraunces">
+  //       {bio.intro} {bio.paragraphs[0]}
+  //     </p>
+  //   );
+  // }
 
   return (
     <motion.p
