@@ -88,7 +88,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/keniye-og.png",
+    apple: "/keniye-og.png",
   },
 };
 
