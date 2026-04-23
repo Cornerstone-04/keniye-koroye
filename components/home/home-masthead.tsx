@@ -24,7 +24,7 @@ export function HomeMasthead() {
           className="font-black uppercase leading-none font-playfair -tracking-[0.02em]"
           style={{ fontSize: "clamp(3.5rem, 18vw, 6rem)" }}
         >
-          KEN<em className="text-accent italic">I</em>YE
+          KEN<em className="text-accent italic">I</em>YĒ
         </motion.h1>
 
         <p className="mt-2 text-[0.82rem] italic font-fraunces text-muted">
@@ -66,7 +66,7 @@ export function HomeMasthead() {
             className="font-black uppercase leading-none font-playfair -tracking-[0.02em]"
             style={{ fontSize: "clamp(3.5rem, 9vw, 7.5rem)" }}
           >
-            KEN<em className="text-accent italic">I</em>YE
+            KEN<em className="text-accent italic">I</em>YĒ
           </motion.h1>
 
           <p className="mt-2 text-[0.9rem] font-fraunces italic text-muted">

@@ -24,7 +24,7 @@ export function HomeHeroImage({ priority = false }: HomeHeroImageProps) {
       />
 
       <span className="absolute bottom-3 left-3 md:bottom-4 md:left-4 text-[0.55rem] md:text-[0.58rem] tracking-[0.12em] md:tracking-[0.15em] uppercase text-white/20 md:text-white/35 font-mono">
-        — Funfere Keniye Koroye
+        — Funfere Keniyē Koroye
       </span>
     </motion.div>
   );

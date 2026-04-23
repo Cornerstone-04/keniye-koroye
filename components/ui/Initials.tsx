@@ -21,7 +21,7 @@ export default function Initials() {
           F<br />K<br />K
         </div>
         <div className="mt-6 text-[0.6rem] tracking-[0.3em] uppercase font-mono text-rule">
-          Funfere · Keniye · Koroye
+          Funfere · Keniyē · Koroye
         </div>
       </motion.div>
 

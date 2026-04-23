@@ -28,11 +28,11 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: "Keniye — Product Manager, Developer & Researcher",
-    template: "%s | Keniye",
+    default: "Keniyē — Product Manager, Developer & Researcher",
+    template: "%s | Keniyē",
   },
   description:
-    "Funfere Keniye Koroye is a certified Product Manager and Design Engineer with expertise in Industrial, Service, and UX design. Global Talent Visa recipient. Based in London.",
+    "Funfere Keniyē Koroye is a certified Product Manager and Design Engineer with expertise in Industrial, Service, and UX design. Global Talent Visa recipient. Based in London.",
   keywords: [
     "Product Manager",
     "Product Developer",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     "Nupe Energy",
   ],
   authors: [
-    { name: "Funfere Keniye Koroye", url: "https://keniyekoroye.vercel.app" },
+    { name: "Funfere Keniyē Koroye", url: "https://keniyekoroye.vercel.app" },
   ],
-  creator: "Funfere Keniye Koroye",
+  creator: "Funfere Keniyē Koroye",
   metadataBase: new URL("https://keniyekoroye.vercel.app"),
   alternates: {
     canonical: "/",
@@ -59,22 +59,22 @@ export const metadata: Metadata = {
     url: "https://keniyekoroye.vercel.app",
     title: "Keniye — Product Manager, Developer & Researcher",
     description:
-      "Funfere Keniye Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
+      "Funfere Keniyē Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
     siteName: "Keniye Portfolio",
     images: [
       {
         url: "https://keniyekoroye.vercel.app/keniye-og.png",
         width: 2000,
         height: 2000,
-        alt: "Keniye — Product Manager, Developer & Researcher",
+        alt: "Keniyē — Product Manager, Developer & Researcher",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Keniye — Product Manager, Developer & Researcher",
+    title: "Keniyē — Product Manager, Developer & Researcher",
     description:
-      "Funfere Keniye Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
+      "Funfere Keniyē Koroye is a certified Product Manager and Design Engineer. Global Talent Visa recipient. Building impactful technology from London.",
     creator: "@keniyekoroye",
     images: ["https://keniyekoroye.vercel.app/keniye-og.png"],
   },
