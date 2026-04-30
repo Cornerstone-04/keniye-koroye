@@ -25,12 +25,13 @@ export function WorkCard({ project, totalProjects }: WorkCardProps) {
       className="border-r border-b border-rule"
       data-hover
     >
-      <div
-        // href={`/work/${project.slug}`}
+      {/*<Link
+        href={`/work/${project.slug}`}
         className="block overflow-hidden no-underline"
-      >
+      >*/}
+      <div className="block overflow-hidden no-underline">
         <div
-          className="relative overflow-hidden aspect-4/3"
+          className="group relative overflow-hidden aspect-4/3"
           style={{ background: project.bg }}
         >
           {project.thumbnail ? (
@@ -38,7 +39,7 @@ export function WorkCard({ project, totalProjects }: WorkCardProps) {
               src={project.thumbnail}
               alt={project.title}
               fill
-              className="object-cover"
+              className="object-cover opacity-70 group-hover:scale-103 transition-all ease-linear"
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center font-black select-none font-playfair text-[5rem] text-white/5">

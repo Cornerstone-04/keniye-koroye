@@ -173,11 +173,23 @@ export const projects: Project[] = [
     title: "Cradle Health — UX Research",
     client: "Cradle Health",
     pills: ["Healthcare", "Femtech", "Mobile"],
-    bg: "#0d2b3e",
+    bg: "#1a2a1a",
     thumbnail: "/images/projects/cradle.png",
   },
   {
     num: "02",
+    slug: "kelvar-dome",
+    tag: "hardware",
+    tagLabel: "Hardware",
+    year: "2026",
+    title: "Dome",
+    client: "Kelvar Industries",
+    pills: ["Surveillance", "Drone Tech", "Robotics"],
+    bg: "#0d2b3e",
+    thumbnail: "/images/projects/dome.jpg",
+  },
+  {
+    num: "03",
     slug: "eight-medical",
     tag: "software",
     tagLabel: "Software",
@@ -189,7 +201,19 @@ export const projects: Project[] = [
     thumbnail: "/images/projects/eight-medical.png",
   },
   {
-    num: "03",
+    num: "04",
+    slug: "kelvar-hydrax",
+    tag: "hardware",
+    tagLabel: "Hardware",
+    year: "2026",
+    title: "Hydrax",
+    client: "Kelvar Industries",
+    pills: ["Surveillance", "Drone Tech", "Robotics"],
+    bg: "#1a2a1a",
+    thumbnail: "/images/projects/hydrax_angle.png",
+  },
+  {
+    num: "05",
     slug: "nupe-energy",
     tag: "software",
     tagLabel: "Software",
@@ -197,8 +221,20 @@ export const projects: Project[] = [
     title: "Nupe Energy — UX Research",
     client: "Nupe Energy",
     pills: ["Energy", "CleanTech", "Mobile"],
-    bg: "#1a2a1a",
+    bg: "#1a1a2e",
     thumbnail: "/images/projects/nupe.png",
+  },
+  {
+    num: "06",
+    slug: "kelvar-robobot",
+    tag: "hardware",
+    tagLabel: "Hardware",
+    year: "2026",
+    title: "Robobot",
+    client: "Kelvar Industries",
+    pills: ["Surveillance", "Drone Tech", "Robotics"],
+    bg: "#0d2b3e",
+    thumbnail: "/images/projects/robobot.jpg",
   },
 ];
 
@@ -206,48 +242,4 @@ export const testimonials = [
   { quote: "Vibrant & encouraging enthusiasm", client: "Cradle Health" },
   { quote: "A truly inspiring designer", client: "Eight Medical" },
   { quote: "Went above and beyond the scope", client: "Nupe Energy" },
-];
-
-export const articles = [
-  {
-    num: "01",
-    type: "Product Strategy",
-    title: "Why Most Product Roadmaps Are a Lie — And What to Do Instead",
-    excerpt:
-      "A candid look at why traditional roadmaps create false certainty, and a framework for building outcome-based plans that actually adapt to reality.",
-    date: "Nov 2024",
-  },
-  {
-    num: "02",
-    type: "User Research",
-    title: "The 5 Research Methods Every PM Should Know (But Most Skip)",
-    excerpt:
-      "From contextual enquiry to diary studies — a practical breakdown of research methods that go beyond the standard user interview.",
-    date: "Sep 2024",
-  },
-  {
-    num: "03",
-    type: "Product Development",
-    title: "Technical Debt Is a Product Problem, Not an Engineering One",
-    excerpt:
-      "How product managers contribute to technical debt — often unknowingly — and the mindset shifts needed to break the cycle.",
-    date: "Jul 2024",
-  },
-  {
-    num: "04",
-    type: "Leadership",
-    title: "Influence Without Authority: The PM's Most Important Skill",
-    excerpt:
-      "Product managers own nothing and are responsible for everything. Here's how to lead effectively in a structure that works against you.",
-    date: "Apr 2024",
-  },
-  {
-    num: "05",
-    type: "Design & Tech",
-    title:
-      "Building for Africa First: Why Context-First Product Thinking Matters",
-    excerpt:
-      "Why Western product frameworks often fail in emerging markets, and what a context-first approach to product design looks like in practice.",
-    date: "Jan 2024",
-  },
 ];

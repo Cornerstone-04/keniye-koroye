@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import type { Project } from "@/lib/data";
+import { BsArrowLeft } from "react-icons/bs";
 
 type WorkDetailPageProps = {
   project: Project;
@@ -21,9 +22,9 @@ export function WorkDetailPage({ project }: WorkDetailPageProps) {
         >
           <Link
             href="/work"
-            className="text-[0.6rem] tracking-[0.25em] uppercase text-accent font-mono no-underline"
+            className="text-[0.6rem] tracking-[0.25em] uppercase text-accent font-mono no-underline inline-flex gap-2 items-center"
           >
-            Back to Work
+            <BsArrowLeft /> Back to Work
           </Link>
           <span className="flex-1 h-px bg-rule" />
         </motion.div>
