@@ -2,6 +2,7 @@ export const personal = {
   name: "Funfere Keniyē Koroye",
   preferredName: "Ken",
   email: "keniye@koroye.com",
+  bookingUrl: "https://calendly.com/keniyekoroye",
   instagram: "https://instagram.com/keniyekoroye",
   twitter: "https://twitter.com/keniyekoroye",
   linkedin: "https://linkedin.com/in/keniyekoroye/",
@@ -81,10 +82,22 @@ export const timeline = [
     company: "Tech Nation",
   },
   {
+    year: "2020",
+    role: "Winner",
+    company: "LASRIC COVID-19 Grant",
+  },
+  { year: "2019", role: "Head of Design", company: "Fusion D-Lab" },
+  { year: "2018", role: "Contract Designer", company: "Jaza Energy" },
+  { year: "2017", role: "Product Developer", company: "AFA Sports" },
+  {
     year: "2016",
     role: "Industrial Design Lead",
     company: "Tecno Mobile",
   },
+  { year: "2015", role: "Design Technician", company: "DW College" },
+  { year: "2014", role: "Intern", company: "Jump Shoes NY" },
+  { year: "2013", role: "Diploma in Shoe Making", company: "RIACI" },
+  { year: "2012", role: "M.A in Service Design", company: "DOMUS Academy" },
   { year: "2011", role: "BFA Industrial Design", company: "SCAD" },
 ];
 
