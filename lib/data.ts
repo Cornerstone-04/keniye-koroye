@@ -2,7 +2,7 @@ export const personal = {
   name: "Funfere Keniyē Koroye",
   preferredName: "Ken",
   email: "keniye@koroye.com",
-  bookingUrl: "https://calendly.com/keniyekoroye",
+  bookingUrl: "https://calendly.com/keniye",
   instagram: "https://instagram.com/keniyekoroye",
   twitter: "https://twitter.com/keniyekoroye",
   linkedin: "https://linkedin.com/in/keniyekoroye/",
