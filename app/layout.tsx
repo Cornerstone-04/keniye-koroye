@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/navbar/navbar";
 import Cursor from "@/components/ui/Cursor";
 import Footer from "@/components/layout/Footer";
+import LoadingScreen from "@/components/ui/LoadingScreen";
 import { Playfair_Display, DM_Mono, Fraunces } from "next/font/google";
 
 const playfairDisplay = Playfair_Display({
@@ -105,6 +106,7 @@ export default function RootLayout({
       className={`${playfairDisplay.variable} ${dmMono.variable} ${fraunces.variable}`}
     >
       <body className="overflow-x-hidden">
+        <LoadingScreen />
         <Cursor />
         <Navbar />
         <main>{children}</main>
