@@ -36,6 +36,27 @@ export const GTVEligibility = () => {
               to show the signals that matter.
             </p>
           </div>
+          <div className="mt-6 bg-cream px-5 py-5 max-w-xl">
+            <div className="flex items-center justify-between gap-4 mb-4">
+              <span className="text-[0.6rem] tracking-[0.18em] uppercase text-muted font-mono">
+                Readiness Signals
+              </span>
+              <span className="font-playfair text-3xl font-black text-accent">
+                {score}/{globalTalentAssessment.length}
+              </span>
+            </div>
+            <div className="h-px bg-rule">
+              <div
+                className="h-px bg-accent transition-all duration-300"
+                style={{
+                  width: `${(score / globalTalentAssessment.length) * 100}%`,
+                }}
+              />
+            </div>
+            <p className="mt-4 text-[0.75rem] leading-[1.75] text-muted">
+              {result}
+            </p>
+          </div>
         </FadeIn>
 
         <FadeIn delay={0.2}>
@@ -68,28 +89,6 @@ export const GTVEligibility = () => {
                 </span>
               </label>
             ))}
-
-            <div className="mt-6 bg-cream px-5 py-5">
-              <div className="flex items-center justify-between gap-4 mb-4">
-                <span className="text-[0.6rem] tracking-[0.18em] uppercase text-muted font-mono">
-                  Readiness Signals
-                </span>
-                <span className="font-playfair text-3xl font-black text-accent">
-                  {score}/{globalTalentAssessment.length}
-                </span>
-              </div>
-              <div className="h-px bg-rule">
-                <div
-                  className="h-px bg-accent transition-all duration-300"
-                  style={{
-                    width: `${(score / globalTalentAssessment.length) * 100}%`,
-                  }}
-                />
-              </div>
-              <p className="mt-4 text-[0.75rem] leading-[1.75] text-muted">
-                {result}
-              </p>
-            </div>
           </div>
         </FadeIn>
       </div>

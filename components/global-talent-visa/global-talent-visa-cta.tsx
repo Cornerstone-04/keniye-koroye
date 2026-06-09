@@ -5,7 +5,7 @@ import { GTVSectionLabel } from "./gtv-section-label";
 
 export const GlobalTalentVisaCTA = () => {
   return (
-    <section className="px-6 md:px-12 py-10 md:py-14 border-t-[3px] border-double border-ink">
+    <section className="px-6 md:px-12 py-10 md:py-14 border-t border-rule">
       <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 md:items-end">
         <FadeIn delay={0.1}>
           <div>
@@ -27,7 +27,7 @@ export const GlobalTalentVisaCTA = () => {
               href={personal.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:px-7 py-3.5 transition-colors duration-200 hover:bg-accent"
+              className="inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:px-7 py-3.5 transition-all ease-linear duration-200 hover:bg-accent"
             >
               Book a Call
               <span>

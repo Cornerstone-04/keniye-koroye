@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import FadeIn from "@/components/ui/FadeIn";
 import { timeline } from "@/lib/data";
+import { LuMinus, LuPlus } from "react-icons/lu";
 
 const STEP = 3;
 
@@ -12,6 +13,7 @@ export function AboutTimeline() {
 
   const visible = timeline.slice(0, visibleCount);
   const hasMore = visibleCount < timeline.length;
+  const showLess = visibleCount > STEP;
 
   return (
     <FadeIn delay={0.55}>
@@ -48,15 +50,36 @@ export function AboutTimeline() {
           ))}
         </div>
 
-        {hasMore && (
-          <button
-            onClick={() => setVisibleCount((prev) => prev + STEP)}
-            className="mt-5 text-[0.6rem] tracking-widest uppercase font-mono text-accent hover:opacity-70 transition-opacity"
-          >
-            + {Math.min(STEP, timeline.length - visibleCount)} more
-          </button>
-        )}
+        <div className="flex gap-3 mt-5">
+          {hasMore && (
+            <DisplayButton
+              onClick={() => setVisibleCount((prev) => prev + STEP)}
+            >
+              <LuPlus /> {Math.min(STEP, timeline.length - visibleCount)} more
+            </DisplayButton>
+          )}
+          {showLess && (
+            <DisplayButton onClick={() => setVisibleCount(STEP)}>
+              <LuMinus /> show less
+            </DisplayButton>
+          )}
+        </div>
       </div>
     </FadeIn>
   );
 }
+
+const DisplayButton = ({
+  children,
+  onClick,
+}: {
+  children: React.ReactNode;
+  onClick: () => void;
+}) => (
+  <button
+    onClick={onClick}
+    className="text-[0.6rem] tracking-widest uppercase font-mono text-accent hover:opacity-70 transition-opacity flex items-center gap-2"
+  >
+    {children}
+  </button>
+);
