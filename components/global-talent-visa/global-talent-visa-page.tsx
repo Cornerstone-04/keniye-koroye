@@ -5,11 +5,11 @@ import { motion } from "motion/react";
 import { BsArrowRight } from "react-icons/bs";
 import FadeIn from "@/components/ui/FadeIn";
 import { personal } from "@/lib/data";
-import { assessmentQuestions, guidanceSections } from "@/lib/gtv-details";
+import { globalTalentAssessment, guidanceSections } from "@/lib/gtv-details";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-[0.62rem] tracking-[0.2em] uppercase mb-6 text-accent font-mono">
+    <h3 className="text-[0.62rem] tracking-[0.2em] uppercase mb-4 text-accent font-mono">
       {children}
     </h3>
   );
@@ -17,7 +17,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 export default function GlobalTalentVisaPage() {
   const [checked, setChecked] = useState<boolean[]>(
-    assessmentQuestions.map(() => false),
+    globalTalentAssessment.map(() => false),
   );
 
   const score = checked.filter(Boolean).length;
@@ -45,7 +45,7 @@ export default function GlobalTalentVisaPage() {
           </div>
         </FadeIn>
 
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 md:items-end">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:items-end gap-8">
           <FadeIn delay={0.1}>
             <h1
               className="font-black leading-[0.95] font-playfair -tracking-[0.02em]"
@@ -58,7 +58,7 @@ export default function GlobalTalentVisaPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="space-y-5 max-w-xl">
+            <div className="space-y-2">
               <p
                 className="leading-[1.75]"
                 style={{
@@ -73,11 +73,9 @@ export default function GlobalTalentVisaPage() {
               <div className="space-y-4 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
                 <p>
                   Over the past few years, many people have asked me how to
-                  qualify for the UK Global Talent Visa.
-                </p>
-                <p>
-                  Most people start in the wrong place. They focus on documents,
-                  application strategies, and checklists.
+                  qualify for the UK Global Talent Visa. Most people start in
+                  the wrong place. They focus on documents, application
+                  strategies, and checklists.
                 </p>
                 <p>
                   But the visa is really asking a much simpler question: are you
@@ -97,7 +95,7 @@ export default function GlobalTalentVisaPage() {
         <div className="px-6 md:px-12 py-10 md:py-14">
           <SectionLabel>Guidance Notes</SectionLabel>
 
-          <div className="space-y-10">
+          <div className="space-y-5">
             {guidanceSections.slice(0, 4).map((section, index) => (
               <motion.article
                 key={section.title}
@@ -110,7 +108,7 @@ export default function GlobalTalentVisaPage() {
                 <span className="text-[0.6rem] tracking-[0.15em] uppercase text-muted font-mono">
                   0{index + 1}
                 </span>
-                <h2 className="mt-3 mb-4 text-2xl md:text-3xl font-black leading-tight">
+                <h2 className="my-2 text-2xl font-black leading-tight">
                   {section.title}
                 </h2>
                 <div className="space-y-4 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
@@ -137,7 +135,7 @@ export default function GlobalTalentVisaPage() {
         <div className="px-6 md:px-12 py-10 md:py-14">
           <SectionLabel>Profile Building</SectionLabel>
 
-          <div className="space-y-10">
+          <div className="space-y-5">
             {guidanceSections.slice(4).map((section, index) => (
               <motion.article
                 key={section.title}
@@ -148,9 +146,9 @@ export default function GlobalTalentVisaPage() {
                 transition={{ duration: 0.5, delay: index * 0.06 }}
               >
                 <span className="text-[0.6rem] tracking-[0.15em] uppercase text-muted font-mono">
-                  0{index + 5}
+                  0{index + 1}
                 </span>
-                <h2 className="mt-3 mb-4 text-2xl md:text-3xl font-black leading-tight">
+                <h2 className="my-2 text-2xl font-black leading-tight">
                   {section.title}
                 </h2>
                 <div className="space-y-4 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
@@ -175,10 +173,7 @@ export default function GlobalTalentVisaPage() {
                 <span className="text-[0.6rem] tracking-[0.18em] uppercase text-accent font-mono">
                   The One Thing I&apos;d Tell Anyone Applying
                 </span>
-                <p
-                  className="mt-5 text-3xl md:text-4xl leading-tight font-playfair font-black"
-                  style={{ maxWidth: "12ch" }}
-                >
+                <p className="mt-5 text-3xl  leading-tight font-playfair font-black">
                   Don&apos;t chase the visa.
                 </p>
                 <p className="mt-4 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
@@ -195,7 +190,7 @@ export default function GlobalTalentVisaPage() {
           <FadeIn delay={0.1}>
             <div>
               <SectionLabel>Eligibility Self-Assessment</SectionLabel>
-              <h2 className="text-3xl md:text-4xl font-black leading-tight mb-5">
+              <h2 className="text-3xl  font-black leading-tight mb-5">
                 Reflect on your readiness.
               </h2>
               <p className="text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted max-w-xl">
@@ -208,9 +203,9 @@ export default function GlobalTalentVisaPage() {
 
           <FadeIn delay={0.2}>
             <div className="border-t border-rule">
-              {assessmentQuestions.map((question, index) => (
+              {globalTalentAssessment.map((item, index) => (
                 <label
-                  key={question}
+                  key={item.id}
                   className="grid gap-4 py-4 items-start border-b border-rule"
                   style={{ gridTemplateColumns: "28px 1fr" }}
                 >
@@ -226,8 +221,13 @@ export default function GlobalTalentVisaPage() {
                     }
                     className="mt-1 h-4 w-4 accent-accent"
                   />
-                  <span className="text-[0.78rem] md:text-[0.85rem] leading-[1.65] text-ink">
-                    {question}
+                  <span className="space-y-2">
+                    <span className="block text-[0.78rem] md:text-[0.85rem] leading-[1.65] text-ink">
+                      {item.question}
+                    </span>
+                    <span className="block text-[0.68rem] md:text-[0.72rem] leading-[1.65] text-muted">
+                      {item.requirement}
+                    </span>
                   </span>
                 </label>
               ))}
@@ -238,14 +238,14 @@ export default function GlobalTalentVisaPage() {
                     Readiness Signals
                   </span>
                   <span className="font-playfair text-3xl font-black text-accent">
-                    {score}/{assessmentQuestions.length}
+                    {score}/{globalTalentAssessment.length}
                   </span>
                 </div>
                 <div className="h-px bg-rule">
                   <div
                     className="h-px bg-accent transition-all duration-300"
                     style={{
-                      width: `${(score / assessmentQuestions.length) * 100}%`,
+                      width: `${(score / globalTalentAssessment.length) * 100}%`,
                     }}
                   />
                 </div>

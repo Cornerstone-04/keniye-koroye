@@ -8,7 +8,18 @@ export default function Footer() {
         Ken<em className="text-accent italic">I</em>YĒ
       </p>
       <p className="text-[0.6rem] tracking-[0.12em] md:text-right order-3 text-muted">
-        Built for impact. Designed with intention.
+        Built by{" "}
+        <a
+          href="https://cornerstoneephraim.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent transition-opacity hover:opacity-60 no-underline"
+        >
+          Cornerstone Ephraim
+        </a>
+        .
+        <br />
+        Designed with intention.
       </p>
     </footer>
   );

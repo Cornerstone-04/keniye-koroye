@@ -50,13 +50,37 @@ const guidanceSections = [
   },
 ];
 
-const assessmentQuestions = [
-  "Have you built work with measurable impact?",
-  "Can independent people verify your contributions?",
-  "Do you have examples of leadership or influence?",
-  "Have you contributed meaningfully to your industry?",
-  "Can you clearly explain your value proposition?",
-  "Do you have a portfolio of evidence rather than isolated achievements?",
+const globalTalentAssessment = [
+  {
+    id: "track_record",
+    question: "Do you have a 5-year sustained track record?",
+    requirement:
+      "Regular professional activity and outstanding work within the last five years.",
+  },
+  {
+    id: "references",
+    question: "Can you secure three high-level expert references?",
+    requirement:
+      "Three letters from independent experts or eminent organizations.",
+  },
+  {
+    id: "measurable_impact",
+    question: "Is your impact measurable beyond a standard salary?",
+    requirement:
+      "Proven technical, commercial, or academic impact through data or metrics.",
+  },
+  {
+    id: "contribution",
+    question: "Do you contribute to your field outside of your day job?",
+    requirement:
+      "Evidence of innovation, mentoring, or speaking at prominent events.",
+  },
+  {
+    id: "portfolio",
+    question: "Can you provide a distinct portfolio of 10 evidence pieces?",
+    requirement:
+      "Curated collection of 10 documents proving leadership or promise.",
+  },
 ];
 
-export { guidanceSections, assessmentQuestions };
+export { guidanceSections, globalTalentAssessment };
