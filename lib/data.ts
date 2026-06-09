@@ -2,6 +2,7 @@ export const personal = {
   name: "Funfere Keniyē Koroye",
   preferredName: "Ken",
   email: "keniye@koroye.com",
+  bookingUrl: "https://calendly.com/keniyekoroye",
   instagram: "https://instagram.com/keniyekoroye",
   twitter: "https://twitter.com/keniyekoroye",
   linkedin: "https://linkedin.com/in/keniyekoroye/",
@@ -13,7 +14,7 @@ export const bio = {
   intro:
     "A certified Product Manager and Design Engineer with a strong foundation in Industrial, Service, and UX design.",
   paragraphs: [
-    "Funfere Keniye Koroye brings extensive experience in product development, sales consultancy, and project management, leveraging user empathy, product strategy, and stakeholder collaboration to deliver impactful, market-driven solutions.",
+    "Funfere Keniyē Koroye brings extensive experience in product development, sales consultancy, and project management, leveraging user empathy, product strategy, and stakeholder collaboration to deliver impactful, market-driven solutions.",
     "With degrees in Industrial & Service Design from SCAD and Domus Academy, and a UX Research/Design certification from the UX Design Institute, he specialises in creating functional, aesthetically-pleasing, and user-centred products.",
     "Awarded the prestigious Global Talent Visa by Tech Nation in 2021, he excels in agile environments and leading cross-functional teams to successfully execute product roadmaps that enhance user experiences.",
   ],
@@ -81,10 +82,22 @@ export const timeline = [
     company: "Tech Nation",
   },
   {
+    year: "2020",
+    role: "Winner",
+    company: "LASRIC COVID-19 Grant",
+  },
+  { year: "2019", role: "Head of Design", company: "Fusion D-Lab" },
+  { year: "2018", role: "Contract Designer", company: "Jaza Energy" },
+  { year: "2017", role: "Product Developer", company: "AFA Sports" },
+  {
     year: "2016",
     role: "Industrial Design Lead",
     company: "Tecno Mobile",
   },
+  { year: "2015", role: "Design Technician", company: "DW College" },
+  { year: "2014", role: "Intern", company: "Jump Shoes NY" },
+  { year: "2013", role: "Diploma in Shoe Making", company: "RIACI" },
+  { year: "2012", role: "M.A in Service Design", company: "DOMUS Academy" },
   { year: "2011", role: "BFA Industrial Design", company: "SCAD" },
 ];
 

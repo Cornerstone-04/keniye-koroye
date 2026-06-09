@@ -1,35 +1,43 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "motion/react";
 import FadeIn from "@/components/ui/FadeIn";
 import { timeline } from "@/lib/data";
+import { LuMinus, LuPlus } from "react-icons/lu";
+
+const STEP = 3;
 
 export function AboutTimeline() {
+  const [visibleCount, setVisibleCount] = useState(STEP);
+
+  const visible = timeline.slice(0, visibleCount);
+  const hasMore = visibleCount < timeline.length;
+  const showLess = visibleCount > STEP;
+
   return (
     <FadeIn delay={0.55}>
-      <div className="pt-8 border-t border-rule">
+      <div className="mt-8">
         <h3 className="text-[0.62rem] tracking-[0.2em] uppercase mb-6 text-accent font-mono">
           Career Timeline
         </h3>
 
         <div className="space-y-5">
-          {timeline.map((t, i) => (
+          {visible.map((t, i) => (
             <motion.div
               key={t.year + t.role}
               className="grid gap-x-4"
               style={{ gridTemplateColumns: "55px 1px 1fr" }}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.55 + i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
             >
               <span className="text-[0.8rem] font-bold pt-0.5 font-playfair text-muted">
                 {t.year}
               </span>
-
               <div className="relative bg-rule">
                 <span className="absolute top-2 left-1/2 -translate-x-11/20 md:-translate-x-9/20 w-2 h-2 rounded-full bg-accent" />
               </div>
-
               <div>
                 <div className="text-[0.85rem] font-bold font-playfair">
                   {t.role}
@@ -41,7 +49,37 @@ export function AboutTimeline() {
             </motion.div>
           ))}
         </div>
+
+        <div className="flex gap-3 mt-5">
+          {hasMore && (
+            <DisplayButton
+              onClick={() => setVisibleCount((prev) => prev + STEP)}
+            >
+              <LuPlus /> {Math.min(STEP, timeline.length - visibleCount)} more
+            </DisplayButton>
+          )}
+          {showLess && (
+            <DisplayButton onClick={() => setVisibleCount(STEP)}>
+              <LuMinus /> show less
+            </DisplayButton>
+          )}
+        </div>
       </div>
     </FadeIn>
   );
 }
+
+const DisplayButton = ({
+  children,
+  onClick,
+}: {
+  children: React.ReactNode;
+  onClick: () => void;
+}) => (
+  <button
+    onClick={onClick}
+    className="text-[0.6rem] tracking-widest uppercase font-mono text-accent hover:opacity-70 transition-opacity flex items-center gap-2"
+  >
+    {children}
+  </button>
+);
