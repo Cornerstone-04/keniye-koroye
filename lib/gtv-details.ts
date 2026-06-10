@@ -83,4 +83,73 @@ const globalTalentAssessment = [
   },
 ];
 
-export { guidanceSections, globalTalentAssessment };
+const coreDocs = [
+  {
+    num: "01",
+    label: "Core Evidence",
+    title: "1,000 Word Personal Statement",
+    body: "Focused on how my ideas, work, and experience could create value within the UK ecosystem.",
+  },
+  {
+    num: "02",
+    label: "Profile Cohesion",
+    title: "CV / Resume / Website / LinkedIn",
+    body: "These should be cohesive. Strong personal branding matters. Your story should be consistent across every touchpoint. Regularly sharing your work and thinking also strengthens visibility.",
+  },
+  {
+    num: "03",
+    label: "External Validation",
+    title: "Three Recommendation Letters",
+    body: "From a CEO of a Fintech company, a CEO of a Cleantech company, and a CEO of a VR Technology company. Each referee knew me for at least 3-5 years, had substantial industry credibility, and could confidently speak about my impact.",
+  },
+];
+
+const evidenceItems = [
+  {
+    title: "Tech Degree in AI",
+    label: "Core Evidence",
+  },
+  {
+    title: "Tech Blog Interviews",
+    label: "Public Recognition",
+  },
+  {
+    title: "Speaking Engagements",
+    label: "Leadership Visibility",
+  },
+  {
+    title: "VC Investment Agreement",
+    label: "Commercial Impact",
+  },
+  {
+    title: "Equity Contract in a Startup",
+    label: "Commercial Impact",
+  },
+  {
+    title: "Invoice for a Hardware Project",
+    label: "Paid Work",
+  },
+  {
+    title: "Newspaper Article About a Patent",
+    label: "Public Recognition",
+  },
+  {
+    title: "Venture Builder Acceptance Letter",
+    label: "External Validation",
+  },
+  {
+    title: "Innovation Awards & Nominations",
+    label: "Industry Recognition",
+  },
+  {
+    title: "YouTube Interview From a Television Network",
+    label: "Public Recognition",
+  },
+];
+
+export {
+  coreDocs,
+  evidenceItems,
+  globalTalentAssessment,
+  guidanceSections,
+};

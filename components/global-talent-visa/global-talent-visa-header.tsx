@@ -1,6 +1,6 @@
 import PageHero from "@/components/ui/PageHero";
 
-const GlobalTalentVisaHeader = () => {
+export const GlobalTalentVisaHeader = () => {
   return (
     <PageHero
       as="h1"
@@ -30,4 +30,3 @@ const GlobalTalentVisaHeader = () => {
   );
 };
 
-export default GlobalTalentVisaHeader;
