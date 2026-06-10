@@ -52,7 +52,7 @@ export const GlobalTalentVisaJourney = () => {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="relative aspect-[3/4] md:aspect-[4/3] w-full overflow-hidden border border-rule bg-cream">
+            <div className="relative aspect-3/4 md:aspect-4/3 w-full overflow-hidden border border-rule bg-cream">
               <Image
                 src="/images/keniye-gtv.jpeg"
                 alt="Keniyē Koroye during his Global Talent Visa journey"

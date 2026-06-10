@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/data";
 import { WorkDetailPage } from "@/components/work/work-detail-page";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 type PageProps = {
   params: Promise<{
@@ -33,9 +33,31 @@ export async function generateMetadata({
     };
   }
 
+  const description =
+    project.desc ||
+    project.overview ||
+    `${project.title} by Funfere Keniyē Koroye.`;
+  const url = `/work/${project.slug}`;
+
   return {
     title: `${project.title} | Work`,
-    description: project.desc,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${project.title} | Work | Keniyē`,
+      description,
+      url,
+      images: project.thumbnail
+        ? [
+            {
+              url: project.thumbnail,
+              alt: project.title,
+            },
+          ]
+        : undefined,
+    },
   };
 }
 
