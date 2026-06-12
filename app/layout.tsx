@@ -48,9 +48,7 @@ export const metadata: Metadata = {
     "Cradle Health",
     "Nupe Energy",
   ],
-  authors: [
-    { name: "Funfere Keniyē Koroye", url: "https://www.koroye.com" },
-  ],
+  authors: [{ name: "Funfere Keniyē Koroye", url: "https://www.koroye.com" }],
   creator: "Funfere Keniyē Koroye",
   metadataBase: new URL("https://www.koroye.com"),
   alternates: {

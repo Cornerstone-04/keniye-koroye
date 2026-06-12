@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
-import { visaBenefits, visaExpertise } from "@/lib/gtv-details";
+import { visaBenefits } from "@/lib/gtv-details";
 import { GTVSectionLabel } from "./gtv-section-label";
 
 export const GlobalTalentVisaJourney = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section className="border-b border-rule">
       <div className="px-6 md:px-12 py-10 md:py-14">
@@ -76,12 +79,21 @@ export const GlobalTalentVisaJourney = () => {
           <FadeIn delay={0.2} className="md:h-full">
             <div className="md:h-full">
               <div className="relative aspect-3/4 w-full overflow-hidden border border-rule bg-cream md:h-full md:aspect-auto">
+                <div
+                  aria-hidden="true"
+                  className={`image-skeleton absolute inset-0 transition-opacity duration-500 ${
+                    imageLoaded ? "opacity-0" : "opacity-100"
+                  }`}
+                />
                 <Image
                   src="/images/keniye-gtv.jpeg"
                   alt="Keniyē Koroye during his Global Talent Visa journey"
                   fill
                   sizes="(min-width: 768px) 40vw, 100vw"
-                  className="object-cover object-center"
+                  onLoad={() => setImageLoaded(true)}
+                  className={`object-cover object-center transition-opacity duration-500 ${
+                    imageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
                 />
               </div>
             </div>

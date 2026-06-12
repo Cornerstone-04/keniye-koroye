@@ -107,6 +107,16 @@
     }
 }
 
+@keyframes image-skeleton {
+    0% {
+        background-position: 120% 0;
+    }
+
+    100% {
+        background-position: -120% 0;
+    }
+}
+
 .page-loader-rule {
     animation: page-loader-rule 1.35s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
@@ -117,4 +127,17 @@
 
 .page-loader-meta {
     animation: page-loader-meta 1.2s ease-in-out infinite;
+}
+
+.image-skeleton {
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(200, 191, 170, 0.55) 48%,
+            transparent 100%
+        ),
+        var(--cream);
+    background-size: 220% 100%;
+    animation: image-skeleton 1.35s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
