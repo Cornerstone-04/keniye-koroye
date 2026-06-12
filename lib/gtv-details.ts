@@ -147,9 +147,21 @@ const evidenceItems = [
   },
 ];
 
+const visaExpertise = ["Hardware Engineering", "Industrial Design", "R&D"];
+
+const visaBenefits = [
+  "Live and work in the UK without employer sponsorship",
+  "Build companies, products, and independent projects",
+  "Change roles or clients without restarting visa sponsorship",
+  // "Bring eligible family members with you",
+  "Create a pathway toward long-term settlement",
+];
+
 export {
   coreDocs,
   evidenceItems,
   globalTalentAssessment,
   guidanceSections,
+  visaBenefits,
+  visaExpertise,
 };

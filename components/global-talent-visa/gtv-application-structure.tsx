@@ -2,22 +2,37 @@
 
 import { motion } from "motion/react";
 import FadeIn from "@/components/ui/FadeIn";
-import { coreDocs, evidenceItems } from "@/lib/gtv-details";
+import { coreDocs, evidenceItems, visaExpertise } from "@/lib/gtv-details";
 import { GTVSectionLabel } from "./gtv-section-label";
 
 export const GlobalTalentVisaApplicationStructure = () => {
   return (
     <section className="border-b border-rule">
-      <div className="px-6 md:px-12 py-10 md:py-14 border-b border-rule">
+      <div className="px-6 md:px-12 py-10 md:py-14 border-y border-rule">
         <GTVSectionLabel>Application Structure</GTVSectionLabel>
         <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 md:items-end">
-          <FadeIn delay={0.1}>
+          <FadeIn delay={0.1} className="flex flex-col gap-4">
             <h2
               className="font-black leading-tight font-playfair -tracking-[0.02em]"
               style={{ fontSize: "clamp(1.6rem, 4vw, 2.8rem)" }}
             >
               What My Submission Looked Like
             </h2>
+            <div className="flex flex-col gap-2">
+              <span className="text-[0.6rem] tracking-[0.18em] uppercase text-accent font-mono">
+                My Visa Expertise Areas
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {visaExpertise.map((item) => (
+                  <span
+                    key={item}
+                    className="border border-rule px-3 py-2 text-[0.58rem] tracking-[0.14em] uppercase text-muted font-mono"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           </FadeIn>
           <FadeIn delay={0.2}>
             <div className="space-y-3 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">

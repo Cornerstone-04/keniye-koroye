@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
 import FadeIn from "@/components/ui/FadeIn";
+import { visaBenefits, visaExpertise } from "@/lib/gtv-details";
 import { GTVSectionLabel } from "./gtv-section-label";
 
 export const GlobalTalentVisaJourney = () => {
@@ -11,7 +11,7 @@ export const GlobalTalentVisaJourney = () => {
       <div className="px-6 md:px-12 py-10 md:py-14">
         <GTVSectionLabel>My Journey</GTVSectionLabel>
 
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16">
+        <div className="grid grid-cols-1 items-stretch md:grid-cols-2 gap-8 md:gap-16">
           <FadeIn delay={0.1}>
             <div>
               <h2
@@ -48,18 +48,42 @@ export const GlobalTalentVisaJourney = () => {
                   clearly.
                 </p>
               </div>
+
+              <div className="mt-4 pt-4">
+                <span className="text-[0.6rem] tracking-[0.18em] uppercase text-accent font-mono">
+                  Benefits Of The Visa
+                </span>
+                <div className="mt-4 grid gap-0 border-t border-rule">
+                  {visaBenefits.map((benefit, index) => (
+                    <div
+                      key={benefit}
+                      className="grid gap-4 border-b border-rule py-3.5"
+                      style={{ gridTemplateColumns: "28px 1fr" }}
+                    >
+                      <span className="font-playfair font-black text-[0.75rem] text-muted/40">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-[0.76rem] md:text-[0.82rem] leading-snug text-muted">
+                        {benefit}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.2}>
-            <div className="relative aspect-3/4 md:aspect-4/3 w-full overflow-hidden border border-rule bg-cream">
-              <Image
-                src="/images/keniye-gtv.jpeg"
-                alt="Keniyē Koroye during his Global Talent Visa journey"
-                fill
-                sizes="(min-width: 768px) 40vw, 100vw"
-                className="object-cover object-center"
-              />
+          <FadeIn delay={0.2} className="md:h-full">
+            <div className="md:h-full">
+              <div className="relative aspect-3/4 w-full overflow-hidden border border-rule bg-cream md:h-full md:aspect-auto">
+                <Image
+                  src="/images/keniye-gtv.jpeg"
+                  alt="Keniyē Koroye during his Global Talent Visa journey"
+                  fill
+                  sizes="(min-width: 768px) 40vw, 100vw"
+                  className="object-cover object-center"
+                />
+              </div>
             </div>
           </FadeIn>
         </div>
