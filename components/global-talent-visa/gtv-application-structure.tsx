@@ -14,7 +14,7 @@ export const GlobalTalentVisaApplicationStructure = () => {
           <FadeIn delay={0.1} className="flex flex-col gap-4">
             <h2
               className="font-black leading-tight font-playfair -tracking-[0.02em]"
-              style={{ fontSize: "clamp(1.6rem, 4vw, 2.8rem)" }}
+              style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
             >
               What My Submission Looked Like
             </h2>
@@ -63,23 +63,19 @@ export const GlobalTalentVisaApplicationStructure = () => {
               <span className="text-[0.6rem] tracking-[0.18em] uppercase text-muted font-mono">
                 Core Pack — 3 Documents
               </span>
-              <h3 className="mt-4 text-xl font-black leading-tight mb-6">
+              <h3 className="mt-4 text-[1rem] font-bold leading-tight mb-6">
                 The profile foundation.
               </h3>
               <div className="border-t border-rule">
                 {coreDocs.map((doc, index) => (
                   <motion.article
                     key={doc.num}
-                    className="grid gap-4 py-5 border-b border-rule"
-                    style={{ gridTemplateColumns: "44px 1fr" }}
+                    className="py-5 border-b border-rule"
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.25 }}
                     transition={{ duration: 0.5, delay: index * 0.06 }}
                   >
-                    <span className="font-playfair font-black text-[1rem] leading-none text-muted/40">
-                      {doc.num}
-                    </span>
                     <div>
                       <span className="text-[0.55rem] tracking-[0.16em] uppercase text-accent font-mono">
                         {doc.label}
@@ -102,23 +98,19 @@ export const GlobalTalentVisaApplicationStructure = () => {
               <span className="text-[0.6rem] tracking-[0.18em] uppercase text-muted font-mono">
                 Evidence Pack — 10 Documents
               </span>
-              <h3 className="mt-4 text-xl font-black leading-tight mb-6">
+              <h3 className="mt-4 text-[1rem] font-bold leading-tight mb-6">
                 Proof reviewers can verify.
               </h3>
               <div className="grid md:grid-cols-2 border-t border-rule md:border-l">
                 {evidenceItems.map((item, index) => (
                   <motion.article
                     key={item.title}
-                    className="grid gap-3 py-4 md:px-4 border-b border-rule md:border-r"
-                    style={{ gridTemplateColumns: "28px 1fr" }}
+                    className="py-4 md:px-4 border-b border-rule md:border-r"
                     initial={{ opacity: 0, x: 16 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.4, delay: index * 0.04 }}
                   >
-                    <span className="font-playfair font-black text-[0.75rem] text-muted/40">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
                     <span>
                       <span className="block text-[0.54rem] tracking-[0.15em] uppercase text-accent font-mono">
                         {item.label}

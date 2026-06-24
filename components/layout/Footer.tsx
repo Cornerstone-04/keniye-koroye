@@ -18,8 +18,6 @@ export default function Footer() {
           Cornerstone Ephraim
         </a>
         .
-        <br />
-        Designed with intention.
       </p>
     </footer>
   );

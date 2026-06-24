@@ -12,7 +12,7 @@ export function NavbarDesktopLinks({
   pathname,
 }: NavbarDesktopLinksProps) {
   return (
-    <ul className="hidden md:flex gap-10 list-none">
+    <ul className="hidden md:flex gap-5 lg:gap-8 xl:gap-10 list-none">
       {navLinks.map(({ href, label }) => {
         const active = pathname === href;
 

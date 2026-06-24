@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-// @ts-ignore: Allow importing global CSS without module declarations
-import "./globals.css";
 import Navbar from "@/components/layout/navbar/navbar";
 import Cursor from "@/components/ui/Cursor";
 import Footer from "@/components/layout/Footer";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import { Playfair_Display, DM_Mono, Fraunces } from "next/font/google";
+// @ts-ignore: Allow importing global CSS without module declarations
+import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",

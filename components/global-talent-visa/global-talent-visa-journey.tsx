@@ -19,7 +19,7 @@ export const GlobalTalentVisaJourney = () => {
             <div>
               <h2
                 className="font-black leading-tight font-playfair -tracking-[0.02em] mb-6"
-                style={{ fontSize: "clamp(1.6rem, 4vw, 2.8rem)" }}
+                style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
               >
                 The application started years before I applied.
               </h2>
@@ -52,20 +52,16 @@ export const GlobalTalentVisaJourney = () => {
                 </p>
               </div>
 
-              <div className="mt-4 pt-4">
+              <div className="mt-6 pt-5 border-t border-rule">
                 <span className="text-[0.6rem] tracking-[0.18em] uppercase text-accent font-mono">
                   Benefits Of The Visa
                 </span>
                 <div className="mt-4 grid gap-0 border-t border-rule">
-                  {visaBenefits.map((benefit, index) => (
+                  {visaBenefits.map((benefit) => (
                     <div
                       key={benefit}
-                      className="grid gap-4 border-b border-rule py-3.5"
-                      style={{ gridTemplateColumns: "28px 1fr" }}
+                      className="border-b border-rule py-3.5"
                     >
-                      <span className="font-playfair font-black text-[0.75rem] text-muted/40">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
                       <span className="text-[0.76rem] md:text-[0.82rem] leading-snug text-muted">
                         {benefit}
                       </span>
@@ -78,7 +74,7 @@ export const GlobalTalentVisaJourney = () => {
 
           <FadeIn delay={0.2} className="md:h-full">
             <div className="md:h-full">
-              <div className="relative aspect-3/4 w-full overflow-hidden border border-rule bg-cream md:h-full md:aspect-auto">
+              <div className="relative aspect-[3/4] w-full overflow-hidden border border-rule bg-cream md:h-full md:aspect-auto">
                 <div
                   aria-hidden="true"
                   className={`image-skeleton absolute inset-0 transition-opacity duration-500 ${
