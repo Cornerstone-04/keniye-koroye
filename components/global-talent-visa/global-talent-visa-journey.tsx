@@ -52,7 +52,7 @@ export const GlobalTalentVisaJourney = () => {
                 </p>
               </div>
 
-              <div className="mt-4 pt-4">
+              <div className="mt-6 pt-5 border-t border-rule">
                 <span className="text-[0.6rem] tracking-[0.18em] uppercase text-accent font-mono">
                   Benefits Of The Visa
                 </span>
@@ -78,7 +78,7 @@ export const GlobalTalentVisaJourney = () => {
 
           <FadeIn delay={0.2} className="md:h-full">
             <div className="md:h-full">
-              <div className="relative aspect-3/4 w-full overflow-hidden border border-rule bg-cream md:h-full md:aspect-auto">
+              <div className="relative aspect-[3/4] w-full overflow-hidden border border-rule bg-cream md:h-full md:aspect-auto">
                 <div
                   aria-hidden="true"
                   className={`image-skeleton absolute inset-0 transition-opacity duration-500 ${

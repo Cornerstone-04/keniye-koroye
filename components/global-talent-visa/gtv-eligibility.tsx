@@ -22,12 +22,12 @@ export const GTVEligibility = () => {
   }, [score]);
 
   return (
-    <section className="px-6 md:px-12 py-10 md:py-14 border-t border-rule">
-      <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16">
-        <FadeIn delay={0.1}>
+    <section className="px-6 md:px-12 py-10 md:py-14 border-b border-rule">
+      <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+        <FadeIn delay={0.1} className="md:sticky md:top-24 md:self-start">
           <div>
             <GTVSectionLabel>Eligibility Self-Assessment</GTVSectionLabel>
-            <h2 className="text-3xl  font-black leading-tight mb-5">
+            <h2 className="text-3xl md:text-4xl font-black leading-tight mb-5">
               Reflect on your readiness.
             </h2>
             <p className="text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted max-w-xl">
@@ -36,7 +36,7 @@ export const GTVEligibility = () => {
               to show the signals that matter.
             </p>
           </div>
-          <div className="mt-6 bg-cream px-5 py-5 max-w-xl">
+          <div className="mt-6 bg-cream px-5 py-5 max-w-xl border border-rule">
             <div className="flex items-center justify-between gap-4 mb-4">
               <span className="text-[0.6rem] tracking-[0.18em] uppercase text-muted font-mono">
                 Readiness Signals
@@ -64,8 +64,8 @@ export const GTVEligibility = () => {
             {globalTalentAssessment.map((item, index) => (
               <label
                 key={item.id}
-                className="grid gap-4 py-4 items-start border-b border-rule"
-                style={{ gridTemplateColumns: "28px 1fr" }}
+                className="group grid gap-4 py-5 items-start border-b border-rule transition-colors hover:bg-cream/45"
+                style={{ gridTemplateColumns: "34px 1fr" }}
               >
                 <input
                   type="checkbox"
@@ -79,11 +79,14 @@ export const GTVEligibility = () => {
                   }
                   className="mt-1 h-4 w-4 accent-accent"
                 />
-                <span className="space-y-2">
-                  <span className="block text-[0.78rem] md:text-[0.85rem] leading-[1.65] text-ink">
+                <span>
+                  <span className="mb-2 block text-[0.55rem] tracking-[0.16em] uppercase text-accent font-mono">
+                    Prompt {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="block text-[0.82rem] md:text-[0.9rem] leading-[1.65] text-ink">
                     {item.question}
                   </span>
-                  <span className="block text-[0.68rem] md:text-[0.72rem] leading-[1.65] text-muted">
+                  <span className="mt-2 block text-[0.7rem] md:text-[0.76rem] leading-[1.7] text-muted">
                     {item.requirement}
                   </span>
                 </span>
