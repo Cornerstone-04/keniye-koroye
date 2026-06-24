@@ -13,7 +13,7 @@ export const GlobalTalentVisaCTA = () => {
         <FadeIn delay={0.1}>
           <div>
             <GTVSectionLabel>Let&apos;s Talk</GTVSectionLabel>
-            <h2 className="text-3xl md:text-5xl font-black leading-tight">
+            <h2 className="text-[1.35rem] md:text-2xl font-black leading-tight">
               Want an honest assessment of your profile?
             </h2>
           </div>

@@ -25,23 +25,20 @@ export function GlobalTalentVisaIntro() {
         <FadeIn delay={0.05}>
           <div>
             <GTVSectionLabel>How To Use This Page</GTVSectionLabel>
-            <p className="font-playfair text-2xl md:text-3xl font-black leading-tight">
+            <p className="mt-4 max-w-xl font-fraunces text-[1rem] md:text-[1.15rem] leading-[1.75] text-muted">
               A practical guide from a Global Talent Visa recipient.
             </p>
           </div>
         </FadeIn>
 
         <FadeIn delay={0.12}>
-          <div className="grid gap-0 border-t border-rule md:grid-cols-3 md:border-l">
-            {guideNotes.map((note, index) => (
+          <div className="border-t border-rule">
+            {guideNotes.map((note) => (
               <div
                 key={note.label}
-                className="border-b border-rule py-4 md:border-r md:px-4"
+                className="border-b border-rule py-4"
               >
-                <span className="font-playfair text-[0.8rem] font-black text-muted/40">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="mt-3 text-[0.56rem] tracking-[0.16em] uppercase text-accent font-mono">
+                <p className="text-[0.56rem] tracking-[0.16em] uppercase text-accent font-mono">
                   {note.label}
                 </p>
                 <p className="mt-3 text-[0.74rem] md:text-[0.8rem] leading-[1.75] text-muted">

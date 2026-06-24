@@ -27,7 +27,7 @@ export const GTVEligibility = () => {
         <FadeIn delay={0.1} className="md:sticky md:top-24 md:self-start">
           <div>
             <GTVSectionLabel>Eligibility Self-Assessment</GTVSectionLabel>
-            <h2 className="text-3xl md:text-4xl font-black leading-tight mb-5">
+            <h2 className="text-[1.35rem] md:text-2xl font-black leading-tight mb-5">
               Reflect on your readiness.
             </h2>
             <p className="text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted max-w-xl">
@@ -80,9 +80,6 @@ export const GTVEligibility = () => {
                   className="mt-1 h-4 w-4 accent-accent"
                 />
                 <span>
-                  <span className="mb-2 block text-[0.55rem] tracking-[0.16em] uppercase text-accent font-mono">
-                    Prompt {String(index + 1).padStart(2, "0")}
-                  </span>
                   <span className="block text-[0.82rem] md:text-[0.9rem] leading-[1.65] text-ink">
                     {item.question}
                   </span>

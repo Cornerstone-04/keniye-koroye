@@ -15,7 +15,7 @@ const guidanceSections = [
     ],
   },
   {
-    title: "Evidence > Claims",
+    title: "Evidence over Claims",
     body: "Saying you are talented is not enough. You need proof. Examples:",
     points: [
       "Measurable outcomes",
