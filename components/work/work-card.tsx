@@ -25,11 +25,10 @@ export function WorkCard({ project, totalProjects }: WorkCardProps) {
       className="border-r border-b border-rule"
       data-hover
     >
-      {/*<Link
-        href={`/work/${project.slug}`}
+      <div
+        // href={`/work/${project.slug}`}
         className="block overflow-hidden no-underline"
-      >*/}
-      <div className="block overflow-hidden no-underline">
+      >
         <div
           className="group relative overflow-hidden aspect-4/3"
           style={{ background: project.bg }}

@@ -6,6 +6,7 @@ export const personal = {
   instagram: "https://instagram.com/keniyekoroye",
   twitter: "https://twitter.com/keniyekoroye",
   linkedin: "https://linkedin.com/in/keniyekoroye/",
+  shopUrl: "",
   location: "London, UK",
   tagline: "Reach out if you want to create impactful technology together.",
 };
@@ -157,6 +158,35 @@ export interface ProjectOutcome {
   label: string;
 }
 
+export interface ProjectDetailSection {
+  label: string;
+  title?: string;
+  body: string;
+}
+
+export interface ProjectExternalLink {
+  label: string;
+  href: string;
+}
+
+export interface ProjectDetails {
+  headline: string;
+  summary: string;
+  status?: string;
+  role?: string;
+  context?: string;
+  disciplines: string[];
+  heroImage?: string;
+  gallery?: string[];
+  sections: ProjectDetailSection[];
+  features?: string[];
+  technicalNotes?: string[];
+  culturalReferences?: string[];
+  externalLinks?: ProjectExternalLink[];
+  shopUrl?: string;
+  relatedSlugs?: string[];
+}
+
 export interface Project {
   num: string;
   slug?: string;
@@ -174,6 +204,7 @@ export interface Project {
   bg: string;
   outcomes?: ProjectOutcome[];
   thumbnail?: string;
+  productDetails?: ProjectDetails;
 }
 
 export const projects: Project[] = [
@@ -183,11 +214,37 @@ export const projects: Project[] = [
     tag: "software",
     tagLabel: "Software",
     year: "2023",
-    title: "Cradle Health — UX Research",
+    title: "Cradle Health",
     client: "Cradle Health",
     pills: ["Healthcare", "Femtech", "Mobile"],
     bg: "#1a2a1a",
     thumbnail: "/images/projects/cradle.png",
+    // TODO: Review with Keniye - drafted from existing project title/category and visual asset, not confirmed source copy.
+    desc: "A UX research engagement for a healthcare product operating in the femtech space.",
+    productDetails: {
+      headline: "Research for a more legible healthcare experience.",
+      summary:
+        "A software research project focused on understanding how a healthcare product could become clearer, more usable, and more trustworthy for its users.",
+      status: "Client Work",
+      role: "UX Research",
+      context: "Cradle Health",
+      disciplines: ["UX Research", "Healthcare", "Mobile Product"],
+      heroImage: "/images/projects/cradle.png",
+      sections: [
+        {
+          label: "Context",
+          title: "Healthcare products need clarity before they need decoration.",
+          body: "The work sits inside a sensitive healthcare context, where user confidence depends on language, navigation, trust signals, and a product flow that does not create unnecessary friction.",
+        },
+        {
+          label: "Research Lens",
+          title: "Understanding what users need to see, feel, and do.",
+          body: "The project can be framed around research-led product improvement: identifying user expectations, clarifying pain points, and translating findings into practical interface and experience recommendations.",
+        },
+      ],
+      features: ["Healthcare UX", "User research", "Mobile product review"],
+      relatedSlugs: ["eight-medical", "nupe-energy"],
+    },
   },
   {
     num: "02",
@@ -200,6 +257,54 @@ export const projects: Project[] = [
     pills: ["Surveillance", "Drone Tech", "Robotics"],
     bg: "#0d2b3e",
     thumbnail: "/images/projects/dome.jpg",
+    desc: "An AI-powered autonomous aerial CCTV swarm platform for residential, commercial, and industrial security.",
+    productDetails: {
+      headline: "Static CCTV becomes an autonomous protective field.",
+      summary:
+        "Dome is an AI-powered autonomous aerial CCTV swarm designed by Kelvar Industries for residential, commercial, and industrial security.",
+      status: "Platform",
+      role: "Product / industrial design",
+      context: "Kelvar Industries",
+      disciplines: ["Hardware", "Surveillance", "Drone Systems", "Robotics"],
+      heroImage: "/images/projects/dome.jpg",
+      sections: [
+        {
+          label: "Context",
+          title: "A moving surveillance network.",
+          body: "Kelvar describes Dome as a living CCTV network where cameras do not remain fixed to walls. They fly, reposition, track, and respond to create dynamic aerial visibility.",
+        },
+        {
+          label: "System Logic",
+          title: "Detect, classify, coordinate, respond.",
+          body: "The platform uses AI, machine learning, predictive threat analytics, and communication between drones to create overlapping security coverage rather than isolated camera feeds.",
+        },
+        {
+          label: "Use",
+          title: "Built for homes, estates, commercial sites, farms, and industrial zones.",
+          body: "The platform is positioned for residential, commercial, agricultural, and industrial security contexts where blind spots, perimeter edges, and high-risk zones need persistent visibility.",
+        },
+      ],
+      features: [
+        "Autonomous patrol swarm",
+        "Dome Dock",
+        "Solar-powered surveillance",
+        "Night and low-light vision",
+        "Quiet residential-safe operation",
+      ],
+      technicalNotes: [
+        "AI, ML, and predictive analytics",
+        "Thermal, infrared, and LiDAR vision",
+        "360-degree dynamic coverage",
+        "Gunshot, glass-breaking, and fire sensing",
+      ],
+      externalLinks: [
+        {
+          label: "View Dome on Kelvar",
+          href: "https://www.kelvarindustries.com/drones/dome",
+        },
+      ],
+      relatedSlugs: ["kelvar-hydrax", "kelvar-robobot"],
+    },
   },
   {
     num: "03",
@@ -207,11 +312,37 @@ export const projects: Project[] = [
     tag: "software",
     tagLabel: "Software",
     year: "2023",
-    title: "Eight Medical — UX Research",
+    title: "Eight Medical",
     client: "Eight Medical",
     pills: ["HealthTech", "Emergency Care", "Mobile"],
     bg: "#1a1a2e",
     thumbnail: "/images/projects/eight-medical.png",
+    // TODO: Review with Keniye - drafted from existing project title/category and visual asset, not confirmed source copy.
+    desc: "A UX research engagement for a healthtech product in the emergency care space.",
+    productDetails: {
+      headline: "Research for high-pressure healthcare decisions.",
+      summary:
+        "A software research project for a healthtech experience connected to emergency care, where speed, comprehension, and trust are central to the product journey.",
+      status: "Client Work",
+      role: "UX Research",
+      context: "Eight Medical",
+      disciplines: ["UX Research", "HealthTech", "Emergency Care"],
+      heroImage: "/images/projects/eight-medical.png",
+      sections: [
+        {
+          label: "Context",
+          title: "Emergency care products must reduce uncertainty.",
+          body: "The project can be positioned around making urgent healthcare interactions easier to understand, with research helping identify what information users need and where the experience may create friction.",
+        },
+        {
+          label: "Research Lens",
+          title: "Turning healthcare complexity into usable flows.",
+          body: "The work likely involved reviewing user journeys, product language, and interface expectations so that the product could support clearer decision-making in a high-stakes context.",
+        },
+      ],
+      features: ["Healthtech UX", "Emergency care", "Research synthesis"],
+      relatedSlugs: ["cradle-health", "nupe-energy"],
+    },
   },
   {
     num: "04",
@@ -224,6 +355,37 @@ export const projects: Project[] = [
     pills: ["Surveillance", "Drone Tech", "Robotics"],
     bg: "#1a2a1a",
     thumbnail: "/images/projects/hydrax_angle.png",
+    desc: "A Kelvar Industries surveillance platform within its autonomous security systems portfolio.",
+    productDetails: {
+      headline: "A surveillance platform for environments beyond static coverage.",
+      summary:
+        "Hydrax is part of Kelvar Industries' autonomous security platform family, positioned within a broader portfolio of systems for surveillance, defence technology, and resilient coverage.",
+      status: "Platform",
+      role: "Product / industrial design",
+      context: "Kelvar Industries",
+      disciplines: ["Hardware", "Surveillance", "Drone Systems", "Robotics"],
+      heroImage: "/images/projects/hydrax_angle.png",
+      sections: [
+        {
+          label: "Context",
+          title: "Autonomous surveillance for moving risk.",
+          body: "Kelvar frames its work around intelligent autonomous surveillance systems designed to protect people, property, and progress across environments where conventional security coverage can fall short.",
+        },
+        {
+          label: "Platform",
+          title: "Designed as part of Kelvar's security ecosystem.",
+          body: "Hydrax sits alongside Dome and Robobot as one of Kelvar's named platforms, extending the company's focus on autonomous systems, drone R&D, and security technology.",
+        },
+      ],
+      features: ["Autonomous security", "Surveillance platform", "Robotics"],
+      externalLinks: [
+        {
+          label: "Visit Kelvar Industries",
+          href: "https://www.kelvarindustries.com/",
+        },
+      ],
+      relatedSlugs: ["kelvar-dome", "kelvar-robobot"],
+    },
   },
   {
     num: "05",
@@ -231,11 +393,37 @@ export const projects: Project[] = [
     tag: "software",
     tagLabel: "Software",
     year: "2023",
-    title: "Nupe Energy — UX Research",
+    title: "Nupe Energy",
     client: "Nupe Energy",
     pills: ["Energy", "CleanTech", "Mobile"],
     bg: "#1a1a2e",
     thumbnail: "/images/projects/nupe.png",
+    // TODO: Review with Keniye - drafted from existing project title/category and visual asset, not confirmed source copy.
+    desc: "A UX research engagement for a clean energy software product.",
+    productDetails: {
+      headline: "Research for a cleaner energy product experience.",
+      summary:
+        "A software research project for a clean technology product, focused on making energy access and product interactions easier to understand.",
+      status: "Client Work",
+      role: "UX Research",
+      context: "Nupe Energy",
+      disciplines: ["UX Research", "CleanTech", "Energy"],
+      heroImage: "/images/projects/nupe.png",
+      sections: [
+        {
+          label: "Context",
+          title: "Energy products need simple, trustworthy interactions.",
+          body: "The project can be framed around improving how users understand and interact with a clean energy product, especially where trust, payment, access, or ongoing usage may shape the experience.",
+        },
+        {
+          label: "Research Lens",
+          title: "Clarifying the product journey.",
+          body: "The research direction likely supported clearer flows, stronger product communication, and better alignment between user needs and the service model.",
+        },
+      ],
+      features: ["CleanTech UX", "Energy access", "Mobile product research"],
+      relatedSlugs: ["cradle-health", "eight-medical"],
+    },
   },
   {
     num: "06",
@@ -248,6 +436,37 @@ export const projects: Project[] = [
     pills: ["Surveillance", "Drone Tech", "Robotics"],
     bg: "#0d2b3e",
     thumbnail: "/images/projects/robobot.jpg",
+    desc: "A Kelvar Industries robotic surveillance platform within its autonomous security systems portfolio.",
+    productDetails: {
+      headline: "Robotic security for terrain where cameras cannot simply stay still.",
+      summary:
+        "Robobot is part of Kelvar Industries' autonomous security platform family, connected to the company's focus on robotics, surveillance, and intelligent coverage.",
+      status: "Platform",
+      role: "Product / industrial design",
+      context: "Kelvar Industries",
+      disciplines: ["Hardware", "Surveillance", "Robotics", "Autonomous Systems"],
+      heroImage: "/images/projects/robobot.jpg",
+      sections: [
+        {
+          label: "Context",
+          title: "Security systems that move with the environment.",
+          body: "Kelvar describes its work as autonomous surveillance technology for air, land, sea, and space security, with platforms designed to deliver clarity and coverage where risk follows.",
+        },
+        {
+          label: "Platform",
+          title: "A named robotics platform in the Kelvar ecosystem.",
+          body: "Robobot sits beside Dome and Hydrax as one of Kelvar's platform concepts, extending the company narrative from aerial surveillance into broader autonomous security systems.",
+        },
+      ],
+      features: ["Robotic surveillance", "Autonomous security", "Platform design"],
+      externalLinks: [
+        {
+          label: "Visit Kelvar Industries",
+          href: "https://www.kelvarindustries.com/",
+        },
+      ],
+      relatedSlugs: ["kelvar-dome", "kelvar-hydrax"],
+    },
   },
   {
     num: "07",
@@ -260,6 +479,32 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#1a2a1a",
     thumbnail: "/images/projects/jaza-2.png",
+    // TODO: Review with Keniye - drafted from visual interpretation and the timeline reference to Jaza Energy, not confirmed source copy.
+    desc: "A portable battery enclosure study for energy access, built around carryability, brand presence, and field use.",
+    productDetails: {
+      headline: "A portable power object with a visible identity.",
+      summary:
+        "JAZA BATTERY presents a handled power unit whose enclosure, proportions, and graphic surface language make the battery feel portable, recognizable, and ready for everyday field use.",
+      status: "Client Work",
+      role: "Industrial Design",
+      context: "Jaza Energy",
+      disciplines: ["Industrial Design", "Energy Access", "Product Enclosure"],
+      heroImage: "/images/projects/jaza-2.png",
+      sections: [
+        {
+          label: "Context",
+          title: "Energy access as a carried object.",
+          body: "The design treats the battery as something that may need to be moved, exchanged, stored, and recognized quickly, using a strong handle form and bold graphic identity.",
+        },
+        {
+          label: "Design Response",
+          title: "A protective enclosure with brand character.",
+          body: "The object balances utility and visibility: a robust box form, integrated carry handle, and surface graphics that make the battery feel less like anonymous hardware and more like a branded product system.",
+        },
+      ],
+      features: ["Integrated handle", "Branded enclosure", "Portable power form"],
+      relatedSlugs: ["nugas", "sense"],
+    },
   },
   {
     num: "08",
@@ -272,6 +517,33 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#0d2b3e",
     thumbnail: "/images/projects/spritz-brush-2.png",
+    // TODO: Review with Keniye - drafted from visual interpretation of technical drawing asset, not confirmed source copy.
+    desc: "A personal-care product study developed through technical drawing, ergonomics, and component detailing.",
+    productDetails: {
+      headline: "A grooming object resolved through engineering detail.",
+      summary:
+        "SPRITZ BRUSH is presented through technical views, section drawings, and dimensional details, positioning the project as a personal-care object developed with attention to ergonomics and manufacturing logic.",
+      status: "Product Study",
+      role: "Industrial Design",
+      context: "Personal Care",
+      disciplines: ["Industrial Design", "Technical Drawing", "Ergonomics"],
+      heroImage: "/images/projects/spritz-brush-2.png",
+      sections: [
+        {
+          label: "Context",
+          title: "A handheld tool shaped by grip and routine.",
+          body: "The product sits in the everyday personal-care category, where comfort, reach, weight, and intuitive use matter as much as the visible form.",
+        },
+        {
+          label: "Process",
+          title: "Technical drawing as design development.",
+          body: "The drawing set shows front, side, sectional, and dimensional views, suggesting a product developed beyond styling into component proportion, handle geometry, and manufacturable detail.",
+        },
+      ],
+      features: ["Ergonomic handle", "Comb/brush head", "Section view", "Dimensional study"],
+      technicalNotes: ["Section B-B", "Measured handle and brush proportions"],
+      relatedSlugs: ["equalizer", "sense"],
+    },
   },
   {
     num: "09",
@@ -284,6 +556,33 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#1a1a2e",
     thumbnail: "/images/projects/equaliser-2.png",
+    // TODO: Review with Keniye - drafted from visual interpretation of sketches, renders, and body-use imagery, not confirmed source copy.
+    desc: "A wearable body-interface concept exploring recovery, touch points, and portable electronic interaction.",
+    productDetails: {
+      headline: "A triangular interface for the body.",
+      summary:
+        "EQUALIZER appears as a wearable or attachable body device, combining soft-contact pads, physical controls, charging, and a compact triangular form language.",
+      status: "Concept / Prototype Study",
+      role: "Industrial Design",
+      context: "Wearable Wellness",
+      disciplines: ["Industrial Design", "Wearables", "Product Interaction"],
+      heroImage: "/images/projects/equaliser-2.png",
+      sections: [
+        {
+          label: "Context",
+          title: "A device designed around contact with the body.",
+          body: "The project explores how an electronic object can sit on the body, communicate function through controls and pads, and remain compact enough for everyday handling.",
+        },
+        {
+          label: "Design Response",
+          title: "Controls, pads, and casing become one interface.",
+          body: "The triangular form organizes the product's touch points, buttons, charging port, and body-facing surfaces into a single readable object.",
+        },
+      ],
+      features: ["Triangular form", "Physical controls", "Charging port", "Body-contact pad"],
+      technicalNotes: ["Recessed power button", "Electrode gel pad concept", "USB charging port"],
+      relatedSlugs: ["spritz-brush", "sense"],
+    },
   },
   {
     num: "10",
@@ -296,6 +595,49 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#1a2a1a",
     thumbnail: "/images/projects/nugas-2.png",
+    desc: "An IoT-enabled smart meter for pay-as-you-go LPG cylinders, designed to expand access to clean cooking gas in Africa.",
+    productDetails: {
+      headline: "Pay-as-you-go gas access, measured in real time.",
+      summary:
+        "NUGAS is an IoT-enabled smart meter for pay-as-you-go Liquefied Petroleum Gas cylinders, helping households buy gas in small increments instead of paying for a full refill upfront.",
+      status: "Product System",
+      role: "Industrial Design",
+      context: "Clean Cooking / LPG Access",
+      disciplines: ["Industrial Design", "IoT", "Clean Energy", "Hardware"],
+      heroImage: "/images/projects/nugas-2.png",
+      sections: [
+        {
+          label: "Context",
+          title: "Cleaner cooking needs a more flexible payment model.",
+          body: "The product is designed for households that need access to LPG without the financial pressure of paying for a full cylinder refill at once.",
+        },
+        {
+          label: "System",
+          title: "A smart meter connected to mobile money.",
+          body: "By connecting to a mobile money platform, the device supports small, affordable gas purchases while monitoring consumption in real time.",
+        },
+        {
+          label: "Continuity",
+          title: "Monitoring that prevents sudden shortages.",
+          body: "The integrated smart technology alerts suppliers when gas levels run low, supporting smoother cylinder exchange and reducing the risk of unexpected fuel shortages.",
+        },
+      ],
+      features: [
+        "Pay-as-you-go LPG metering",
+        "Mobile money integration",
+        "Real-time consumption monitoring",
+        "Low-gas supplier alerts",
+      ],
+      technicalNotes: [
+        "Flow meter",
+        "PCBA",
+        "8000mAh lithium-ion battery",
+        "Gas outlet",
+        "Lock mechanism",
+        "27mm regulator",
+      ],
+      relatedSlugs: ["jaza-battery", "sense", "omi"],
+    },
   },
   {
     num: "11",
@@ -308,6 +650,33 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#1a1a2e",
     thumbnail: "/images/projects/sense-2.png",
+    // TODO: Review with Keniye - drafted from visual interpretation of plug-in detector imagery, sketches, and exploded view, not confirmed source copy.
+    desc: "A plug-in sensing device concept exploring domestic monitoring, visual feedback, and compact electronics.",
+    productDetails: {
+      headline: "A small detector designed to live in the wall.",
+      summary:
+        "SENSE appears as a plug-in sensor device with a compact housing, illuminated status ring, USB detail, and internal electronics organized for a domestic monitoring experience.",
+      status: "Concept / Prototype Study",
+      role: "Industrial Design",
+      context: "Domestic Sensing",
+      disciplines: ["Industrial Design", "IoT", "Product Enclosure"],
+      heroImage: "/images/projects/sense-2.png",
+      sections: [
+        {
+          label: "Context",
+          title: "A sensor that communicates quietly.",
+          body: "The project explores how a domestic device can sit in a wall outlet, monitor its environment, and communicate status through a minimal visual language.",
+        },
+        {
+          label: "Design Response",
+          title: "Electronics packaged as a simple home object.",
+          body: "The square form, rounded edges, LED ring, and compact plug-in body make the device feel closer to a household product than exposed technical hardware.",
+        },
+      ],
+      features: ["Plug-in form", "LED status ring", "Compact enclosure", "Exploded electronics"],
+      technicalNotes: ["Battery housing sketch", "Air inlet/detector sketch", "USB/power detail"],
+      relatedSlugs: ["nugas", "jaza-battery", "equalizer"],
+    },
   },
   {
     num: "12",
@@ -320,6 +689,37 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#0d2b3e",
     thumbnail: "/images/projects/omi-2.png",
+    // TODO: Review with Keniye - drafted from visual interpretation of filtration diagrams and use imagery, not confirmed source copy.
+    desc: "A bottle-mounted water filtration concept designed around everyday access, portability, and simple use.",
+    productDetails: {
+      headline: "Water filtration designed for the bottle already in hand.",
+      summary:
+        "OMI appears as a portable water filtration attachment, using a bottle-mounted tube system to improve access to cleaner drinking water through a compact, familiar format.",
+      status: "Concept / Product Study",
+      role: "Industrial Design",
+      context: "Water Access",
+      disciplines: ["Industrial Design", "Water Filtration", "Humanitarian Design"],
+      heroImage: "/images/projects/omi-2.png",
+      sections: [
+        {
+          label: "Context",
+          title: "A water product for everyday scarcity.",
+          body: "The visual story frames OMI around communities where safe drinking water cannot be assumed, using familiar bottles as the platform for a more accessible filtration object.",
+        },
+        {
+          label: "Design Response",
+          title: "A filter that attaches to common bottles.",
+          body: "The concept uses a tube-like filter module and drinking interface, allowing filtration to happen through a portable object rather than a fixed infrastructure product.",
+        },
+      ],
+      features: ["Bottle-mounted filter", "Portable drinking interface", "Layered filtration diagram"],
+      technicalNotes: [
+        "Traps larger dirt and sediment",
+        "Filters smaller bacteria and impurities",
+        "Improves taste and smell of water",
+      ],
+      relatedSlugs: ["nugas", "jaza-battery"],
+    },
   },
   {
     num: "13",
@@ -332,6 +732,33 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#1a2a1a",
     thumbnail: "/images/projects/idia-heel.png",
+    // TODO: Review with Keniye - drafted from visual interpretation of Queen Idia/Benin mask reference, not confirmed source copy.
+    desc: "A sculptural heel concept using Queen Idia-inspired form as a structural and cultural design reference.",
+    productDetails: {
+      headline: "A heel where heritage becomes structure.",
+      summary:
+        "IDIA HEEL uses the visual language of Queen Idia-inspired sculpture as a dramatic heel support, turning cultural reference into the architecture of the footwear.",
+      status: "Concept / Fashion Object",
+      role: "Footwear Design",
+      context: "Cultural Footwear Study",
+      disciplines: ["Footwear", "Industrial Design", "Cultural Object"],
+      heroImage: "/images/projects/idia-heel.png",
+      sections: [
+        {
+          label: "Context",
+          title: "Footwear as a cultural object.",
+          body: "The project treats the heel not as a hidden support but as the symbolic center of the shoe, using sculptural reference to carry meaning as well as weight.",
+        },
+        {
+          label: "Design Response",
+          title: "A mask form becomes the heel architecture.",
+          body: "The elevated sandal profile places the sculptural head beneath the footbed, creating a tension between fashion object, artifact, and engineered support.",
+        },
+      ],
+      features: ["Sculptural heel support", "Black and gold palette", "Ankle strap silhouette"],
+      culturalReferences: ["Queen Idia", "Benin visual heritage", "Sculptural footwear"],
+      relatedSlugs: ["africa-heel", "cowrie-heel"],
+    },
   },
   {
     num: "14",
@@ -344,6 +771,33 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#1a1a2e",
     thumbnail: "/images/projects/africa-heel-2.png",
+    // TODO: Review with Keniye - drafted from visual interpretation of Africa-map heel structure, not confirmed source copy.
+    desc: "A statement heel concept using the outline of Africa as a structural silhouette.",
+    productDetails: {
+      headline: "A continental outline turned into a wearable structure.",
+      summary:
+        "AFRICA HEEL transforms the silhouette of the African continent into the defining structural gesture of a fashion object.",
+      status: "Prototype / Fashion Object",
+      role: "Footwear Design",
+      context: "Cultural Footwear Study",
+      disciplines: ["Footwear", "Industrial Design", "Fashion Object"],
+      heroImage: "/images/projects/africa-heel-2.png",
+      sections: [
+        {
+          label: "Context",
+          title: "Identity carried through silhouette.",
+          body: "The design uses the recognizable outline of Africa as a visible support system, making the heel both a graphic statement and a structural feature.",
+        },
+        {
+          label: "Design Response",
+          title: "The heel becomes the message.",
+          body: "The shoe keeps the upper minimal so the heel profile can carry the visual weight of the object, turning a functional component into the main cultural reference.",
+        },
+      ],
+      features: ["Africa-map heel support", "Minimal black upper", "Statement silhouette"],
+      culturalReferences: ["African identity", "Continental silhouette", "Wearable symbolism"],
+      relatedSlugs: ["idia-heel", "cowrie-heel"],
+    },
   },
   {
     num: "15",
@@ -356,6 +810,33 @@ export const projects: Project[] = [
     pills: ["Product", "Industrial Design"],
     bg: "#0d2b3e",
     thumbnail: "/images/projects/cowry-heel-2.png",
+    // TODO: Review with Keniye - drafted from visual interpretation of cowrie-shell heel imagery, not confirmed source copy.
+    desc: "A sculptural heel concept using the cowrie shell as a cultural and formal reference.",
+    productDetails: {
+      headline: "The cowrie shell reimagined as heel architecture.",
+      summary:
+        "COWRIE HEEL uses the cowrie shell as both symbol and structure, turning an object associated with adornment, value, and heritage into a fashion support form.",
+      status: "Prototype / Fashion Object",
+      role: "Footwear Design",
+      context: "Cultural Footwear Study",
+      disciplines: ["Footwear", "Industrial Design", "Cultural Object"],
+      heroImage: "/images/projects/cowry-heel-2.png",
+      sections: [
+        {
+          label: "Context",
+          title: "A familiar symbol moved into footwear.",
+          body: "The cowrie shell becomes the focal point of the shoe, shifting from ornament into the structural identity of the heel.",
+        },
+        {
+          label: "Design Response",
+          title: "Soft symbolism, hard structure.",
+          body: "The design contrasts a clean sandal upper with a sculptural cowrie form beneath the heel, letting the cultural reference remain visible from the side profile.",
+        },
+      ],
+      features: ["Cowrie-shell heel", "Sandal upper", "Sculptural side profile"],
+      culturalReferences: ["Cowrie shell", "Adornment", "Value and heritage"],
+      relatedSlugs: ["idia-heel", "africa-heel"],
+    },
   },
 ];
 

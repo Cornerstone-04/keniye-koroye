@@ -31,6 +31,15 @@ const patentImages = [
   },
 ];
 
+const registeredDesign = [
+  ["Design number", "6470494"],
+  ["Grant date", "26 September 2025"],
+  ["Registration date", "07 September 2025"],
+  ["Registered owner", "Funfere Keniye Koroye"],
+  ["Design application", "Smart Watch Glove"],
+  ["Classification", "Gloves / Watches and wrist watches"],
+];
+
 export default function PatentsPage() {
   return (
     <div className="min-h-screen pt-14.25 bg-paper">
@@ -137,11 +146,46 @@ export default function PatentsPage() {
               <blockquote className="mt-6 max-w-3xl font-playfair italic text-[1rem] md:text-[1.15rem] leading-[1.8] text-muted">
                 {patentsContent.vision}
               </blockquote>
+              <div className="mt-8 border-t border-rule">
+                <div className="py-5 border-b border-rule">
+                  <SectionLabel>Registered Design</SectionLabel>
+                  <p className="mt-4 max-w-2xl text-[0.85rem] leading-[1.85] text-muted">
+                    The Smart Watch Glove design is registered with the UK
+                    Intellectual Property Office.
+                  </p>
+                </div>
+                <div className="border-b border-rule">
+                  {registeredDesign.map(([label, value]) => (
+                    <div
+                      key={label}
+                      className="grid gap-4 border-b border-rule py-3.5 last:border-b-0 md:grid-cols-[0.45fr_1fr]"
+                    >
+                      <span className="text-[0.55rem] tracking-[0.16em] uppercase text-accent font-mono">
+                        {label}
+                      </span>
+                      <span className="text-[0.8rem] leading-snug text-muted">
+                        {value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <Link
+                href="/documents/tek-smart-glove-patent.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 mr-3 inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-ink border border-ink px-6 md:px-7 py-3.5 transition-all ease-linear duration-200 hover:border-accent hover:text-accent"
+              >
+                View Design Patent
+                <span>
+                  <BsArrowRight />
+                </span>
+              </Link>
               <Link
                 href="https://www.knklabs.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:px-7 py-3.5 transition-all ease-linear duration-200 hover:bg-accent"
+                className="mt-4 inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:px-7 py-3.5 transition-all ease-linear duration-200 hover:bg-accent md:mt-8"
               >
                 Visit KNK Labs
                 <span>
