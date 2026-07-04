@@ -68,10 +68,6 @@ export function WorkCard({ project, totalProjects }: WorkCardProps) {
             {project.desc}
           </p>
 
-          {project.outcomes ? (
-            <WorkOutcomes outcomes={project.outcomes} />
-          ) : null}
-
           <WorkPills pills={project.pills} />
         </div>
       </Link>

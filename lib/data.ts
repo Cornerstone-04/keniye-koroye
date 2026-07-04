@@ -250,6 +250,12 @@ export const projects: Project[] = [
         "Mobile Application",
       ],
       heroImage: "/images/projects/cradle-health/mockup-1.png",
+      gallery: [
+        "/images/projects/cradle-health/mockup-2.png",
+        "/images/projects/cradle-health/mockup-3.png",
+        "/images/projects/cradle-health/mockup-4.png",
+        "/images/projects/cradle-health/mockup-5.png",
+      ],
       sections: [
         {
           label: "Overview",
@@ -263,12 +269,14 @@ export const projects: Project[] = [
         },
         {
           label: "Approach",
-          title: "A mixed-methods research process built around continuous learning.",
+          title:
+            "A mixed-methods research process built around continuous learning.",
           body: "The work combined quantitative methods such as surveys and analytics review with qualitative research, including in-depth interviews, usability testing, diary studies, and phased research execution. The approach allowed the team to iterate, refine, and respond to user feedback throughout the year.",
         },
         {
           label: "Insights",
-          title: "Clearer understanding of user behaviour, pain points, and practical needs.",
+          title:
+            "Clearer understanding of user behaviour, pain points, and practical needs.",
           body: "The research surfaced how pregnant women and new mothers use the platform, what they prefer across web and mobile, and which tasks they perform most frequently. It also identified common frustrations such as navigation issues, content access barriers, and challenges around features like virtual consultations.",
         },
       ],
@@ -286,6 +294,12 @@ export const projects: Project[] = [
         "Phase 3: Iterative design testing, feedback implementation, and cross-platform optimisation",
         "Phase 4: Post-implementation evaluation, follow-up research, and final recommendations",
       ],
+      externalLinks: [
+        {
+          label: "View 8 Medical",
+          href: "https://www.8medical.co/",
+        },
+      ],
       relatedSlugs: ["eight-medical", "nupe-energy"],
     },
   },
@@ -299,7 +313,7 @@ export const projects: Project[] = [
     client: "Kelvar Industries",
     pills: ["Surveillance", "Drone Tech", "Robotics"],
     bg: "#0d2b3e",
-    thumbnail: "/images/projects/dome.jpg",
+    thumbnail: "/images/projects/kelvar-dome/dome.jpg",
     desc: "An AI-powered autonomous aerial CCTV swarm platform for residential, commercial, and industrial security.",
     productDetails: {
       headline: "Static CCTV becomes an autonomous protective field.",
@@ -309,7 +323,7 @@ export const projects: Project[] = [
       role: "Product / industrial design",
       context: "Kelvar Industries",
       disciplines: ["Hardware", "Surveillance", "Drone Systems", "Robotics"],
-      heroImage: "/images/projects/dome.jpg",
+      heroImage: "/images/projects/kelvar-dome/dome.jpg",
       sections: [
         {
           label: "Context",
@@ -323,7 +337,8 @@ export const projects: Project[] = [
         },
         {
           label: "Use",
-          title: "Built for homes, estates, commercial sites, farms, and industrial zones.",
+          title:
+            "Built for homes, estates, commercial sites, farms, and industrial zones.",
           body: "The platform is positioned for residential, commercial, agricultural, and industrial security contexts where blind spots, perimeter edges, and high-risk zones need persistent visibility.",
         },
       ],
@@ -359,7 +374,7 @@ export const projects: Project[] = [
     client: "Eight Medical",
     pills: ["HealthTech", "Emergency Care", "Mobile"],
     bg: "#1a1a2e",
-    thumbnail: "/images/projects/eight-medical.png",
+    thumbnail: "/images/projects/eight-medical/eight-medical.png",
     // TODO: Review with Keniye - drafted from existing project title/category and visual asset, not confirmed source copy.
     desc: "A UX research engagement for a healthtech product in the emergency care space.",
     productDetails: {
@@ -370,7 +385,7 @@ export const projects: Project[] = [
       role: "UX Research",
       context: "Eight Medical",
       disciplines: ["UX Research", "HealthTech", "Emergency Care"],
-      heroImage: "/images/projects/eight-medical.png",
+      heroImage: "/images/projects/eight-medical/eight-medical.png",
       sections: [
         {
           label: "Context",
@@ -397,17 +412,18 @@ export const projects: Project[] = [
     client: "Kelvar Industries",
     pills: ["Surveillance", "Drone Tech", "Robotics"],
     bg: "#1a2a1a",
-    thumbnail: "/images/projects/hydrax_angle.png",
+    thumbnail: "/images/projects/kelvar-hydrax/hydrax_angle.png",
     desc: "A Kelvar Industries surveillance platform within its autonomous security systems portfolio.",
     productDetails: {
-      headline: "A surveillance platform for environments beyond static coverage.",
+      headline:
+        "A surveillance platform for environments beyond static coverage.",
       summary:
         "Hydrax is part of Kelvar Industries' autonomous security platform family, positioned within a broader portfolio of systems for surveillance, defence technology, and resilient coverage.",
       status: "Platform",
       role: "Product / industrial design",
       context: "Kelvar Industries",
       disciplines: ["Hardware", "Surveillance", "Drone Systems", "Robotics"],
-      heroImage: "/images/projects/hydrax_angle.png",
+      heroImage: "/images/projects/kelvar-hydrax/hydrax_angle.png",
       sections: [
         {
           label: "Context",
@@ -440,7 +456,7 @@ export const projects: Project[] = [
     client: "Nupe Energy",
     pills: ["Energy", "CleanTech", "Mobile"],
     bg: "#1a1a2e",
-    thumbnail: "/images/projects/nupe.png",
+    thumbnail: "/images/projects/nupe-energy/nupe.png",
     // TODO: Review with Keniye - drafted from existing project title/category and visual asset, not confirmed source copy.
     desc: "A UX research engagement for a clean energy software product.",
     productDetails: {
@@ -451,7 +467,7 @@ export const projects: Project[] = [
       role: "UX Research",
       context: "Nupe Energy",
       disciplines: ["UX Research", "CleanTech", "Energy"],
-      heroImage: "/images/projects/nupe.png",
+      heroImage: "/images/projects/nupe-energy/nupe.png",
       sections: [
         {
           label: "Context",
@@ -478,17 +494,23 @@ export const projects: Project[] = [
     client: "Kelvar Industries",
     pills: ["Surveillance", "Drone Tech", "Robotics"],
     bg: "#0d2b3e",
-    thumbnail: "/images/projects/robobot.jpg",
+    thumbnail: "/images/projects/kelvar-robobot/robobot.jpg",
     desc: "A Kelvar Industries robotic surveillance platform within its autonomous security systems portfolio.",
     productDetails: {
-      headline: "Robotic security for terrain where cameras cannot simply stay still.",
+      headline:
+        "Robotic security for terrain where cameras cannot simply stay still.",
       summary:
         "Robobot is part of Kelvar Industries' autonomous security platform family, connected to the company's focus on robotics, surveillance, and intelligent coverage.",
       status: "Platform",
       role: "Product / industrial design",
       context: "Kelvar Industries",
-      disciplines: ["Hardware", "Surveillance", "Robotics", "Autonomous Systems"],
-      heroImage: "/images/projects/robobot.jpg",
+      disciplines: [
+        "Hardware",
+        "Surveillance",
+        "Robotics",
+        "Autonomous Systems",
+      ],
+      heroImage: "/images/projects/kelvar-robobot/robobot.jpg",
       sections: [
         {
           label: "Context",
@@ -501,7 +523,11 @@ export const projects: Project[] = [
           body: "Robobot sits beside Dome and Hydrax as one of Kelvar's platform concepts, extending the company narrative from aerial surveillance into broader autonomous security systems.",
         },
       ],
-      features: ["Robotic surveillance", "Autonomous security", "Platform design"],
+      features: [
+        "Robotic surveillance",
+        "Autonomous security",
+        "Platform design",
+      ],
       externalLinks: [
         {
           label: "Visit Kelvar Industries",
@@ -521,7 +547,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#1a2a1a",
-    thumbnail: "/images/projects/jaza-2.png",
+    thumbnail: "/images/projects/jaza-battery/jaza-2.png",
     // TODO: Review with Keniye - drafted from visual interpretation and the timeline reference to Jaza Energy, not confirmed source copy.
     desc: "A portable battery enclosure study for energy access, built around carryability, brand presence, and field use.",
     productDetails: {
@@ -532,7 +558,7 @@ export const projects: Project[] = [
       role: "Industrial Design",
       context: "Jaza Energy",
       disciplines: ["Industrial Design", "Energy Access", "Product Enclosure"],
-      heroImage: "/images/projects/jaza-2.png",
+      heroImage: "/images/projects/jaza-battery/jaza-2.png",
       sections: [
         {
           label: "Context",
@@ -545,7 +571,11 @@ export const projects: Project[] = [
           body: "The object balances utility and visibility: a robust box form, integrated carry handle, and surface graphics that make the battery feel less like anonymous hardware and more like a branded product system.",
         },
       ],
-      features: ["Integrated handle", "Branded enclosure", "Portable power form"],
+      features: [
+        "Integrated handle",
+        "Branded enclosure",
+        "Portable power form",
+      ],
       relatedSlugs: ["nugas", "sense"],
     },
   },
@@ -559,7 +589,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#0d2b3e",
-    thumbnail: "/images/projects/spritz-brush-2.png",
+    thumbnail: "/images/projects/spritz-brush/spritz-brush-2.png",
     // TODO: Review with Keniye - drafted from visual interpretation of technical drawing asset, not confirmed source copy.
     desc: "A personal-care product study developed through technical drawing, ergonomics, and component detailing.",
     productDetails: {
@@ -570,7 +600,8 @@ export const projects: Project[] = [
       role: "Industrial Design",
       context: "Personal Care",
       disciplines: ["Industrial Design", "Technical Drawing", "Ergonomics"],
-      heroImage: "/images/projects/spritz-brush-2.png",
+      heroImage: "/images/projects/spritz-brush/spritz-brush-2.png",
+      gallery: ["/images/projects/spritz-brush/spritz-brush.jpg"],
       sections: [
         {
           label: "Context",
@@ -583,7 +614,12 @@ export const projects: Project[] = [
           body: "The drawing set shows front, side, sectional, and dimensional views, suggesting a product developed beyond styling into component proportion, handle geometry, and manufacturable detail.",
         },
       ],
-      features: ["Ergonomic handle", "Comb/brush head", "Section view", "Dimensional study"],
+      features: [
+        "Ergonomic handle",
+        "Comb/brush head",
+        "Section view",
+        "Dimensional study",
+      ],
       technicalNotes: ["Section B-B", "Measured handle and brush proportions"],
       relatedSlugs: ["equalizer", "sense"],
     },
@@ -598,7 +634,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#1a1a2e",
-    thumbnail: "/images/projects/equaliser-2.png",
+    thumbnail: "/images/projects/equalizer/equaliser-2.png",
     // TODO: Review with Keniye - drafted from visual interpretation of sketches, renders, and body-use imagery, not confirmed source copy.
     desc: "A wearable body-interface concept exploring recovery, touch points, and portable electronic interaction.",
     productDetails: {
@@ -609,7 +645,7 @@ export const projects: Project[] = [
       role: "Industrial Design",
       context: "Wearable Wellness",
       disciplines: ["Industrial Design", "Wearables", "Product Interaction"],
-      heroImage: "/images/projects/equaliser-2.png",
+      heroImage: "/images/projects/equalizer/equaliser-2.png",
       sections: [
         {
           label: "Context",
@@ -622,8 +658,17 @@ export const projects: Project[] = [
           body: "The triangular form organizes the product's touch points, buttons, charging port, and body-facing surfaces into a single readable object.",
         },
       ],
-      features: ["Triangular form", "Physical controls", "Charging port", "Body-contact pad"],
-      technicalNotes: ["Recessed power button", "Electrode gel pad concept", "USB charging port"],
+      features: [
+        "Triangular form",
+        "Physical controls",
+        "Charging port",
+        "Body-contact pad",
+      ],
+      technicalNotes: [
+        "Recessed power button",
+        "Electrode gel pad concept",
+        "USB charging port",
+      ],
       relatedSlugs: ["spritz-brush", "sense"],
     },
   },
@@ -637,7 +682,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#1a2a1a",
-    thumbnail: "/images/projects/nugas-2.png",
+    thumbnail: "/images/projects/nugas/nugas-2.png",
     desc: "An IoT-enabled smart meter for pay-as-you-go LPG cylinders, designed to expand access to clean cooking gas in Africa.",
     productDetails: {
       headline: "Pay-as-you-go gas access, measured in real time.",
@@ -647,7 +692,7 @@ export const projects: Project[] = [
       role: "Industrial Design",
       context: "Clean Cooking / LPG Access",
       disciplines: ["Industrial Design", "IoT", "Clean Energy", "Hardware"],
-      heroImage: "/images/projects/nugas-2.png",
+      heroImage: "/images/projects/nugas/nugas-2.png",
       sections: [
         {
           label: "Context",
@@ -692,7 +737,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#1a1a2e",
-    thumbnail: "/images/projects/sense-2.png",
+    thumbnail: "/images/projects/sense/sense-2.png",
     // TODO: Review with Keniye - drafted from visual interpretation of plug-in detector imagery, sketches, and exploded view, not confirmed source copy.
     desc: "A plug-in sensing device concept exploring domestic monitoring, visual feedback, and compact electronics.",
     productDetails: {
@@ -703,7 +748,7 @@ export const projects: Project[] = [
       role: "Industrial Design",
       context: "Domestic Sensing",
       disciplines: ["Industrial Design", "IoT", "Product Enclosure"],
-      heroImage: "/images/projects/sense-2.png",
+      heroImage: "/images/projects/sense/sense-2.png",
       sections: [
         {
           label: "Context",
@@ -716,8 +761,17 @@ export const projects: Project[] = [
           body: "The square form, rounded edges, LED ring, and compact plug-in body make the device feel closer to a household product than exposed technical hardware.",
         },
       ],
-      features: ["Plug-in form", "LED status ring", "Compact enclosure", "Exploded electronics"],
-      technicalNotes: ["Battery housing sketch", "Air inlet/detector sketch", "USB/power detail"],
+      features: [
+        "Plug-in form",
+        "LED status ring",
+        "Compact enclosure",
+        "Exploded electronics",
+      ],
+      technicalNotes: [
+        "Battery housing sketch",
+        "Air inlet/detector sketch",
+        "USB/power detail",
+      ],
       relatedSlugs: ["nugas", "jaza-battery", "equalizer"],
     },
   },
@@ -731,7 +785,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#0d2b3e",
-    thumbnail: "/images/projects/omi-2.png",
+    thumbnail: "/images/projects/omi/omi-2.png",
     // TODO: Review with Keniye - drafted from visual interpretation of filtration diagrams and use imagery, not confirmed source copy.
     desc: "A bottle-mounted water filtration concept designed around everyday access, portability, and simple use.",
     productDetails: {
@@ -741,8 +795,12 @@ export const projects: Project[] = [
       status: "Concept / Product Study",
       role: "Industrial Design",
       context: "Water Access",
-      disciplines: ["Industrial Design", "Water Filtration", "Humanitarian Design"],
-      heroImage: "/images/projects/omi-2.png",
+      disciplines: [
+        "Industrial Design",
+        "Water Filtration",
+        "Humanitarian Design",
+      ],
+      heroImage: "/images/projects/omi/omi-2.png",
       sections: [
         {
           label: "Context",
@@ -755,7 +813,11 @@ export const projects: Project[] = [
           body: "The concept uses a tube-like filter module and drinking interface, allowing filtration to happen through a portable object rather than a fixed infrastructure product.",
         },
       ],
-      features: ["Bottle-mounted filter", "Portable drinking interface", "Layered filtration diagram"],
+      features: [
+        "Bottle-mounted filter",
+        "Portable drinking interface",
+        "Layered filtration diagram",
+      ],
       technicalNotes: [
         "Traps larger dirt and sediment",
         "Filters smaller bacteria and impurities",
@@ -774,7 +836,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#1a2a1a",
-    thumbnail: "/images/projects/idia-heel.png",
+    thumbnail: "/images/projects/idia-heel/idia-heel.png",
     // TODO: Review with Keniye - drafted from visual interpretation of Queen Idia/Benin mask reference, not confirmed source copy.
     desc: "A sculptural heel concept using Queen Idia-inspired form as a structural and cultural design reference.",
     productDetails: {
@@ -785,7 +847,7 @@ export const projects: Project[] = [
       role: "Footwear Design",
       context: "Cultural Footwear Study",
       disciplines: ["Footwear", "Industrial Design", "Cultural Object"],
-      heroImage: "/images/projects/idia-heel.png",
+      heroImage: "/images/projects/idia-heel/idia-heel.png",
       sections: [
         {
           label: "Context",
@@ -798,8 +860,16 @@ export const projects: Project[] = [
           body: "The elevated sandal profile places the sculptural head beneath the footbed, creating a tension between fashion object, artifact, and engineered support.",
         },
       ],
-      features: ["Sculptural heel support", "Black and gold palette", "Ankle strap silhouette"],
-      culturalReferences: ["Queen Idia", "Benin visual heritage", "Sculptural footwear"],
+      features: [
+        "Sculptural heel support",
+        "Black and gold palette",
+        "Ankle strap silhouette",
+      ],
+      culturalReferences: [
+        "Queen Idia",
+        "Benin visual heritage",
+        "Sculptural footwear",
+      ],
       relatedSlugs: ["africa-heel", "cowrie-heel"],
     },
   },
@@ -813,7 +883,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#1a1a2e",
-    thumbnail: "/images/projects/africa-heel-2.png",
+    thumbnail: "/images/projects/africa-heel/africa-heel-2.png",
     // TODO: Review with Keniye - drafted from visual interpretation of Africa-map heel structure, not confirmed source copy.
     desc: "A statement heel concept using the outline of Africa as a structural silhouette.",
     productDetails: {
@@ -824,7 +894,7 @@ export const projects: Project[] = [
       role: "Footwear Design",
       context: "Cultural Footwear Study",
       disciplines: ["Footwear", "Industrial Design", "Fashion Object"],
-      heroImage: "/images/projects/africa-heel-2.png",
+      heroImage: "/images/projects/africa-heel/africa-heel-2.png",
       sections: [
         {
           label: "Context",
@@ -837,8 +907,16 @@ export const projects: Project[] = [
           body: "The shoe keeps the upper minimal so the heel profile can carry the visual weight of the object, turning a functional component into the main cultural reference.",
         },
       ],
-      features: ["Africa-map heel support", "Minimal black upper", "Statement silhouette"],
-      culturalReferences: ["African identity", "Continental silhouette", "Wearable symbolism"],
+      features: [
+        "Africa-map heel support",
+        "Minimal black upper",
+        "Statement silhouette",
+      ],
+      culturalReferences: [
+        "African identity",
+        "Continental silhouette",
+        "Wearable symbolism",
+      ],
       relatedSlugs: ["idia-heel", "cowrie-heel"],
     },
   },
@@ -852,7 +930,7 @@ export const projects: Project[] = [
     client: "Product Design",
     pills: ["Product", "Industrial Design"],
     bg: "#0d2b3e",
-    thumbnail: "/images/projects/cowry-heel-2.png",
+    thumbnail: "/images/projects/cowrie-heel/cowry-heel-2.png",
     // TODO: Review with Keniye - drafted from visual interpretation of cowrie-shell heel imagery, not confirmed source copy.
     desc: "A sculptural heel concept using the cowrie shell as a cultural and formal reference.",
     productDetails: {
@@ -863,7 +941,7 @@ export const projects: Project[] = [
       role: "Footwear Design",
       context: "Cultural Footwear Study",
       disciplines: ["Footwear", "Industrial Design", "Cultural Object"],
-      heroImage: "/images/projects/cowry-heel-2.png",
+      heroImage: "/images/projects/cowrie-heel/cowry-heel-2.png",
       sections: [
         {
           label: "Context",
@@ -876,7 +954,11 @@ export const projects: Project[] = [
           body: "The design contrasts a clean sandal upper with a sculptural cowrie form beneath the heel, letting the cultural reference remain visible from the side profile.",
         },
       ],
-      features: ["Cowrie-shell heel", "Sandal upper", "Sculptural side profile"],
+      features: [
+        "Cowrie-shell heel",
+        "Sandal upper",
+        "Sculptural side profile",
+      ],
       culturalReferences: ["Cowrie shell", "Adornment", "Value and heritage"],
       relatedSlugs: ["idia-heel", "africa-heel"],
     },
