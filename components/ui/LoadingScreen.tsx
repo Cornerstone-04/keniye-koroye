@@ -25,7 +25,7 @@ export default function LoadingScreen() {
         <motion.div
           role="status"
           aria-label="Loading page"
-          className="fixed inset-0 z-[100] bg-paper text-ink"
+          className="fixed inset-0 z-100 bg-paper text-ink"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}

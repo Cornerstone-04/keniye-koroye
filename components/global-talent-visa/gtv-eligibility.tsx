@@ -1,3 +1,5 @@
+"use client";
+
 import { globalTalentAssessment } from "@/lib/gtv-details";
 import FadeIn from "../ui/FadeIn";
 import { GTVSectionLabel } from "./gtv-section-label";

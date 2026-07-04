@@ -1,8 +1,7 @@
 export const patentsContent = {
   title: "Patents",
   eyebrow: "Patent-Pending Innovation",
-  hero:
-    "Exploring the intersection of wearable intelligence, AI, robotics, and human interaction.",
+  hero: "Exploring the intersection of wearable intelligence, AI, robotics, and human interaction.",
   intro:
     "The Smart Glove System for KNK Labs is a patent-pending innovation developed by Keniye Koroye, designed to revolutionise how humans interact with technology.",
   overview: [
@@ -155,8 +154,7 @@ export const colabContent = {
 export const tekContent = {
   title: "The Taukeme Edwin Koroye Grant",
   eyebrow: "TEK Grant",
-  hero:
-    "Empowering the next generation through education, technology, and opportunity.",
+  hero: "Empowering the next generation through education, technology, and opportunity.",
   intro:
     "The Taukeme Edwin Koroye (TEK) Grant is a philanthropic initiative dedicated to honoring the legacy of the late Taukeme Edwin Koroye, a visionary Nigerian financial executive and former Executive Director of Access Bank Plc.",
   legacy:
@@ -184,4 +182,5 @@ export const tekContent = {
   ],
   closing:
     "The work continues by turning memory into opportunity, and legacy into tools young people can build with.",
+  link: "https://taukeme-koroye.vercel.app/",
 };

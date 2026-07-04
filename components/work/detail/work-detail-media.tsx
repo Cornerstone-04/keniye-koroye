@@ -24,11 +24,11 @@ export function WorkDetailFeatureImage({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={workDetailViewport}
         transition={{ duration: 0.65, ease: workDetailEase }}
-        className="relative flex min-h-[22rem] items-center justify-center overflow-hidden p-6 md:min-h-[36rem] md:p-10"
+        className="relative flex min-h-88 items-center justify-center overflow-hidden p-6 md:min-h-144 md:p-10"
         style={{ background: bg }}
       >
         {image ? (
-          <div className="relative h-[min(68vh,42rem)] w-full max-w-[78rem]">
+          <div className="relative h-[min(68vh,42rem)] w-full max-w-312">
             <Image
               src={image}
               alt={title}
@@ -58,7 +58,7 @@ export function WorkDetailGalleryImage({ image, title }: GalleryImageProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={workDetailViewport}
       transition={{ duration: 0.55, ease: workDetailEase }}
-      className="relative min-h-[18rem] border-b border-r border-rule bg-cream md:min-h-[26rem]"
+      className="relative min-h-72 border-b border-r border-rule bg-cream md:min-h-104"
     >
       <Image src={image} alt={title} fill className="object-contain p-4 md:p-6" />
     </motion.div>

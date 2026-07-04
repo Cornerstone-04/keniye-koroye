@@ -138,7 +138,7 @@ export default function TekPage() {
                   ))}
                 </div>
                 <Link
-                  href="https://instagram.com/keniyekoroye"
+                  href={tekContent.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:px-7 py-3.5 transition-colors ease-linear duration-200 hover:bg-accent"

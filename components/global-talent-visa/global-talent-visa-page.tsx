@@ -1,5 +1,3 @@
-"use client";
-
 import { GlobalTalentVisaCTA } from "./global-talent-visa-cta";
 import { GlobalTalentVisaGuidanceSections } from "./global-talent-visa-guidance-sections";
 import { GlobalTalentVisaHeader } from "./global-talent-visa-header";
