@@ -25,8 +25,8 @@ export function WorkCard({ project, totalProjects }: WorkCardProps) {
       className="border-r border-b border-rule"
       data-hover
     >
-      <div
-        // href={`/work/${project.slug}`}
+      <Link
+        href={`/work/${project.slug}`}
         className="block overflow-hidden no-underline"
       >
         <div
@@ -74,7 +74,7 @@ export function WorkCard({ project, totalProjects }: WorkCardProps) {
 
           <WorkPills pills={project.pills} />
         </div>
-      </div>
+      </Link>
     </motion.div>
   );
 }

@@ -16,7 +16,11 @@ export function NavbarMobileMenu({
   pathname,
   closeAction,
 }: NavbarMobileMenuProps) {
-  const activeIndex = navLinks.findIndex((link) => link.href === pathname);
+  const activeIndex = navLinks.findIndex(
+    (link) =>
+      pathname === link.href ||
+      (link.href !== "/" && pathname.startsWith(`${link.href}/`)),
+  );
   const displayIndex = activeIndex >= 0 ? `0${activeIndex + 1}` : "01";
 
   return (
@@ -46,7 +50,9 @@ export function NavbarMobileMenu({
                 <nav aria-label="Mobile Navigation">
                   <ul className="flex flex-col gap-4">
                     {navLinks.map(({ href, label }, index) => {
-                      const active = pathname === href;
+                      const active =
+                        pathname === href ||
+                        (href !== "/" && pathname.startsWith(`${href}/`));
 
                       return (
                         <motion.li

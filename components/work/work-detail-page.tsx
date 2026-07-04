@@ -125,23 +125,26 @@ export function WorkDetailPage({ project }: WorkDetailPageProps) {
         </motion.div>
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-[1.45fr_0.95fr]">
-        <div className="border-b lg:sticky lg:top-14.25 lg:h-[calc(100vh-3.5625rem)] lg:self-start lg:border-b-0 lg:border-r border-rule">
+      <section className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr]">
+        <div className="border-b lg:sticky lg:top-14.25 lg:min-h-[calc(100vh-3.5625rem)] lg:self-start lg:border-b-0 lg:border-r border-rule">
           <motion.div
             initial={{ opacity: 0, scale: 0.985 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative aspect-video lg:h-full lg:aspect-auto"
+            className="relative flex min-h-[20rem] items-center justify-center p-6 md:p-10 lg:min-h-[calc(100vh-3.5625rem)]"
             style={{ background: project.bg }}
           >
             {heroImage ? (
-              <Image
-                src={heroImage}
-                alt={project.title}
-                fill
-                className="object-cover"
-                priority
-              />
+              <div className="relative h-[min(62vh,34rem)] w-full max-w-[48rem]">
+                <Image
+                  src={heroImage}
+                  alt={project.title}
+                  fill
+                  className="object-contain"
+                  sizes="(min-width: 1024px) 54vw, 100vw"
+                  priority
+                />
+              </div>
             ) : (
               <div className="absolute inset-0 flex items-center justify-center font-playfair text-[6rem] text-white/10">
                 {project.num}

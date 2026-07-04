@@ -8,14 +8,14 @@ type NavbarDesktopLinksProps = {
   pathname: string;
 };
 
-export function NavbarDesktopLinks({
-  pathname,
-}: NavbarDesktopLinksProps) {
+export function NavbarDesktopLinks({ pathname }: NavbarDesktopLinksProps) {
   return (
     <ul className="hidden md:flex gap-5 lg:gap-8 xl:gap-10 list-none">
       {navLinks.map(({ href, label }) => {
-        const active = pathname === href;
-
+        const active =
+          pathname === href ||
+          (href !== "/" && pathname.startsWith(`${href}/`));
+        
         return (
           <li key={href}>
             <Link
