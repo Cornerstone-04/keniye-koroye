@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import Image from "next/image";
 import type { projects } from "@/lib/data";
-import { WorkOutcomes } from "./work-outcomes";
 import { WorkPills } from "./work-pills";
 
 type Project = (typeof projects)[number];

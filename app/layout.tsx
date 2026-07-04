@@ -5,7 +5,6 @@ import Footer from "@/components/layout/Footer";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { Playfair_Display, DM_Mono, Fraunces } from "next/font/google";
-// @ts-ignore: Allow importing global CSS without module declarations
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({

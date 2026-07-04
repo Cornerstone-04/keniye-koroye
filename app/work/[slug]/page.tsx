@@ -9,12 +9,6 @@ type PageProps = {
   }>;
 };
 
-type WorkDetailPageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
-
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
@@ -61,7 +55,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: WorkDetailPageProps) {
+export default async function Page({ params }: PageProps) {
   const { slug } = await params;
 
   const project = projects.find((item) => item.slug === slug);
