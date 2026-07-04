@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export function proxy(request: NextRequest) {
   const host = request.headers.get("host");
 
-  if (host === "keniye-koroye.vercel.app") {
+  if (host === "keniyekoroye.vercel.app") {
     const url = request.nextUrl.clone();
     url.hostname = "koroye.com";
     url.protocol = "https:";
