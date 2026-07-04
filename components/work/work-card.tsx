@@ -10,10 +10,9 @@ type Project = (typeof projects)[number];
 
 type WorkCardProps = {
   project: Project;
-  totalProjects: number;
 };
 
-export function WorkCard({ project, totalProjects }: WorkCardProps) {
+export function WorkCard({ project }: WorkCardProps) {
   return (
     <motion.div
       layout
@@ -44,10 +43,6 @@ export function WorkCard({ project, totalProjects }: WorkCardProps) {
               {project.num}
             </div>
           )}
-
-          <span className="absolute top-3 left-3 z-10 text-[0.58rem] tracking-[0.15em] uppercase text-white/35 font-mono">
-            {project.num} / 0{totalProjects}
-          </span>
 
           <span className="absolute top-3 right-3 z-10 px-2 py-[0.2rem] text-[0.55rem] tracking-[0.15em] uppercase text-white bg-accent font-mono">
             {project.tagLabel}

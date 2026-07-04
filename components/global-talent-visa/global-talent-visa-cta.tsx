@@ -1,5 +1,3 @@
-"use client";
-
 import { personal } from "@/lib/data";
 import { BsArrowRight } from "react-icons/bs";
 import FadeIn from "../ui/FadeIn";

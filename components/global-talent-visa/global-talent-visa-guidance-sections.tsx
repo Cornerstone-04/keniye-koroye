@@ -1,3 +1,5 @@
+"use client";
+
 import { guidanceSections } from "@/lib/gtv-details";
 import { motion } from "motion/react";
 import FadeIn from "../ui/FadeIn";

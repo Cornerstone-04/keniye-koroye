@@ -62,29 +62,3 @@ export function WorkDetailLinks({ shopUrl, links }: WorkDetailLinksProps) {
     </section>
   );
 }
-
-export function WorkDetailCta({ bookingUrl }: { bookingUrl: string }) {
-  return (
-    <section className="px-6 md:px-12 py-14 md:py-20 bg-ink text-paper">
-      <motion.div
-        initial={{ opacity: 0, y: 14 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={workDetailViewport}
-        transition={{ duration: 0.55, ease: workDetailEase }}
-        className="mx-auto flex max-w-328 flex-col gap-6 md:flex-row md:items-end md:justify-between"
-      >
-        <div>
-          <p className="text-[0.62rem] tracking-[0.2em] uppercase text-paper/50 font-mono">
-            Next
-          </p>
-          <h2 className="mt-4 max-w-328 font-playfair text-[1.8rem] md:text-[2.6rem] font-black leading-tight">
-            Have a project in mind?
-          </h2>
-        </div>
-        <WorkDetailExternalButton href={bookingUrl}>
-          Book a Meeting
-        </WorkDetailExternalButton>
-      </motion.div>
-    </section>
-  );
-}

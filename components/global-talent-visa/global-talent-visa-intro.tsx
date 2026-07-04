@@ -1,5 +1,3 @@
-"use client";
-
 import FadeIn from "@/components/ui/FadeIn";
 import { GTVSectionLabel } from "./gtv-section-label";
 

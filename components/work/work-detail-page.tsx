@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { projects, personal, type Project } from "@/lib/data";
+import { projects, type Project } from "@/lib/data";
 import { BsArrowLeft } from "react-icons/bs";
 import {
   WorkDetailBlock,
@@ -10,7 +10,7 @@ import {
   WorkDetailOutcomesBlock,
   WorkDetailSectionHeader,
 } from "./detail/work-detail-blocks";
-import { WorkDetailCta, WorkDetailLinks } from "./detail/work-detail-actions";
+import { WorkDetailLinks } from "./detail/work-detail-actions";
 import {
   WorkDetailFeatureImage,
   WorkDetailGalleryImage,
@@ -88,7 +88,7 @@ export function WorkDetailPage({ project }: WorkDetailPageProps) {
 
             <h1
               className="font-black leading-[0.92] font-playfair"
-              style={{ fontSize: "clamp(2.8rem, 10vw, 7rem)" }}
+              style={{ fontSize: "clamp(2.2rem, 8vw, 5.5rem)" }}
             >
               {project.title}
             </h1>
@@ -203,7 +203,6 @@ export function WorkDetailPage({ project }: WorkDetailPageProps) {
         links={details?.externalLinks}
       />
       <WorkDetailRelated projects={relatedProjects} />
-      <WorkDetailCta bookingUrl={personal.bookingUrl} />
     </div>
   );
 }
