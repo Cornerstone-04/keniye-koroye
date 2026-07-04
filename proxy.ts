@@ -5,7 +5,7 @@ export function proxy(request: NextRequest) {
 
   if (host === "keniyekoroye.vercel.app") {
     const url = request.nextUrl.clone();
-    url.hostname = "koroye.com";
+    url.hostname = "www.koroye.com";
     url.protocol = "https:";
 
     return NextResponse.redirect(url, 308);
