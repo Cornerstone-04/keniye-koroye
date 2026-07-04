@@ -1,12 +1,10 @@
 "use client";
 
-import { LuArrowRight } from "react-icons/lu";
 import FadeIn from "../ui/FadeIn";
 import { AboutIntro } from "./about-intro";
 import { AboutParagraphs } from "./about-paragraphs";
 import { AboutSkills } from "./about-skills";
 import { AboutTools } from "./about-tools";
-// import { AboutToolkit } from "./about-toolkit";
 
 export function AboutMain() {
   return (
@@ -23,26 +21,6 @@ export function AboutMain() {
       </FadeIn>
       <AboutSkills />
       <AboutTools />
-      {/* <AboutToolkit /> */}
-      {/* <div className="mt-8 pt-8 border-t border-rule">
-        <h3 className="text-[0.62rem] tracking-[0.2em] uppercase mb-4 text-accent font-mono">
-          Now
-        </h3>
-        <ul className="space-y-2 text-[0.82rem] text-muted leading-relaxed">
-          <li className="flex items-center">
-            <LuArrowRight className="mr-2" /> Building climate ventures at
-            Carbon13
-          </li>
-          <li className="flex items-center">
-            <LuArrowRight className="mr-2" /> Exploring hardware-software
-            product intersections
-          </li>
-          <li className="flex items-center">
-            <LuArrowRight className="mr-2" /> Open to advisory & consulting
-            opportunities
-          </li>
-        </ul>
-      </div> */}
     </div>
   );
 }

@@ -1,22 +1,15 @@
-import type { Metadata } from "next";
 import { BsArrowRight } from "react-icons/bs";
 import PageHero from "@/components/ui/PageHero";
 import { personal } from "@/lib/data";
+import { createPageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Shop",
   description:
     "Shop objects, products, and limited releases from Keniye Koroye.",
-  alternates: {
-    canonical: "/shop",
-  },
-  openGraph: {
-    title: "Shop | Keniyē",
-    description:
-      "Shop objects, products, and limited releases from Keniye Koroye.",
-    url: "/shop",
-  },
-};
+  path: "/shop",
+});
 
 export default function Page() {
   const hasStoreUrl = Boolean(personal.shopUrl);

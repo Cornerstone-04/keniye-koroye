@@ -6,39 +6,11 @@ import { motion } from "motion/react";
 import { BsArrowRight } from "react-icons/bs";
 import FadeIn from "@/components/ui/FadeIn";
 import PageHero from "@/components/ui/PageHero";
-import { patentsContent } from "@/lib/story-pages";
-
-const patentImages = [
-  {
-    src: "/images/patents/knk_dual_angle.png",
-    alt: "Smart Glove System dual angle render",
-    className: "aspect-[4/3]",
-  },
-  {
-    src: "/images/patents/knk_glove_int.png",
-    alt: "Smart Glove System internal component render",
-    className: "aspect-[4/3]",
-  },
-  {
-    src: "/images/patents/echo_glove.png",
-    alt: "Echo Glove gesture render",
-    className: "aspect-square",
-  },
-  {
-    src: "/images/patents/knk_tekglove.png",
-    alt: "Tek Glove wearable render",
-    className: "aspect-[4/5]",
-  },
-];
-
-const registeredDesign = [
-  ["Design number", "6470494"],
-  ["Grant date", "26 September 2025"],
-  ["Registration date", "07 September 2025"],
-  ["Registered owner", "Funfere Keniye Koroye"],
-  ["Design application", "Smart Watch Glove"],
-  ["Classification", "Gloves / Watches and wrist watches"],
-];
+import {
+  patentImages,
+  patentsContent,
+  registeredDesign,
+} from "@/lib/story-pages";
 
 export default function PatentsPage() {
   return (

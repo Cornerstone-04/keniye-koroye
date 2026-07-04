@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import Image from "next/image";
 import type { projects } from "@/lib/data";
-import { WorkOutcomes } from "./work-outcomes";
 import { WorkPills } from "./work-pills";
 
 type Project = (typeof projects)[number];
@@ -67,10 +66,6 @@ export function WorkCard({ project, totalProjects }: WorkCardProps) {
           <p className="text-[0.72rem] leading-[1.7] mb-4 text-[#3a3730]">
             {project.desc}
           </p>
-
-          {project.outcomes ? (
-            <WorkOutcomes outcomes={project.outcomes} />
-          ) : null}
 
           <WorkPills pills={project.pills} />
         </div>

@@ -1,20 +1,13 @@
-import type { Metadata } from "next";
 import TekPage from "@/components/story-pages/tek-page";
+import { createPageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "TEK Grant",
   description:
     "The Taukeme Edwin Koroye Grant honors a legacy of education, technology, opportunity, and community impact.",
-  alternates: {
-    canonical: "/tek",
-  },
-  openGraph: {
-    title: "TEK Grant | Keniyē",
-    description:
-      "The Taukeme Edwin Koroye Grant honors a legacy of education, technology, opportunity, and community impact.",
-    url: "/tek",
-  },
-};
+  path: "/tek",
+});
 
 export default function Page() {
   return <TekPage />;

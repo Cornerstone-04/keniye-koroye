@@ -3,8 +3,8 @@ import Navbar from "@/components/layout/navbar/navbar";
 import Cursor from "@/components/ui/Cursor";
 import Footer from "@/components/layout/Footer";
 import LoadingScreen from "@/components/ui/LoadingScreen";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 import { Playfair_Display, DM_Mono, Fraunces } from "next/font/google";
-// @ts-ignore: Allow importing global CSS without module declarations
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -108,6 +108,7 @@ export default function RootLayout({
         <Cursor />
         <Navbar />
         <main>{children}</main>
+        <ScrollToTop />
         <Footer />
       </body>
     </html>

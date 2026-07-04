@@ -1,20 +1,13 @@
-import type { Metadata } from "next";
 import ContactPage from "@/components/contact/contact-page";
+import { createPageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contact",
   description:
     "Contact Funfere Keniyē Koroye for product management, product development, UX research, and technology collaboration.",
-  alternates: {
-    canonical: "/contact",
-  },
-  openGraph: {
-    title: "Contact | Keniyē",
-    description:
-      "Contact Funfere Keniyē Koroye for product management, product development, UX research, and technology collaboration.",
-    url: "/contact",
-  },
-};
+  path: "/contact",
+});
 
 export default function Page() {
   return <ContactPage />;
