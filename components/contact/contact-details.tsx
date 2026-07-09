@@ -34,25 +34,13 @@ export function ContactDetails() {
               rel={
                 item.href.startsWith("http") ? "noopener noreferrer" : undefined
               }
-              className="inline-flex items-center gap-2 transition-opacity hover:opacity-60 no-underline"
-              style={{
-                fontFamily: "'Fraunces', serif",
-                fontSize: "0.95rem",
-                color: "var(--ink)",
-              }}
+              className="inline-flex items-center gap-2 text-ink hover:text-accent transition-all ease-linear no-underline font-fraunces text-[0.95rem]"
             >
               {item.icon}
               {item.value}
             </a>
           ) : (
-            <span
-              className="inline-flex items-center gap-2"
-              style={{
-                fontFamily: "'Fraunces', serif",
-                fontSize: "0.95rem",
-                color: "var(--ink)",
-              }}
-            >
+            <span className="inline-flex items-center gap-2 font-fraunces text-[0.95rem] text-ink">
               {item.icon}
               {item.value}
             </span>

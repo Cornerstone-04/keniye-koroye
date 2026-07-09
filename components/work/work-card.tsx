@@ -54,7 +54,7 @@ export function WorkCard({ project }: WorkCardProps) {
             {project.year} · {project.client}
           </div>
 
-          <h3 className="font-bold text-[1rem] md:text-[1.1rem] leading-snug mb-2 font-playfair">
+          <h3 className="font-bold text-[1rem] md:text-[1.1rem] leading-snug mb-2 font-playfair uppercase">
             {project.title}
           </h3>
 
