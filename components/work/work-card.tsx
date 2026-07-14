@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import Image from "next/image";
 import type { projects } from "@/lib/data";
 import { WorkPills } from "./work-pills";
@@ -12,14 +12,22 @@ type WorkCardProps = {
   project: Project;
 };
 
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
 export function WorkCard({ project }: WorkCardProps) {
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      variants={cardVariants}
       exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
+      transition={{ layout: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } }}
       className="border-r border-b border-rule"
       data-hover
     >
