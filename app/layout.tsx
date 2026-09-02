@@ -4,8 +4,20 @@ import Cursor from "@/components/ui/Cursor";
 import Footer from "@/components/layout/Footer";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import ScrollToTop from "@/components/ui/ScrollToTop";
-import { Playfair_Display, DM_Mono, Fraunces } from "next/font/google";
+import { RouteScrollReset } from "@/components/layout/route-scroll-reset";
+import {
+  Playfair_Display,
+  DM_Mono,
+  Fraunces,
+  Noto_Sans,
+} from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const notoSans = Noto_Sans({
+  subsets: ["latin"],
+  variable: "--font-noto-sans",
+});
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -101,9 +113,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfairDisplay.variable} ${dmMono.variable} ${fraunces.variable}`}
+      className={cn(
+        playfairDisplay.variable,
+        dmMono.variable,
+        fraunces.variable,
+        notoSans.variable,
+      )}
     >
       <body className="overflow-x-hidden">
+        <RouteScrollReset />
         <LoadingScreen />
         <Cursor />
         <Navbar />

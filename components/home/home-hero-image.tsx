@@ -16,7 +16,7 @@ export function HomeHeroImage({ priority = false }: HomeHeroImageProps) {
       initial={{ opacity: 0, scale: 0.97 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.9, delay: 0.15 }}
-      className="w-full relative overflow-hidden mb-6 bg-ink aspect-3/4"
+      className="relative mb-6 aspect-3/4 w-full overflow-hidden bg-ink"
     >
       <div
         aria-hidden="true"
@@ -36,7 +36,7 @@ export function HomeHeroImage({ priority = false }: HomeHeroImageProps) {
         }`}
       />
 
-      <span className="absolute bottom-3 right-3 text-[0.6rem] tracking-widest uppercase text-paper/90 font-medium font-mono">
+      <span className="absolute right-3 bottom-3 font-mono text-[0.6rem] font-medium tracking-widest text-paper/90 uppercase">
         Funfere Keniyē Koroye
       </span>
     </motion.div>

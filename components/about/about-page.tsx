@@ -5,7 +5,7 @@ import { AboutLayout } from "./about-layout";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen pt-14.25 bg-paper">
+    <div className="min-h-screen bg-paper pt-14.25">
       <AboutHeader />
       <AboutLayout />
     </div>

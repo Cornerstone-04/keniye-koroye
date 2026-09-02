@@ -8,11 +8,11 @@ import { education } from "@/lib/data";
 export function AboutEducation() {
   return (
     <FadeIn delay={0.15}>
-      <h3 className="text-[0.62rem] tracking-[0.2em] uppercase mb-5 text-accent font-mono">
+      <h3 className="mb-5 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
         Education
       </h3>
 
-      <div className="space-y-4 mb-10">
+      <div className="mb-10 space-y-4">
         {education.map((e, i) => (
           <motion.div
             key={e.institution}

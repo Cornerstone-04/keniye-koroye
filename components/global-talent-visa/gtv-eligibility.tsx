@@ -24,23 +24,23 @@ export const GTVEligibility = () => {
   }, [score]);
 
   return (
-    <section className="px-6 md:px-12 py-10 md:py-14 border-b border-rule">
+    <section className="border-b border-rule px-6 py-10 md:px-12 md:py-14">
       <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
         <FadeIn delay={0.1} className="md:sticky md:top-24 md:self-start">
           <div>
             <GTVSectionLabel>Eligibility Self-Assessment</GTVSectionLabel>
-            <h2 className="text-[1.35rem] md:text-2xl font-black leading-tight mb-5">
+            <h2 className="mb-5 text-[1.35rem] leading-tight font-black md:text-2xl">
               Reflect on your readiness.
             </h2>
-            <p className="text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted max-w-xl">
+            <p className="max-w-xl text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
               This is not a formal eligibility checker or legal advice. It is a
               practical prompt to help you see whether your profile is starting
               to show the signals that matter.
             </p>
           </div>
-          <div className="mt-6 bg-cream px-5 py-5 max-w-xl border border-rule">
-            <div className="flex items-center justify-between gap-4 mb-4">
-              <span className="text-[0.6rem] tracking-[0.18em] uppercase text-muted font-mono">
+          <div className="mt-6 max-w-xl border border-rule bg-cream px-5 py-5">
+            <div className="mb-4 flex items-center justify-between gap-4">
+              <span className="font-mono text-[0.6rem] tracking-[0.18em] text-muted uppercase">
                 Readiness Signals
               </span>
               <span className="font-playfair text-3xl font-black text-accent">
@@ -66,7 +66,7 @@ export const GTVEligibility = () => {
             {globalTalentAssessment.map((item, index) => (
               <label
                 key={item.id}
-                className="group grid gap-4 py-5 items-start border-b border-rule transition-colors hover:bg-cream/45"
+                className="group grid items-start gap-4 border-b border-rule py-5 transition-colors hover:bg-cream/45"
                 style={{ gridTemplateColumns: "34px 1fr" }}
               >
                 <input
@@ -82,10 +82,10 @@ export const GTVEligibility = () => {
                   className="mt-1 h-4 w-4 accent-accent"
                 />
                 <span>
-                  <span className="block text-[0.82rem] md:text-[0.9rem] leading-[1.65] text-ink">
+                  <span className="block text-[0.82rem] leading-[1.65] text-ink md:text-[0.9rem]">
                     {item.question}
                   </span>
-                  <span className="mt-2 block text-[0.7rem] md:text-[0.76rem] leading-[1.7] text-muted">
+                  <span className="mt-2 block text-[0.7rem] leading-[1.7] text-muted md:text-[0.76rem]">
                     {item.requirement}
                   </span>
                 </span>

@@ -26,7 +26,7 @@ export default function FlipCard({
       initial="resting"
     >
       <motion.div
-        className="relative w-full h-full"
+        className="relative h-full w-full"
         style={{ transformStyle: "preserve-3d" }}
         variants={{
           resting: { rotateY: 0 },
@@ -36,28 +36,28 @@ export default function FlipCard({
       >
         {/* Front */}
         <div
-          className="absolute inset-0 flex flex-col justify-between p-5 border border-rule bg-paper"
+          className="absolute inset-0 flex flex-col justify-between border border-rule bg-paper p-5"
           style={{
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
           }}
         >
           <div>
-            <div className="text-[0.7rem] tracking-[0.15em] uppercase font-bold font-mono text-accent mb-1">
+            <div className="mb-1 font-mono text-[0.7rem] font-bold tracking-[0.15em] text-accent uppercase">
               {institution}
             </div>
-            <div className="text-[1rem] font-bold leading-snug font-playfair">
+            <div className="font-playfair text-[1rem] leading-snug font-bold">
               {full}
             </div>
-            <div className="text-[0.65rem] tracking-widest mt-2 text-muted font-mono">
+            <div className="mt-2 font-mono text-[0.65rem] tracking-widest text-muted">
               {subject}
             </div>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-[0.6rem] tracking-[0.15em] uppercase text-muted font-mono">
+            <span className="font-mono text-[0.6rem] tracking-[0.15em] text-muted uppercase">
               {year}
             </span>
-            <span className="text-[0.6rem] tracking-[0.15em] uppercase text-muted font-mono">
+            <span className="font-mono text-[0.6rem] tracking-[0.15em] text-muted uppercase">
               Hover to view ↗
             </span>
           </div>
@@ -78,8 +78,8 @@ export default function FlipCard({
             fill
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute bottom-0 left-0 right-0 px-4 py-2 bg-ink/70">
-            <span className="text-[0.6rem] tracking-[0.15em] uppercase text-white font-mono">
+          <div className="absolute right-0 bottom-0 left-0 bg-ink/70 px-4 py-2">
+            <span className="font-mono text-[0.6rem] tracking-[0.15em] text-white uppercase">
               {institution} — {year}
             </span>
           </div>

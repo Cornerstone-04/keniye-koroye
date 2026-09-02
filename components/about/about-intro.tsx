@@ -7,7 +7,7 @@ export function AboutIntro() {
   return (
     <FadeIn delay={0.15}>
       <p
-        className="leading-[1.75] mb-6 font-fraunces"
+        className="mb-6 font-fraunces leading-[1.75]"
         style={{ fontSize: "clamp(1rem, 3vw, 1.2rem)", maxWidth: "52ch" }}
       >
         {bio.intro}

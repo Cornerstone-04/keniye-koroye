@@ -27,16 +27,16 @@ export function WorkDetailBlock({
       transition={{ duration: 0.5, delay, ease: workDetailEase }}
       className="border-t border-rule pt-5"
     >
-      <div className="mb-4 text-[0.62rem] tracking-[0.2em] uppercase text-accent font-mono">
+      <div className="mb-4 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
         {label}
       </div>
 
       {title ? (
-        <h2 className="mb-4 text-[1.05rem] md:text-[1.2rem] font-bold leading-snug">
+        <h2 className="mb-4 text-[1.05rem] leading-snug font-bold md:text-[1.2rem]">
           {title}
         </h2>
       ) : null}
-      <p className="text-[0.9rem] leading-[1.85] text-[#3a3730] font-fraunces">
+      <p className="font-fraunces text-[0.9rem] leading-[1.85] text-[#3a3730]">
         {content}
       </p>
     </motion.div>
@@ -45,7 +45,7 @@ export function WorkDetailBlock({
 
 export function WorkDetailSectionHeader({ label }: { label: string }) {
   return (
-    <div className="px-6 md:px-12 py-8 md:py-10 border-b border-rule">
+    <div className="border-b border-rule px-6 py-8 md:px-12 md:py-10">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -53,10 +53,10 @@ export function WorkDetailSectionHeader({ label }: { label: string }) {
         transition={{ duration: 0.45, ease: workDetailEase }}
         className="flex items-center gap-3"
       >
-        <span className="text-[0.62rem] tracking-[0.2em] uppercase text-accent font-mono">
+        <span className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
           {label}
         </span>
-        <span className="flex-1 h-px bg-rule" />
+        <span className="h-px flex-1 bg-rule" />
       </motion.div>
     </div>
   );
@@ -80,7 +80,7 @@ export function WorkDetailListBlock({
       viewport={workDetailViewport}
       transition={{ duration: 0.5, delay, ease: workDetailEase }}
     >
-      <div className="text-[0.62rem] tracking-[0.2em] uppercase mb-5 text-accent font-mono">
+      <div className="mb-5 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
         {label}
       </div>
       <div className="border-t border-rule">
@@ -107,20 +107,20 @@ export function WorkDetailOutcomesBlock({
       transition={{ duration: 0.5, delay: 0.3, ease: workDetailEase }}
       className="lg:col-span-2"
     >
-      <div className="text-[0.62rem] tracking-[0.2em] uppercase mb-5 text-accent font-mono">
+      <div className="mb-5 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
         Outcomes
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-rule">
+      <div className="grid grid-cols-1 border-t border-rule sm:grid-cols-3">
         {outcomes.map((outcome) => (
           <div
             key={`${outcome.pct}-${outcome.label}`}
-            className="border-b border-r border-rule py-5 px-5"
+            className="border-r border-b border-rule px-5 py-5"
           >
-            <div className="font-black text-[1.65rem] font-playfair">
+            <div className="font-playfair text-[1.65rem] font-black">
               {outcome.pct}
             </div>
-            <div className="mt-2 text-[0.72rem] leading-snug text-muted font-mono">
+            <div className="mt-2 font-mono text-[0.72rem] leading-snug text-muted">
               {outcome.label}
             </div>
           </div>

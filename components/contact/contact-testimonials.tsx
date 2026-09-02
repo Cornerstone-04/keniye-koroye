@@ -7,7 +7,7 @@ export function ContactTestimonials() {
   return (
     <div>
       <div
-        className="px-6 md:px-12 py-3 flex items-center gap-3"
+        className="flex items-center gap-3 px-6 py-3 md:px-12"
         style={{ borderBottom: "1px solid var(--rule)" }}
       >
         <span
@@ -20,7 +20,7 @@ export function ContactTestimonials() {
           Client Testimonials
         </span>
 
-        <span className="flex-1 h-px" style={{ background: "var(--rule)" }} />
+        <span className="h-px flex-1" style={{ background: "var(--rule)" }} />
       </div>
 
       <div
@@ -36,7 +36,7 @@ export function ContactTestimonials() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 + index * 0.12 }}
-            className="px-6 md:px-8 py-6 text-center"
+            className="px-6 py-6 text-center md:px-8"
             style={{
               borderBottom:
                 index < testimonials.length - 1
@@ -45,7 +45,7 @@ export function ContactTestimonials() {
             }}
           >
             <p
-              className="text-[0.95rem] leading-snug mb-2"
+              className="mb-2 text-[0.95rem] leading-snug"
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontStyle: "italic",

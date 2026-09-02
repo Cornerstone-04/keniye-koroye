@@ -7,14 +7,14 @@ import { contactItems } from "./contact-types";
 export function ContactDetails() {
   return (
     <FadeIn delay={0.2}>
-      <h3 className="text-[0.62rem] tracking-[0.2em] uppercase mb-6 font-mono text-accent">
+      <h3 className="mb-6 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
         Contact Details
       </h3>
 
       {contactItems.map((item, index) => (
         <motion.div
           key={item.label}
-          className="grid gap-4 py-4 items-end"
+          className="grid items-end gap-4 py-4"
           style={{
             gridTemplateColumns: "80px 1fr",
             borderBottom: "1px solid var(--rule)",
@@ -23,7 +23,7 @@ export function ContactDetails() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 + index * 0.08 }}
         >
-          <span className="text-[0.6rem] tracking-[0.15em] uppercase pt-0.5 text-muted font-mono">
+          <span className="pt-0.5 font-mono text-[0.6rem] tracking-[0.15em] text-muted uppercase">
             {item.label}
           </span>
 
@@ -34,7 +34,7 @@ export function ContactDetails() {
               rel={
                 item.href.startsWith("http") ? "noopener noreferrer" : undefined
               }
-              className="inline-flex items-center gap-2 text-ink hover:text-accent transition-all ease-linear no-underline font-fraunces text-[0.95rem]"
+              className="inline-flex items-center gap-2 font-fraunces text-[0.95rem] text-ink no-underline transition-all ease-linear hover:text-accent"
             >
               {item.icon}
               {item.value}

@@ -10,7 +10,7 @@ export function AboutLayout() {
       style={{ gridTemplateColumns: "1.2fr 1px 1fr" }}
     >
       <AboutMain />
-      <div className="hidden md:block bg-rule" />
+      <div className="hidden bg-rule md:block" />
       <AboutSidebar />
     </div>
   );

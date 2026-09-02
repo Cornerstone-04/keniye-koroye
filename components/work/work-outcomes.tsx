@@ -11,13 +11,13 @@ type WorkOutcomesProps = {
 
 export function WorkOutcomes({ outcomes }: WorkOutcomesProps) {
   return (
-    <div className="grid grid-cols-3 gap-2 mb-4 pt-3 border-t border-rule">
+    <div className="mb-4 grid grid-cols-3 gap-2 border-t border-rule pt-3">
       {outcomes.map((outcome) => (
         <div key={`${outcome.pct}-${outcome.label}`} className="text-center">
-          <div className="font-black text-[1.05rem] font-playfair">
+          <div className="font-playfair text-[1.05rem] font-black">
             {outcome.pct}
           </div>
-          <div className="text-[0.52rem] leading-tight mt-1 text-muted font-mono">
+          <div className="mt-1 font-mono text-[0.52rem] leading-tight text-muted">
             {outcome.label}
           </div>
         </div>

@@ -42,7 +42,7 @@ function ShopHero({ product }: { product: ShopProduct }) {
               className="font-playfair leading-[0.88] font-black -tracking-[0.03em]"
               style={{ fontSize: "clamp(3.4rem, 8vw, 7.5rem)" }}
             >
-              Collectible furniture by Keniyē.
+              Collectible items by Keniyē.
             </h1>
           </div>
         </FadeIn>

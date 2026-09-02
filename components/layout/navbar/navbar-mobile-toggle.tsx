@@ -13,7 +13,7 @@ export function NavbarMobileToggle({
 }: NavbarMobileToggleProps) {
   return (
     <button
-      className="md:hidden flex flex-col gap-1.5 p-1 z-60"
+      className="z-60 flex flex-col gap-1.5 p-1 md:hidden"
       onClick={toggleAction}
       aria-label="Toggle menu"
       aria-expanded={open}

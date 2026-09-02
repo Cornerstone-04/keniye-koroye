@@ -34,7 +34,7 @@ export default function LoadingScreen() {
             <div className="overflow-hidden">
               <p
                 aria-hidden="true"
-                className="page-loader-word font-black uppercase leading-none font-playfair -tracking-[0.02em]"
+                className="page-loader-word font-playfair leading-none font-black -tracking-[0.02em] uppercase"
                 style={{ fontSize: "clamp(3.5rem, 18vw, 6rem)" }}
               >
                 Ken<em className="text-accent italic">I</em>YĒ

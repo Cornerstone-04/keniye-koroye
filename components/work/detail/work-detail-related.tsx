@@ -7,11 +7,7 @@ import { WorkPills } from "../work-pills";
 import { WorkDetailSectionHeader } from "./work-detail-blocks";
 import { workDetailEase, workDetailViewport } from "./work-detail-shared";
 
-export function WorkDetailRelated({
-  projects,
-}: {
-  projects: Project[];
-}) {
+export function WorkDetailRelated({ projects }: { projects: Project[] }) {
   if (!projects.length) return null;
 
   return (
@@ -32,12 +28,12 @@ export function WorkDetailRelated({
           >
             <Link
               href={`/work/${item.slug}`}
-              className="group block h-full border-b border-r border-rule p-6 no-underline transition-colors ease-linear hover:bg-cream"
+              className="group block h-full border-r border-b border-rule p-6 no-underline transition-colors ease-linear hover:bg-cream"
             >
-              <p className="text-[0.58rem] tracking-[0.16em] uppercase text-muted font-mono">
+              <p className="font-mono text-[0.58rem] tracking-[0.16em] text-muted uppercase">
                 {item.tagLabel}
               </p>
-              <h2 className="my-4 font-playfair text-[1.2rem] font-bold leading-tight text-ink transition-colors ease-linear group-hover:text-accent">
+              <h2 className="my-4 font-playfair text-[1.2rem] leading-tight font-bold text-ink transition-colors ease-linear group-hover:text-accent">
                 {item.title}
               </h2>
               <WorkPills pills={item.pills} />

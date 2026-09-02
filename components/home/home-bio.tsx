@@ -9,7 +9,7 @@ export function HomeBio() {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.25 }}
-      className="text-[0.95rem] leading-[1.8] mb-8 font-fraunces"
+      className="mb-8 font-fraunces text-[0.95rem] leading-[1.8]"
     >
       {bio.intro}{" "}
       <strong

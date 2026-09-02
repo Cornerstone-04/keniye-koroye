@@ -9,7 +9,7 @@ type WorkFiltersProps = {
 
 export function WorkFilters({ active, changeAction }: WorkFiltersProps) {
   return (
-    <div className="px-6 md:px-12 py-4 flex gap-2 flex-wrap border-b border-rule">
+    <div className="flex flex-wrap gap-2 border-b border-rule px-6 py-4 md:px-12">
       {filters.map((filter) => {
         const isActive = active === filter.key;
 
@@ -18,10 +18,10 @@ export function WorkFilters({ active, changeAction }: WorkFiltersProps) {
             key={filter.key}
             type="button"
             onClick={() => changeAction(filter.key)}
-            className={`px-4 py-[0.4rem] text-[0.62rem] tracking-[0.15em] uppercase transition-all duration-200 font-mono border ${
+            className={`border px-4 py-[0.4rem] font-mono text-[0.62rem] tracking-[0.15em] uppercase transition-all duration-200 ${
               isActive
-                ? "bg-ink text-paper border-ink"
-                : "bg-transparent text-muted border-rule"
+                ? "border-ink bg-ink text-paper"
+                : "border-rule bg-transparent text-muted"
             }`}
             aria-pressed={isActive}
           >

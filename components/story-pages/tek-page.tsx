@@ -10,7 +10,7 @@ import { tekContent } from "@/lib/story-pages";
 
 export default function TekPage() {
   return (
-    <div className="min-h-screen pt-14.25 bg-paper">
+    <div className="min-h-screen bg-paper pt-14.25">
       <PageHero
         as="h1"
         eyebrow={tekContent.eyebrow}
@@ -22,7 +22,7 @@ export default function TekPage() {
           </>
         }
       >
-        <p className="max-w-xl text-[0.95rem] md:text-[1.05rem] leading-[1.8] text-muted font-fraunces italic">
+        <p className="max-w-xl font-fraunces text-[0.95rem] leading-[1.8] text-muted italic md:text-[1.05rem]">
           {tekContent.hero}
         </p>
       </PageHero>
@@ -31,10 +31,10 @@ export default function TekPage() {
         className="flex flex-col md:grid"
         style={{ gridTemplateColumns: "1.2fr 1px 1fr" }}
       >
-        <main className="px-6 md:px-12 py-10">
+        <main className="px-6 py-10 md:px-12">
           <FadeIn delay={0.12}>
             <p
-              className="leading-[1.75] mb-8 font-fraunces"
+              className="mb-8 font-fraunces leading-[1.75]"
               style={{ fontSize: "clamp(1rem, 3vw, 1.2rem)", maxWidth: "52ch" }}
             >
               {tekContent.title}
@@ -51,14 +51,14 @@ export default function TekPage() {
           </div>
 
           <FadeIn delay={0.24}>
-            <div className="my-8 pt-8 border-t border-rule">
-              <blockquote className="font-playfair italic text-[1rem] leading-[1.8] text-muted">
+            <div className="my-8 border-t border-rule pt-8">
+              <blockquote className="font-playfair text-[1rem] leading-[1.8] text-muted italic">
                 "The work continues by turning memory into opportunity."
               </blockquote>
             </div>
           </FadeIn>
 
-          <div className="mt-10 pt-8 border-t border-rule">
+          <div className="mt-10 border-t border-rule pt-8">
             <SectionLabel>Core Initiatives</SectionLabel>
             <div className="mt-6 border-t border-rule">
               {tekContent.initiatives.map((initiative, index) => (
@@ -70,7 +70,7 @@ export default function TekPage() {
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.45, delay: index * 0.04 }}
                 >
-                  <h2 className="text-[0.95rem] md:text-[1rem] font-bold leading-snug">
+                  <h2 className="text-[0.95rem] leading-snug font-bold md:text-[1rem]">
                     {initiative.title}
                   </h2>
                   <p className="mt-2 max-w-2xl text-[0.85rem] leading-[1.85] text-muted">
@@ -81,7 +81,7 @@ export default function TekPage() {
             </div>
           </div>
 
-          <div className="mt-10 pt-8 border-t border-rule">
+          <div className="mt-10 border-t border-rule pt-8">
             <SectionLabel>Who This Supports</SectionLabel>
             <div className="mt-6 border-t border-rule">
               {tekContent.supports.map((item, index) => (
@@ -100,18 +100,18 @@ export default function TekPage() {
           </div>
 
           <FadeIn delay={0.1}>
-            <div className="mt-10 pt-8 border-t border-rule">
+            <div className="mt-10 border-t border-rule pt-8">
               <SectionLabel>Closing Note</SectionLabel>
-              <p className="mt-6 max-w-3xl font-playfair italic text-[1rem] md:text-[1.15rem] leading-[1.8] text-muted">
+              <p className="mt-6 max-w-3xl font-playfair text-[1rem] leading-[1.8] text-muted italic md:text-[1.15rem]">
                 {tekContent.closing}
               </p>
             </div>
           </FadeIn>
         </main>
 
-        <div className="hidden md:block bg-rule" />
+        <div className="hidden bg-rule md:block" />
 
-        <aside className="px-6 md:px-12 py-10 bg-cream">
+        <aside className="bg-cream px-6 py-10 md:px-12">
           <FadeIn delay={0.15}>
             <div className="sticky top-20 space-y-8">
               <figure className="border-t border-rule pt-5">
@@ -125,7 +125,7 @@ export default function TekPage() {
                     className="object-cover object-center"
                   />
                 </div>
-                <figcaption className="mt-3 text-[0.58rem] tracking-[0.16em] uppercase text-muted font-mono">
+                <figcaption className="mt-3 font-mono text-[0.58rem] tracking-[0.16em] text-muted uppercase">
                   Legacy / Community / Impact
                 </figcaption>
               </figure>
@@ -141,7 +141,7 @@ export default function TekPage() {
                   href={tekContent.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:px-7 py-3.5 transition-colors ease-linear duration-200 hover:bg-accent"
+                  className="mt-8 inline-flex items-center gap-3 bg-ink px-6 py-3.5 font-mono text-[0.65rem] tracking-[0.2em] text-paper uppercase no-underline transition-colors duration-200 ease-linear hover:bg-accent md:px-7"
                 >
                   Stay Updated
                   <span>
@@ -160,7 +160,7 @@ export default function TekPage() {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <FadeIn delay={0.08}>
-      <h2 className="text-[0.62rem] tracking-[0.2em] uppercase text-accent font-mono">
+      <h2 className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
         {children}
       </h2>
     </FadeIn>

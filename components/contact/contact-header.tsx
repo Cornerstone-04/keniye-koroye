@@ -12,7 +12,7 @@ export function ContactHeader() {
         </>
       }
     >
-      <p className="leading-[1.75] font-fraunces italic text-[1.05rem] text-muted">
+      <p className="font-fraunces text-[1.05rem] leading-[1.75] text-muted italic">
         {personal.tagline}
       </p>
     </PageHero>

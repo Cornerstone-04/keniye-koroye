@@ -58,21 +58,21 @@ export function WorkDetailPage({ project }: WorkDetailPageProps) {
   ].filter((item): item is [string, string] => Boolean(item[1]));
 
   return (
-    <div className="min-h-screen pt-14.25 bg-paper">
-      <section className="px-6 md:px-12 pt-10 md:pt-14 pb-10 md:pb-14 border-b-[3px] border-double border-ink">
+    <div className="min-h-screen bg-paper pt-14.25">
+      <section className="border-b-[3px] border-double border-ink px-6 pt-10 pb-10 md:px-12 md:pt-14 md:pb-14">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center gap-3 mb-8"
+          className="mb-8 flex items-center gap-3"
         >
           <Link
             href="/work"
-            className="text-[0.6rem] tracking-[0.25em] uppercase text-accent font-mono no-underline inline-flex gap-2 items-center"
+            className="inline-flex items-center gap-2 font-mono text-[0.6rem] tracking-[0.25em] text-accent uppercase no-underline"
           >
             <BsArrowLeft /> Back to Work
           </Link>
-          <span className="flex-1 h-px bg-rule" />
+          <span className="h-px flex-1 bg-rule" />
         </motion.div>
 
         <motion.div
@@ -82,19 +82,19 @@ export function WorkDetailPage({ project }: WorkDetailPageProps) {
           className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end"
         >
           <div>
-            <div className="mb-4 text-[0.62rem] tracking-[0.18em] uppercase text-muted font-mono">
+            <div className="mb-4 font-mono text-[0.62rem] tracking-[0.18em] text-muted uppercase">
               {project.year} / {project.client}
             </div>
 
             <h1
-              className="font-black leading-[0.92] font-playfair"
+              className="font-playfair leading-[0.92] font-black"
               style={{ fontSize: "clamp(2.2rem, 8vw, 5.5rem)" }}
             >
               {project.title}
             </h1>
 
             {details?.summary || project.desc ? (
-              <p className="mt-6 max-w-[62ch] text-[0.95rem] md:text-[1.05rem] leading-[1.85] text-[#3a3730] font-fraunces">
+              <p className="mt-6 max-w-[62ch] font-fraunces text-[0.95rem] leading-[1.85] text-[#3a3730] md:text-[1.05rem]">
                 {details?.summary || project.desc}
               </p>
             ) : null}
@@ -114,14 +114,14 @@ export function WorkDetailPage({ project }: WorkDetailPageProps) {
         priority
       />
 
-      <section className="px-6 md:px-12 py-10 md:py-16 border-b border-rule">
+      <section className="border-b border-rule px-6 py-10 md:px-12 md:py-16">
         <div>
           {details?.headline ? (
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.12 }}
-              className="max-w-200 font-playfair italic text-[1.1rem] md:text-[1.45rem] leading-[1.65] text-muted"
+              className="max-w-200 font-playfair text-[1.1rem] leading-[1.65] text-muted italic md:text-[1.45rem]"
             >
               {details.headline}
             </motion.p>
@@ -175,13 +175,14 @@ export function WorkDetailPage({ project }: WorkDetailPageProps) {
                 key={image}
                 image={image}
                 title={project.title}
+                expanded={galleryImages.length === 1}
               />
             ))}
           </div>
         </section>
       ) : null}
 
-      <section className="px-6 md:px-12 py-10 md:py-16 border-b border-rule">
+      <section className="border-b border-rule px-6 py-10 md:px-12 md:py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
           {detailGroups.map((group, index) => (
             <WorkDetailListBlock

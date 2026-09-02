@@ -31,15 +31,15 @@ export default function PageHero({
 
   return (
     <section
-      className={`px-6 md:px-12 pt-10 pb-8 border-b-[3px] border-double border-ink ${className}`}
+      className={`border-b-[3px] border-double border-ink px-6 pt-10 pb-8 md:px-12 ${className}`}
     >
       {eyebrow && (
         <FadeIn delay={0.05}>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-[0.6rem] tracking-[0.25em] uppercase text-accent font-mono">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="font-mono text-[0.6rem] tracking-[0.25em] text-accent uppercase">
               {eyebrow}
             </span>
-            <span className="flex-1 h-px bg-rule" />
+            <span className="h-px flex-1 bg-rule" />
           </div>
         </FadeIn>
       )}
@@ -47,13 +47,13 @@ export default function PageHero({
       <div
         className={
           contentLayout === "split"
-            ? `flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16 md:items-end ${innerClassName}`
+            ? `flex flex-col gap-8 md:grid md:grid-cols-2 md:items-end md:gap-16 ${innerClassName}`
             : `flex flex-col gap-8 ${innerClassName}`
         }
       >
         <FadeIn delay={titleDelay}>
           <Heading
-            className={`font-black leading-[0.95] font-playfair -tracking-[0.02em] ${headlineClassName}`}
+            className={`font-playfair leading-[0.95] font-black -tracking-[0.02em] ${headlineClassName}`}
             style={{ fontSize: "clamp(2.2rem, 8vw, 5.5rem)" }}
           >
             {title}
