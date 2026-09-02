@@ -9,13 +9,13 @@ import { HomeDisciplines } from "./home-disciplines";
 
 export function HomeMobileLayout() {
   return (
-    <div className="flex-1 md:hidden flex flex-col border-b border-rule">
+    <div className="flex flex-1 flex-col border-b border-rule md:hidden">
       <div className="px-6 pt-8">
         <HomeHeroImage priority={false} />
         <HomeQuote className="mb-8" />
       </div>
 
-      <div className="px-6 pb-8 border-b border-rule">
+      <div className="border-b border-rule px-6 pb-8">
         <HomeBio />
         <HomeCta />
       </div>

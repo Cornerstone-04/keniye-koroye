@@ -6,20 +6,20 @@ import { GTVJourneyImage } from "./gtv-journey-image";
 export const GlobalTalentVisaJourney = () => {
   return (
     <section className="border-b border-rule">
-      <div className="px-6 md:px-12 py-10 md:py-14">
+      <div className="px-6 py-10 md:px-12 md:py-14">
         <GTVSectionLabel>My Journey</GTVSectionLabel>
 
-        <div className="grid grid-cols-1 items-stretch md:grid-cols-2 gap-8 md:gap-16">
+        <div className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 md:gap-16">
           <FadeIn delay={0.1}>
             <div>
               <h2
-                className="font-black leading-tight font-playfair -tracking-[0.02em] mb-6"
+                className="mb-6 font-playfair leading-tight font-black -tracking-[0.02em]"
                 style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
               >
                 The application started years before I applied.
               </h2>
 
-              <div className="space-y-4 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
+              <div className="space-y-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
                 <p>
                   One of the biggest misconceptions about the Global Talent Visa
                   is that the application begins when you decide to apply.
@@ -47,17 +47,14 @@ export const GlobalTalentVisaJourney = () => {
                 </p>
               </div>
 
-              <div className="mt-6 pt-5 border-t border-rule">
-                <span className="text-[0.6rem] tracking-[0.18em] uppercase text-accent font-mono">
+              <div className="mt-6 border-t border-rule pt-5">
+                <span className="font-mono text-[0.6rem] tracking-[0.18em] text-accent uppercase">
                   Benefits Of The Visa
                 </span>
                 <div className="mt-4 grid gap-0 border-t border-rule">
                   {visaBenefits.map((benefit) => (
-                    <div
-                      key={benefit}
-                      className="border-b border-rule py-3.5"
-                    >
-                      <span className="text-[0.76rem] md:text-[0.82rem] leading-snug text-muted">
+                    <div key={benefit} className="border-b border-rule py-3.5">
+                      <span className="text-[0.76rem] leading-snug text-muted md:text-[0.82rem]">
                         {benefit}
                       </span>
                     </div>

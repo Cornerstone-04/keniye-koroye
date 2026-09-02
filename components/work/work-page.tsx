@@ -23,6 +23,9 @@ const allTabProjectOrder = [
   "omi",
   "equalizer",
   "cowrie-heel",
+  "bunka-cabinet",
+  "bunka-shelf",
+  "bunka-totem",
 ];
 
 export default function WorkPage() {
@@ -43,7 +46,7 @@ export default function WorkPage() {
   }, [active]);
 
   return (
-    <div className="min-h-screen pt-14.25 bg-paper">
+    <div className="min-h-screen bg-paper pt-14.25">
       <WorkHeader />
       <WorkFilters active={active} changeAction={setActive} />
       <WorkGrid projects={filtered} />

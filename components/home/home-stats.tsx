@@ -22,10 +22,10 @@ export function HomeStats({ mobile = false }: HomeStatsProps) {
               transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
               className={`py-4 pr-4 ${i < 2 ? "border-b border-rule" : ""}`}
             >
-              <div className="font-bold leading-none font-playfair text-[2rem]">
+              <div className="font-playfair text-[2rem] leading-none font-bold">
                 {s.num}
               </div>
-              <div className="mt-1 text-[0.58rem] tracking-[0.15em] uppercase text-muted font-mono">
+              <div className="mt-1 font-mono text-[0.58rem] tracking-[0.15em] text-muted uppercase">
                 {s.label}
               </div>
             </motion.div>
@@ -44,12 +44,12 @@ export function HomeStats({ mobile = false }: HomeStatsProps) {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
-          className={`pb-6 mb-6 ${i < stats.length - 1 ? "border-b border-rule" : ""}`}
+          className={`mb-6 pb-6 ${i < stats.length - 1 ? "border-b border-rule" : ""}`}
         >
-          <div className="font-bold leading-none font-playfair text-[2.2rem]">
+          <div className="font-playfair text-[2.2rem] leading-none font-bold">
             {s.num}
           </div>
-          <div className="mt-1 text-[0.62rem] tracking-[0.2em] uppercase text-muted font-mono">
+          <div className="mt-1 font-mono text-[0.62rem] tracking-[0.2em] text-muted uppercase">
             {s.label}
           </div>
         </motion.div>
@@ -65,14 +65,14 @@ function GlobalTalentPrompt({ mobile = false }: HomeStatsProps) {
       initial={{ opacity: 0, y: mobile ? 12 : 0, x: mobile ? 0 : -20 }}
       animate={{ opacity: 1, y: 0, x: 0 }}
       transition={{ duration: 0.6, delay: 0.6 }}
-      className={mobile ? "mt-6 pt-6 border-t border-rule" : "pt-2"}
+      className={mobile ? "mt-6 border-t border-rule pt-6" : "pt-2"}
     >
-      <p className="mb-4 text-[0.75rem] leading-[1.75] text-muted font-mono">
+      <p className="mb-4 font-mono text-[0.75rem] leading-[1.75] text-muted">
         Planning to apply for the Global Talent Visa?
       </p>
       <Link
         href="/global-talent-visa"
-        className="inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:px-7 py-3.5 transition-colors duration-200 hover:bg-accent"
+        className="inline-flex items-center gap-3 bg-ink px-6 py-3.5 font-mono text-[0.65rem] tracking-[0.2em] text-paper uppercase no-underline transition-colors duration-200 hover:bg-accent md:px-7"
       >
         I can help
         <span>

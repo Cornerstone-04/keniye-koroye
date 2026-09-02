@@ -8,7 +8,7 @@ import { GTVEligibility } from "./gtv-eligibility";
 
 export default function GlobalTalentVisaPage() {
   return (
-    <div className="min-h-screen pt-14.25 bg-paper">
+    <div className="min-h-screen bg-paper pt-14.25">
       <GlobalTalentVisaHeader />
       <GlobalTalentVisaIntro />
       <GlobalTalentVisaJourney />

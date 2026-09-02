@@ -40,12 +40,12 @@ export function NavbarMobileMenu({
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,0,0,0.04),transparent_38%)]" />
               {/*nav tracker*/}
-              <div className="absolute right-5 top-28 font-playfair text-[7rem] leading-none italic text-ink/5">
+              <div className="absolute top-28 right-5 font-playfair text-[7rem] leading-none text-ink/5 italic">
                 {displayIndex}
               </div>
             </div>
 
-            <div className="relative flex min-h-screen flex-col justify-between px-6 pb-8 pt-24">
+            <div className="relative flex min-h-screen flex-col justify-between px-6 pt-24 pb-8">
               <div className="space-y-8">
                 <nav aria-label="Mobile Navigation">
                   <ul className="flex flex-col gap-4">
@@ -66,7 +66,7 @@ export function NavbarMobileMenu({
                             className="group flex items-end justify-between gap-4 no-underline"
                           >
                             <div className="flex items-start gap-4">
-                              <span className="mt-1 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted">
+                              <span className="mt-1 font-mono text-[0.65rem] tracking-[0.18em] text-muted uppercase">
                                 0{index + 1}
                               </span>
 
@@ -109,7 +109,7 @@ export function NavbarMobileMenu({
                 className="flex items-end justify-between gap-6 border-t border-rule pt-6"
               >
                 <div className="space-y-2">
-                  <p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-muted">
+                  <p className="font-mono text-[0.62rem] tracking-[0.24em] text-muted uppercase">
                     Vol. I — 2026
                   </p>
                 </div>

@@ -9,10 +9,10 @@ export function HomeMasthead() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="px-6 md:px-12 py-8 border-b-[3px] border-double border-ink font-mono"
+      className="border-b-[3px] border-double border-ink px-6 py-8 font-mono md:px-12"
     >
       {/* Mobile */}
-      <div className="flex flex-col items-center text-center md:hidden mb-2">
+      <div className="mb-2 flex flex-col items-center text-center md:hidden">
         <motion.h1
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -21,32 +21,32 @@ export function HomeMasthead() {
             delay: 0.1,
             ease: [0.16, 1, 0.3, 1] as const,
           }}
-          className="font-black uppercase leading-none font-playfair -tracking-[0.02em]"
+          className="font-playfair leading-none font-black -tracking-[0.02em] uppercase"
           style={{ fontSize: "clamp(3.5rem, 18vw, 6rem)" }}
         >
           KEN<em className="text-accent italic">I</em>YĒ
         </motion.h1>
 
-        <p className="mt-2 text-[0.82rem] italic font-fraunces text-muted">
+        <p className="mt-2 font-fraunces text-[0.82rem] text-muted italic">
           Building impactful technology
         </p>
 
         <div className="mt-2 flex flex-col items-center gap-0.5">
-          <span className="text-[0.6rem] tracking-[0.12em] uppercase text-muted">
+          <span className="text-[0.6rem] tracking-[0.12em] text-muted uppercase">
             Product Manager
           </span>
-          <span className="text-[0.6rem] tracking-[0.12em] uppercase text-muted">
+          <span className="text-[0.6rem] tracking-[0.12em] text-muted uppercase">
             Product Developer
           </span>
-          <span className="text-[0.6rem] tracking-[0.12em] uppercase text-muted">
+          <span className="text-[0.6rem] tracking-[0.12em] text-muted uppercase">
             Product Researcher
           </span>
         </div>
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:grid grid-cols-3 items-end gap-8">
-        <div className="text-[0.62rem] tracking-[0.15em] uppercase leading-loose text-muted">
+      <div className="hidden grid-cols-3 items-end gap-8 md:grid">
+        <div className="text-[0.62rem] leading-loose tracking-[0.15em] text-muted uppercase">
           Product Manager
           <br />
           Product Developer
@@ -63,18 +63,18 @@ export function HomeMasthead() {
               delay: 0.1,
               ease: [0.16, 1, 0.3, 1] as const,
             }}
-            className="font-black uppercase leading-none font-playfair -tracking-[0.02em]"
+            className="font-playfair leading-none font-black -tracking-[0.02em] uppercase"
             style={{ fontSize: "clamp(3.5rem, 9vw, 7.5rem)" }}
           >
             KEN<em className="text-accent italic">I</em>YĒ
           </motion.h1>
 
-          <p className="mt-2 text-[0.9rem] font-fraunces italic text-muted">
+          <p className="mt-2 font-fraunces text-[0.9rem] text-muted italic">
             Building impactful technology
           </p>
         </div>
 
-        <div className="text-right text-[0.62rem] tracking-widest leading-loose text-muted">
+        <div className="text-right text-[0.62rem] leading-loose tracking-widest text-muted">
           {personal.location}
         </div>
       </div>

@@ -10,7 +10,7 @@ export function WorkPills({ pills }: WorkPillsProps) {
       {pills.map((pill) => (
         <span
           key={pill}
-          className="px-2 py-[0.2rem] text-[0.58rem] tracking-[0.12em] uppercase border border-rule text-muted font-mono"
+          className="border border-rule px-2 py-[0.2rem] font-mono text-[0.58rem] tracking-[0.12em] text-muted uppercase"
         >
           {pill}
         </span>

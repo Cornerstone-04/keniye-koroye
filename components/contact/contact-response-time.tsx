@@ -9,7 +9,7 @@ export function ContactResponseTime() {
         className="mt-10 pt-8"
         style={{ borderTop: "1px solid var(--rule)" }}
       >
-        <div className="flex items-center gap-3 mb-4">
+        <div className="mb-4 flex items-center gap-3">
           <span
             className="text-[0.6rem] tracking-[0.25em] uppercase"
             style={{
@@ -20,7 +20,7 @@ export function ContactResponseTime() {
             Response Time
           </span>
 
-          <span className="flex-1 h-px" style={{ background: "var(--rule)" }} />
+          <span className="h-px flex-1" style={{ background: "var(--rule)" }} />
         </div>
 
         <p

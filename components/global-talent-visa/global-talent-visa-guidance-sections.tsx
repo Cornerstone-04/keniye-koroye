@@ -8,13 +8,13 @@ import { GTVSectionLabel } from "./gtv-section-label";
 export const GlobalTalentVisaGuidanceSections = () => {
   return (
     <section className="border-b border-rule">
-      <div className="px-6 md:px-12 pt-10 md:pt-14 pb-8 border-b border-rule">
+      <div className="border-b border-rule px-6 pt-10 pb-8 md:px-12 md:pt-14">
         <div className="grid gap-6 md:grid-cols-[0.85fr_1.15fr] md:items-end">
           <FadeIn delay={0.05}>
             <div>
               <GTVSectionLabel>Key Things To Understand</GTVSectionLabel>
               <h2
-                className="font-black leading-tight font-playfair -tracking-[0.02em]"
+                className="font-playfair leading-tight font-black -tracking-[0.02em]"
                 style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
               >
                 Build the profile before you organise the paperwork.
@@ -22,7 +22,7 @@ export const GlobalTalentVisaGuidanceSections = () => {
             </div>
           </FadeIn>
           <FadeIn delay={0.12}>
-            <p className="max-w-2xl text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
+            <p className="max-w-2xl text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
               These notes are the practical ideas behind the application:
               positioning, proof, validation, leadership, and long-term
               visibility.
@@ -35,7 +35,7 @@ export const GlobalTalentVisaGuidanceSections = () => {
         className="flex flex-col md:grid"
         style={{ gridTemplateColumns: "1fr 1px 1fr" }}
       >
-        <div className="px-6 md:px-12 py-10 md:py-14">
+        <div className="px-6 py-10 md:px-12 md:py-14">
           <GTVSectionLabel>Guidance Notes</GTVSectionLabel>
 
           <div className="space-y-0 border-t border-rule">
@@ -49,10 +49,10 @@ export const GlobalTalentVisaGuidanceSections = () => {
                 transition={{ duration: 0.5, delay: index * 0.06 }}
               >
                 <div>
-                  <h3 className="text-[0.95rem] md:text-[1rem] font-bold leading-snug">
+                  <h3 className="text-[0.95rem] leading-snug font-bold md:text-[1rem]">
                     {section.title}
                   </h3>
-                  <div className="mt-4 space-y-4 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
+                  <div className="mt-4 space-y-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
                     <p>{section.body}</p>
                     {section.points && (
                       <ul className="space-y-2">
@@ -72,9 +72,9 @@ export const GlobalTalentVisaGuidanceSections = () => {
           </div>
         </div>
 
-        <div className="hidden md:block bg-rule" />
+        <div className="hidden bg-rule md:block" />
 
-        <div className="px-6 md:px-12 py-10 md:py-14">
+        <div className="px-6 py-10 md:px-12 md:py-14">
           <GTVSectionLabel>Profile Building</GTVSectionLabel>
 
           <div className="space-y-0 border-t border-rule">
@@ -88,10 +88,10 @@ export const GlobalTalentVisaGuidanceSections = () => {
                 transition={{ duration: 0.5, delay: index * 0.06 }}
               >
                 <div>
-                  <h3 className="text-[0.95rem] md:text-[1rem] font-bold leading-snug">
+                  <h3 className="text-[0.95rem] leading-snug font-bold md:text-[1rem]">
                     {section.title}
                   </h3>
-                  <div className="mt-4 space-y-4 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
+                  <div className="mt-4 space-y-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
                     <p>{section.body}</p>
                     {section.points && (
                       <ul className="space-y-2">
@@ -111,13 +111,13 @@ export const GlobalTalentVisaGuidanceSections = () => {
 
             <FadeIn delay={0.2}>
               <div className="mt-8">
-                <span className="text-[0.6rem] tracking-[0.18em] uppercase text-accent font-mono">
+                <span className="font-mono text-[0.6rem] tracking-[0.18em] text-accent uppercase">
                   The One Thing I&apos;d Tell Anyone Applying
                 </span>
-                <p className="mt-5 text-[1.1rem] leading-[1.7] font-playfair italic text-muted">
+                <p className="mt-5 font-playfair text-[1.1rem] leading-[1.7] text-muted italic">
                   Don&apos;t chase the visa.
                 </p>
-                <p className="mt-4 text-[0.78rem] md:text-[0.85rem] leading-[1.85] text-muted">
+                <p className="mt-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
                   Become the kind of person the visa is looking for.
                 </p>
               </div>

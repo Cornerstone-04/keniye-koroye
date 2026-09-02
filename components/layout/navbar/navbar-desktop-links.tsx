@@ -10,12 +10,12 @@ type NavbarDesktopLinksProps = {
 
 export function NavbarDesktopLinks({ pathname }: NavbarDesktopLinksProps) {
   return (
-    <ul className="hidden md:flex gap-5 lg:gap-8 xl:gap-10 list-none">
+    <ul className="hidden list-none gap-5 md:flex lg:gap-8 xl:gap-10">
       {navLinks.map(({ href, label }) => {
         const active =
           pathname === href ||
           (href !== "/" && pathname.startsWith(`${href}/`));
-        
+
         return (
           <li key={href}>
             <Link
@@ -28,7 +28,7 @@ export function NavbarDesktopLinks({ pathname }: NavbarDesktopLinksProps) {
               {active && (
                 <motion.span
                   layoutId="nav-underline"
-                  className="absolute -bottom-1 left-0 right-0 h-px bg-accent"
+                  className="absolute right-0 -bottom-1 left-0 h-px bg-accent"
                 />
               )}
             </Link>

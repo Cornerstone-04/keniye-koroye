@@ -4,15 +4,15 @@ import { motion } from "motion/react";
 
 export default function Initials() {
   return (
-    <div className="hidden md:flex items-center justify-center overflow-hidden relative border-r border-rule">
+    <div className="relative hidden items-center justify-center overflow-hidden border-r border-rule md:flex">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="select-none text-center leading-none"
+        className="text-center leading-none select-none"
       >
         <div
-          className="font-black font-playfair -tracking-[0.04em] text-transparent leading-[0.9em] animate-pulse"
+          className="animate-pulse font-playfair leading-[0.9em] font-black -tracking-[0.04em] text-transparent"
           style={{
             fontSize: "clamp(6rem, 14vw, 12rem)",
             WebkitTextStroke: "1px var(--rule)",
@@ -20,13 +20,13 @@ export default function Initials() {
         >
           F<br />K<br />K
         </div>
-        <div className="mt-6 text-[0.6rem] tracking-[0.3em] uppercase font-mono text-rule">
+        <div className="mt-6 font-mono text-[0.6rem] tracking-[0.3em] text-rule uppercase">
           Funfere · Keniyē · Koroye
         </div>
       </motion.div>
 
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none -rotate-90">
-        <span className="text-[0.55rem] tracking-[0.4em] uppercase whitespace-nowrap font-mono text-rule/40">
+      <div className="pointer-events-none absolute inset-0 flex -rotate-90 items-center justify-center">
+        <span className="font-mono text-[0.55rem] tracking-[0.4em] whitespace-nowrap text-rule/40 uppercase">
           Product Manager · Developer · Researcher
         </span>
       </div>

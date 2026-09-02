@@ -7,7 +7,7 @@ export function GTVJourneyImage() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="relative aspect-[3/4] w-full overflow-hidden border border-rule bg-cream md:h-full md:aspect-auto">
+    <div className="relative aspect-[3/4] w-full overflow-hidden border border-rule bg-cream md:aspect-auto md:h-full">
       <div
         aria-hidden="true"
         className={`image-skeleton absolute inset-0 transition-opacity duration-500 ${

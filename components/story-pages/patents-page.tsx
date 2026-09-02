@@ -14,7 +14,7 @@ import {
 
 export default function PatentsPage() {
   return (
-    <div className="min-h-screen pt-14.25 bg-paper">
+    <div className="min-h-screen bg-paper pt-14.25">
       <PageHero
         as="h1"
         eyebrow={patentsContent.eyebrow}
@@ -26,7 +26,7 @@ export default function PatentsPage() {
           </>
         }
       >
-        <p className="max-w-xl text-[0.95rem] md:text-[1.05rem] leading-[1.8] text-muted font-fraunces italic">
+        <p className="max-w-xl font-fraunces text-[0.95rem] leading-[1.8] text-muted italic md:text-[1.05rem]">
           {patentsContent.hero}
         </p>
       </PageHero>
@@ -35,10 +35,10 @@ export default function PatentsPage() {
         className="flex flex-col md:grid"
         style={{ gridTemplateColumns: "1.2fr 1px 1fr" }}
       >
-        <main className="px-6 md:px-12 py-10">
+        <main className="px-6 py-10 md:px-12">
           <FadeIn delay={0.12}>
             <p
-              className="leading-[1.75] mb-8 font-fraunces"
+              className="mb-8 font-fraunces leading-[1.75]"
               style={{ fontSize: "clamp(1rem, 3vw, 1.2rem)", maxWidth: "52ch" }}
             >
               {patentsContent.intro}
@@ -46,8 +46,8 @@ export default function PatentsPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="my-8 pt-8 border-t border-rule">
-              <blockquote className="font-playfair italic text-[1rem] leading-[1.8] text-muted">
+            <div className="my-8 border-t border-rule pt-8">
+              <blockquote className="font-playfair text-[1rem] leading-[1.8] text-muted italic">
                 "Human movement as intelligent command."
               </blockquote>
             </div>
@@ -62,7 +62,7 @@ export default function PatentsPage() {
             ))}
           </div>
 
-          <div className="mt-10 pt-8 border-t border-rule">
+          <div className="mt-10 border-t border-rule pt-8">
             <SectionLabel>Ideas Inside The Invention</SectionLabel>
             <div className="mt-6 border-t border-rule">
               {patentsContent.features.map((feature, index) => (
@@ -74,7 +74,7 @@ export default function PatentsPage() {
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.45, delay: index * 0.04 }}
                 >
-                  <h3 className="text-[0.95rem] md:text-[1rem] font-bold leading-snug">
+                  <h3 className="text-[0.95rem] leading-snug font-bold md:text-[1rem]">
                     {feature.title}
                   </h3>
                   <p className="mt-2 max-w-2xl text-[0.85rem] leading-[1.85] text-muted">
@@ -85,9 +85,9 @@ export default function PatentsPage() {
             </div>
           </div>
 
-          <div className="mt-10 pt-8 border-t border-rule">
+          <div className="mt-10 border-t border-rule pt-8">
             <SectionLabel>Domain Applications</SectionLabel>
-            <p className="mt-5 max-w-2xl font-fraunces text-[1rem] md:text-[1.1rem] leading-[1.8] text-muted">
+            <p className="mt-5 max-w-2xl font-fraunces text-[1rem] leading-[1.8] text-muted md:text-[1.1rem]">
               Built for multiple fields of human-machine interaction.
             </p>
 
@@ -101,7 +101,7 @@ export default function PatentsPage() {
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.45, delay: index * 0.04 }}
                 >
-                  <h3 className="text-[0.95rem] md:text-[1rem] font-bold leading-snug">
+                  <h3 className="text-[0.95rem] leading-snug font-bold md:text-[1rem]">
                     {application.title}
                   </h3>
                   <p className="mt-2 max-w-2xl text-[0.85rem] leading-[1.85] text-muted">
@@ -113,13 +113,13 @@ export default function PatentsPage() {
           </div>
 
           <FadeIn delay={0.1}>
-            <div className="mt-10 pt-8 border-t border-rule">
+            <div className="mt-10 border-t border-rule pt-8">
               <SectionLabel>Innovation Vision</SectionLabel>
-              <blockquote className="mt-6 max-w-3xl font-playfair italic text-[1rem] md:text-[1.15rem] leading-[1.8] text-muted">
+              <blockquote className="mt-6 max-w-3xl font-playfair text-[1rem] leading-[1.8] text-muted italic md:text-[1.15rem]">
                 {patentsContent.vision}
               </blockquote>
               <div className="mt-8 border-t border-rule">
-                <div className="py-5 border-b border-rule">
+                <div className="border-b border-rule py-5">
                   <SectionLabel>Registered Design</SectionLabel>
                   <p className="mt-4 max-w-2xl text-[0.85rem] leading-[1.85] text-muted">
                     The Smart Watch Glove design is registered with the UK
@@ -132,7 +132,7 @@ export default function PatentsPage() {
                       key={label}
                       className="grid gap-4 border-b border-rule py-3.5 last:border-b-0 md:grid-cols-[0.45fr_1fr]"
                     >
-                      <span className="text-[0.55rem] tracking-[0.16em] uppercase text-accent font-mono">
+                      <span className="font-mono text-[0.55rem] tracking-[0.16em] text-accent uppercase">
                         {label}
                       </span>
                       <span className="text-[0.8rem] leading-snug text-muted">
@@ -146,7 +146,7 @@ export default function PatentsPage() {
                 href="/documents/tek-smart-glove-patent.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 mr-3 inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-ink border border-ink px-6 md:px-7 py-3.5 transition-all ease-linear duration-200 hover:border-accent hover:text-accent"
+                className="mt-8 mr-3 inline-flex items-center gap-3 border border-ink px-6 py-3.5 font-mono text-[0.65rem] tracking-[0.2em] text-ink uppercase no-underline transition-all duration-200 ease-linear hover:border-accent hover:text-accent md:px-7"
               >
                 View Design Patent
                 <span>
@@ -154,12 +154,12 @@ export default function PatentsPage() {
                 </span>
               </Link>
               <Link
-                href="https://www.knklabs.com"
+                href="https://tekglove.co.uk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:px-7 py-3.5 transition-all ease-linear duration-200 hover:bg-accent md:mt-8"
+                className="mt-4 inline-flex items-center gap-3 bg-ink px-6 py-3.5 font-mono text-[0.65rem] tracking-[0.2em] text-paper uppercase no-underline transition-all duration-200 ease-linear hover:bg-accent md:mt-8 md:px-7"
               >
-                Visit KNK Labs
+                Visit TekGlove
                 <span>
                   <BsArrowRight />
                 </span>
@@ -168,9 +168,9 @@ export default function PatentsPage() {
           </FadeIn>
         </main>
 
-        <div className="hidden md:block bg-rule" />
+        <div className="hidden bg-rule md:block" />
 
-        <aside className="px-6 md:px-12 py-10 bg-cream">
+        <aside className="bg-cream px-6 py-10 md:px-12">
           <FadeIn delay={0.15}>
             <div className="sticky top-20 space-y-8">
               {patentImages.map((image, index) => (
@@ -187,7 +187,7 @@ export default function PatentsPage() {
                       className="object-contain p-5 md:p-7"
                     />
                   </div>
-                  <figcaption className="mt-3 text-[0.58rem] tracking-[0.16em] uppercase text-muted font-mono">
+                  <figcaption className="mt-3 font-mono text-[0.58rem] tracking-[0.16em] text-muted uppercase">
                     {image.alt}
                   </figcaption>
                 </figure>
@@ -203,7 +203,7 @@ export default function PatentsPage() {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <FadeIn delay={0.08}>
-      <h2 className="text-[0.62rem] tracking-[0.2em] uppercase text-accent font-mono">
+      <h2 className="font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
         {children}
       </h2>
     </FadeIn>

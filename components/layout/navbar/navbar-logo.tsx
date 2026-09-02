@@ -6,7 +6,7 @@ export function NavbarLogo() {
   return (
     <Link
       href="/"
-      className="text-[1.05rem] font-black tracking-widest uppercase no-underline text-ink font-playfair"
+      className="font-playfair text-[1.05rem] font-black tracking-widest text-ink uppercase no-underline"
     >
       Ken<em className="text-accent italic">I</em>YĒ
     </Link>

@@ -7,7 +7,7 @@ import { AboutTimeline } from "./about-timeline";
 
 export function AboutSidebar() {
   return (
-    <div className="px-6 md:px-12 py-10 bg-cream">
+    <div className="bg-cream px-6 py-10 md:px-12">
       <AboutEducation />
       <AboutAwards />
       <AboutResidencies />

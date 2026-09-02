@@ -50,7 +50,7 @@ export default function Cursor() {
     <>
       {/* Dot */}
       <motion.div
-        className="hidden md:block fixed top-0 left-0 pointer-events-none z-9999 rounded-full bg-accent -translate-x-[50%] -translate-y-[50%] ring-1 ring-paper shadow-[0_0_0_2px_rgba(13,13,11,0.7),0_2px_8px_rgba(13,13,11,0.35)]"
+        className="pointer-events-none fixed top-0 left-0 z-9999 hidden -translate-x-[50%] -translate-y-[50%] rounded-full bg-accent shadow-[0_0_0_2px_rgba(13,13,11,0.7),0_2px_8px_rgba(13,13,11,0.35)] ring-1 ring-paper md:block"
         style={{
           x: dotX,
           y: dotY,
@@ -64,7 +64,7 @@ export default function Cursor() {
       />
       {/* Ring */}
       <motion.div
-        className="hidden md:block fixed top-0 left-0 pointer-events-none z-9998 rounded-full border border-paper bg-paper/10 backdrop-blur-[1px] shadow-[0_0_0_1px_rgba(13,13,11,0.75),0_2px_10px_rgba(13,13,11,0.3)]"
+        className="pointer-events-none fixed top-0 left-0 z-9998 hidden rounded-full border border-paper bg-paper/10 shadow-[0_0_0_1px_rgba(13,13,11,0.75),0_2px_10px_rgba(13,13,11,0.3)] backdrop-blur-[1px] md:block"
         style={{
           x: ringX,
           y: ringY,

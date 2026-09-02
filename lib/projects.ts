@@ -1,10 +1,5 @@
 export type ProjectTag =
-  | "hardware"
-  | "software"
-  | "product"
-  | "art"
-  | "tech"
-  | "fashion";
+  "hardware" | "software" | "product" | "art" | "tech" | "fashion";
 
 export interface ProjectOutcome {
   pct: string;
@@ -838,6 +833,151 @@ export const projects: Project[] = [
       ],
       culturalReferences: ["Cowrie shell", "Adornment", "Value and heritage"],
       relatedSlugs: ["idia-heel", "africa-heel"],
+    },
+  },
+  {
+    num: "16",
+    slug: "bunka-shelf",
+    tag: "art",
+    tagLabel: "Art",
+    year: "2026",
+    title: "BUNKA SHELF",
+    client: "Bunka",
+    pills: ["Art", "Furniture", "Object Design"],
+    bg: "#1a2a1a",
+    thumbnail: "/images/projects/bunka/bunka-shelf.webp",
+    desc: "A sculptural furniture piece made from reclaimed wood sourced in Bayelsa, transforming material linked to ecological harm into quiet resilience.",
+    productDetails: {
+      headline: "Reclaimed wood shaped into quiet resilience.",
+      summary:
+        "BUNKA SHELF is a sculptural furniture piece made from reclaimed wood sourced in Bayelsa, an area impacted by deforestation and extractive industry.",
+      status: "Sculptural Furniture",
+      role: "Object Design",
+      context: "Bunka Series",
+      disciplines: ["Art", "Furniture", "Sustainability"],
+      heroImage: "/images/projects/bunka/bunka-shelf.webp",
+      sections: [
+        {
+          label: "Context",
+          title: "Material once linked to harm becomes renewal.",
+          body: "The work transforms reclaimed wood once connected to ecological harm into a form of quiet resilience, drawing attention to sustainability, cultural memory, and the power of craft to renew what has been damaged or discarded.",
+        },
+        {
+          label: "Object Language",
+          title: "A vertical shelf that preserves its past.",
+          body: "Shaped into a vertical shelf structure, the piece preserves the wood's natural curves, weathering, and surface scars as visible records of its history rather than concealing them.",
+        },
+      ],
+      features: [
+        "Reclaimed Bayelsa wood",
+        "Vertical shelf structure",
+        "Natural curves and surface scars",
+        "Sustainable furniture object",
+      ],
+      culturalReferences: ["Bayelsa", "Cultural memory", "Sustainable craft"],
+      relatedSlugs: ["bunka-cabinet", "bunka-totem"],
+    },
+  },
+  {
+    num: "17",
+    slug: "bunka-cabinet",
+    tag: "art",
+    tagLabel: "Art",
+    year: "2026",
+    title: "BUNKA CABINET",
+    client: "Bunka",
+    pills: ["Art", "Furniture", "Ritual Object"],
+    bg: "#0d2b3e",
+    thumbnail: "/images/projects/bunka/bunka-cabinet.webp",
+    desc: "A prayer and meditation cabinet designed as a personal sanctuary for reflection, stillness, and reconnection.",
+    productDetails: {
+      headline: "A personal sanctuary for stillness and reflection.",
+      summary:
+        "BUNKA CABINET is a prayer and meditation cabinet created as a space to pause, focus, and reconnect. Inspired by the canoes of the Niger Delta and the rituals of the Egbesu, it is an ode to Keniye's ancestors.",
+      status: "Prayer / Meditation Cabinet",
+      role: "Object Design",
+      context: "Bunka Series",
+      disciplines: ["Art", "Furniture", "Ritual Object"],
+      heroImage: "/images/projects/bunka/bunka-cabinet.webp",
+      gallery: ["/images/projects/bunka/bunka-cabinet-specs.jpg"],
+      sections: [
+        {
+          label: "Context",
+          title: "A space for stillness in a noisy world.",
+          body: "The cabinet is more than furniture. It is a personal sanctuary designed for reflection, prayer, meditation, and meaningful moments.",
+        },
+        {
+          label: "Inspiration",
+          title: "Canoes, ritual, and ancestral memory.",
+          body: "Inspired by the canoes of the Niger Delta and the rituals of the Egbesu, the object carries a spiritual and cultural reference while remaining grounded in furniture design.",
+        },
+        {
+          label: "Design Response",
+          title: "A cabinet for pause, focus, and reconnection.",
+          body: "The form combines a kneeling bench, storage drawer, illuminated display shelves, and a gothic-inspired arch profile for reflection and contemplation.",
+        },
+      ],
+      features: [
+        "Prayer and meditation cabinet",
+        "Integrated kneeling bench",
+        "Illuminated display shelves",
+        "Storage drawer",
+        "Gothic-inspired arch profile",
+      ],
+      technicalNotes: [
+        "Width: 1000 mm",
+        "Depth: 1000 mm",
+        "Height: 2200 mm",
+        "Dark walnut stain finish",
+        "2700K warm white LED Edison bulb",
+        "Solid walnut primary material",
+      ],
+      culturalReferences: [
+        "Niger Delta canoes",
+        "Egbesu rituals",
+        "Ancestral reflection",
+      ],
+      relatedSlugs: ["bunka-shelf", "bunka-totem"],
+    },
+  },
+  {
+    num: "18",
+    slug: "bunka-totem",
+    tag: "art",
+    tagLabel: "Art",
+    year: "2026",
+    title: "BUNKA TOTEM",
+    client: "Bunka",
+    pills: ["Art", "Sculpture", "Object Design"],
+    bg: "#1a1a2e",
+    thumbnail: "/images/projects/bunka/bunka-totem.webp",
+    desc: "A vertical sculptural object from the Bunka series, built around presence, rhythm, and cultural form.",
+    productDetails: {
+      headline: "A vertical marker within the Bunka series.",
+      summary:
+        "BUNKA TOTEM presents the Bunka language as a standing sculptural object, using verticality and rhythm to create presence in space.",
+      contentStatus: "needs-review",
+      contentNote:
+        "Drafted from the supplied project name and image only, not confirmed source copy.",
+      status: "Sculptural Object",
+      role: "Object Design",
+      context: "Bunka Series",
+      disciplines: ["Art", "Sculpture", "Object Design"],
+      heroImage: "/images/projects/bunka/bunka-totem.webp",
+      sections: [
+        {
+          label: "Context",
+          title: "An object designed to hold space.",
+          body: "The totem format gives the Bunka series a more architectural quality, turning the work into a vertical presence rather than a purely functional object.",
+        },
+        {
+          label: "Object Language",
+          title: "Rhythm, proportion, and silhouette.",
+          body: "The piece relies on its stance and profile, allowing the form to communicate through repetition, balance, and the way it occupies the room.",
+        },
+      ],
+      features: ["Totem form", "Sculptural presence", "Vertical composition"],
+      relatedSlugs: ["bunka-shelf", "bunka-cabinet"],
     },
   },
 ];

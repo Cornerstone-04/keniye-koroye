@@ -16,7 +16,7 @@ export function WorkDetailExternalButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex w-full items-center justify-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase font-mono no-underline text-paper bg-ink px-6 md:w-auto md:px-7 py-3.5 transition-all ease-linear duration-200 hover:bg-accent"
+      className="inline-flex w-full items-center justify-center gap-3 bg-ink px-6 py-3.5 font-mono text-[0.65rem] tracking-[0.2em] text-paper uppercase no-underline transition-all duration-200 ease-linear hover:bg-accent md:w-auto md:px-7"
     >
       {children}
       <span>
@@ -35,7 +35,7 @@ export function WorkDetailLinks({ shopUrl, links }: WorkDetailLinksProps) {
   if (!shopUrl && !links?.length) return null;
 
   return (
-    <section className="px-6 md:px-12 py-10 md:py-14 border-b border-rule">
+    <section className="border-b border-rule px-6 py-10 md:px-12 md:py-14">
       <motion.div
         initial={{ opacity: 0, y: 14 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export function WorkDetailLinks({ shopUrl, links }: WorkDetailLinksProps) {
         transition={{ duration: 0.5, ease: workDetailEase }}
         className="max-w-328"
       >
-        <div className="text-[0.62rem] tracking-[0.2em] uppercase mb-5 text-accent font-mono">
+        <div className="mb-5 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
           Links
         </div>
         <div className="flex flex-wrap gap-3">

@@ -35,7 +35,7 @@ export default function ScrollToTop() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 12 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="fixed bottom-5 right-5 z-40 inline-flex h-11 w-11 items-center justify-center border border-rule bg-paper text-ink shadow-sm transition-colors duration-200 hover:border-accent hover:bg-accent hover:text-paper md:bottom-8 md:right-8"
+          className="fixed right-5 bottom-5 z-40 inline-flex h-11 w-11 items-center justify-center border border-rule bg-paper text-ink shadow-sm transition-colors duration-200 hover:border-accent hover:bg-accent hover:text-paper md:right-8 md:bottom-8"
         >
           <BsArrowUp aria-hidden="true" />
         </motion.button>

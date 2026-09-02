@@ -6,7 +6,7 @@ import { HomeDesktopLayout } from "./home-desktop-layout";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-paper pt-14.25 flex flex-col">
+    <div className="flex min-h-screen flex-col bg-paper pt-14.25">
       <HomeMasthead />
       <HomeMobileLayout />
       <HomeDesktopLayout />

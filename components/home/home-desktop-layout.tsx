@@ -11,7 +11,7 @@ import { HomeDisciplines } from "./home-disciplines";
 export function HomeDesktopLayout() {
   return (
     <div
-      className="flex-1 hidden md:grid border-b border-rule"
+      className="hidden flex-1 border-b border-rule md:grid"
       style={{ gridTemplateColumns: "1fr 1px 1.6fr 1px 1fr" }}
     >
       <div className="p-10">
@@ -37,7 +37,7 @@ export function HomeDesktopLayout() {
           <HomeCta />
         </motion.div>
 
-        <div className="mt-10 pt-8 border-t border-rule">
+        <div className="mt-10 border-t border-rule pt-8">
           <HomeDisciplines />
         </div>
       </div>

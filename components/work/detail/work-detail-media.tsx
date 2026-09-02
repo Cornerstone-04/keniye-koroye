@@ -18,7 +18,7 @@ export function WorkDetailFeatureImage({
   priority = false,
 }: FeatureImageProps) {
   return (
-    <section className="px-6 md:px-12 py-8 md:py-12 border-b border-rule">
+    <section className="border-b border-rule px-6 py-8 md:px-12 md:py-12">
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -49,18 +49,31 @@ export function WorkDetailFeatureImage({
 type GalleryImageProps = {
   image: string;
   title: string;
+  expanded?: boolean;
 };
 
-export function WorkDetailGalleryImage({ image, title }: GalleryImageProps) {
+export function WorkDetailGalleryImage({
+  image,
+  title,
+  expanded = false,
+}: GalleryImageProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={workDetailViewport}
       transition={{ duration: 0.55, ease: workDetailEase }}
-      className="relative min-h-72 border-b border-r border-rule bg-cream md:min-h-104"
+      className={`relative border-r border-b border-rule bg-cream ${
+        expanded ? "min-h-[80vh] md:col-span-2" : "min-h-72 md:min-h-104"
+      }`}
     >
-      <Image src={image} alt={title} fill className="object-contain p-4 md:p-6" />
+      <Image
+        src={image}
+        alt={title}
+        fill
+        sizes={expanded ? "100vw" : "(min-width: 768px) 50vw, 100vw"}
+        className={`object-contain ${expanded ? "p-2 md:p-6" : "p-4 md:p-6"}`}
+      />
     </motion.div>
   );
 }

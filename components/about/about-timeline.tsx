@@ -18,7 +18,7 @@ export function AboutTimeline() {
   return (
     <FadeIn delay={0.55}>
       <div className="mt-8">
-        <h3 className="text-[0.62rem] tracking-[0.2em] uppercase mb-6 text-accent font-mono">
+        <h3 className="mb-6 font-mono text-[0.62rem] tracking-[0.2em] text-accent uppercase">
           Career Timeline
         </h3>
 
@@ -32,17 +32,17 @@ export function AboutTimeline() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
-              <span className="text-[0.8rem] font-bold pt-0.5 font-playfair text-muted">
+              <span className="pt-0.5 font-playfair text-[0.8rem] font-bold text-muted">
                 {t.year}
               </span>
               <div className="relative bg-rule">
-                <span className="absolute top-2 left-1/2 -translate-x-11/20 md:-translate-x-9/20 w-2 h-2 rounded-full bg-accent" />
+                <span className="absolute top-2 left-1/2 h-2 w-2 -translate-x-11/20 rounded-full bg-accent md:-translate-x-9/20" />
               </div>
               <div>
-                <div className="text-[0.85rem] font-bold font-playfair">
+                <div className="font-playfair text-[0.85rem] font-bold">
                   {t.role}
                 </div>
-                <div className="text-[0.6rem] tracking-widest uppercase mt-1 text-muted font-mono">
+                <div className="mt-1 font-mono text-[0.6rem] tracking-widest text-muted uppercase">
                   {t.company}
                 </div>
               </div>
@@ -50,7 +50,7 @@ export function AboutTimeline() {
           ))}
         </div>
 
-        <div className="flex gap-3 mt-5">
+        <div className="mt-5 flex gap-3">
           {hasMore && (
             <DisplayButton
               onClick={() => setVisibleCount((prev) => prev + STEP)}
@@ -78,7 +78,7 @@ const DisplayButton = ({
 }) => (
   <button
     onClick={onClick}
-    className="text-[0.6rem] tracking-widest uppercase font-mono text-accent hover:opacity-70 transition-opacity flex items-center gap-2"
+    className="flex items-center gap-2 font-mono text-[0.6rem] tracking-widest text-accent uppercase transition-opacity hover:opacity-70"
   >
     {children}
   </button>
