@@ -5,7 +5,8 @@ export const GlobalTalentVisaHeader = () => {
     <PageHero
       as="h1"
       eyebrow="Recipient Guide"
-      innerClassName=" md:gap-8"
+      innerClassName="md:gap-12 md:items-start"
+      headlineClassName="max-w-4xl"
       title={
         <>
           Global Talent
@@ -14,12 +15,13 @@ export const GlobalTalentVisaHeader = () => {
         </>
       }
     >
-      <div className="space-y-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
+      <div className="max-w-xl space-y-5 text-[0.78rem] leading-[1.9] text-muted md:text-[0.88rem]">
         <p
-          className="font-fraunces text-[1.05rem] leading-[1.75] italic"
+          className="font-fraunces text-[1.1rem] leading-[1.7] italic md:text-[1.3rem]"
           style={{ color: "var(--muted)" }}
         >
-          Build a profile that earns it.
+          A practical guide from someone who has already gone through the
+          process.
         </p>
         <p>
           Over the past few years, many people have asked me how to qualify for
@@ -31,6 +33,11 @@ export const GlobalTalentVisaHeader = () => {
           already, or clearly becoming, someone your industry recognises as
           valuable?
         </p>
+        <div className="grid gap-3 border-t border-rule pt-5 font-mono text-[0.58rem] tracking-[0.16em] text-accent uppercase sm:grid-cols-3">
+          <span>Positioning</span>
+          <span>Evidence</span>
+          <span>Validation</span>
+        </div>
       </div>
     </PageHero>
   );

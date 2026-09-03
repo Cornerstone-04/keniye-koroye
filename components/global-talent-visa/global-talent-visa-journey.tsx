@@ -7,14 +7,13 @@ export const GlobalTalentVisaJourney = () => {
   return (
     <section className="border-b border-rule">
       <div className="px-6 py-10 md:px-12 md:py-14">
-        <GTVSectionLabel>My Journey</GTVSectionLabel>
-
-        <div className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 md:gap-16">
+        <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-[0.95fr_1.05fr] md:gap-16">
           <FadeIn delay={0.1}>
             <div>
+              <GTVSectionLabel>My Journey</GTVSectionLabel>
               <h2
-                className="mb-6 font-playfair leading-tight font-black -tracking-[0.02em]"
-                style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
+                className="mb-6 max-w-xl font-playfair leading-tight font-black -tracking-[0.02em]"
+                style={{ fontSize: "clamp(1.7rem, 4vw, 3.25rem)" }}
               >
                 The application started years before I applied.
               </h2>
@@ -47,14 +46,14 @@ export const GlobalTalentVisaJourney = () => {
                 </p>
               </div>
 
-              <div className="mt-6 border-t border-rule pt-5">
+              <div className="mt-8 border-t border-rule pt-6">
                 <span className="font-mono text-[0.6rem] tracking-[0.18em] text-accent uppercase">
                   Benefits Of The Visa
                 </span>
-                <div className="mt-4 grid gap-0 border-t border-rule">
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
                   {visaBenefits.map((benefit) => (
-                    <div key={benefit} className="border-b border-rule py-3.5">
-                      <span className="text-[0.76rem] leading-snug text-muted md:text-[0.82rem]">
+                    <div key={benefit} className="border-l border-rule pl-4">
+                      <span className="text-[0.76rem] leading-[1.65] text-muted md:text-[0.82rem]">
                         {benefit}
                       </span>
                     </div>
@@ -65,7 +64,7 @@ export const GlobalTalentVisaJourney = () => {
           </FadeIn>
 
           <FadeIn delay={0.2} className="md:h-full">
-            <div className="md:h-full">
+            <div className="md:h-full md:max-h-[42rem]">
               <GTVJourneyImage />
             </div>
           </FadeIn>

@@ -8,109 +8,57 @@ import { GTVSectionLabel } from "./gtv-section-label";
 export const GlobalTalentVisaGuidanceSections = () => {
   return (
     <section className="border-b border-rule">
-      <div className="border-b border-rule px-6 pt-10 pb-8 md:px-12 md:pt-14">
-        <div className="grid gap-6 md:grid-cols-[0.85fr_1.15fr] md:items-end">
-          <FadeIn delay={0.05}>
+      <div className="px-6 py-10 md:px-12 md:py-14">
+        <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-start md:gap-16">
+          <FadeIn delay={0.05} className="md:sticky md:top-24 md:self-start">
             <div>
               <GTVSectionLabel>Key Things To Understand</GTVSectionLabel>
               <h2
-                className="font-playfair leading-tight font-black -tracking-[0.02em]"
-                style={{ fontSize: "clamp(1.35rem, 3vw, 2rem)" }}
+                className="max-w-xl font-playfair leading-tight font-black -tracking-[0.02em]"
+                style={{ fontSize: "clamp(1.7rem, 4vw, 3.25rem)" }}
               >
                 Build the profile before you organise the paperwork.
               </h2>
+              <p className="mt-5 max-w-md text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
+                These notes are the practical ideas behind the application:
+                positioning, proof, validation, leadership, and long-term
+                visibility.
+              </p>
             </div>
           </FadeIn>
-          <FadeIn delay={0.12}>
-            <p className="max-w-2xl text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
-              These notes are the practical ideas behind the application:
-              positioning, proof, validation, leadership, and long-term
-              visibility.
-            </p>
-          </FadeIn>
-        </div>
-      </div>
 
-      <div
-        className="flex flex-col md:grid"
-        style={{ gridTemplateColumns: "1fr 1px 1fr" }}
-      >
-        <div className="px-6 py-10 md:px-12 md:py-14">
-          <GTVSectionLabel>Guidance Notes</GTVSectionLabel>
-
-          <div className="space-y-0 border-t border-rule">
-            {guidanceSections.slice(0, 4).map((section, index) => (
+          <div className="border-t border-rule">
+            {guidanceSections.map((section, index) => (
               <motion.article
                 key={section.title}
-                className="border-b border-rule py-6"
+                className="grid gap-4 border-b border-rule py-6 md:grid-cols-[minmax(10rem,14rem)_1fr]"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.5, delay: index * 0.06 }}
               >
-                <div>
-                  <h3 className="text-[0.95rem] leading-snug font-bold md:text-[1rem]">
-                    {section.title}
-                  </h3>
-                  <div className="mt-4 space-y-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
-                    <p>{section.body}</p>
-                    {section.points && (
-                      <ul className="space-y-2">
-                        {section.points.map((point) => (
-                          <li key={point} className="flex gap-3">
-                            <span className="mt-3 h-px w-4 shrink-0 bg-accent" />
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {section.closing && <p>{section.closing}</p>}
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-
-        <div className="hidden bg-rule md:block" />
-
-        <div className="px-6 py-10 md:px-12 md:py-14">
-          <GTVSectionLabel>Profile Building</GTVSectionLabel>
-
-          <div className="space-y-0 border-t border-rule">
-            {guidanceSections.slice(4).map((section, index) => (
-              <motion.article
-                key={section.title}
-                className="border-b border-rule py-6"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.5, delay: index * 0.06 }}
-              >
-                <div>
-                  <h3 className="text-[0.95rem] leading-snug font-bold md:text-[1rem]">
-                    {section.title}
-                  </h3>
-                  <div className="mt-4 space-y-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
-                    <p>{section.body}</p>
-                    {section.points && (
-                      <ul className="space-y-2">
-                        {section.points.map((point) => (
-                          <li key={point} className="flex gap-3">
-                            <span className="mt-3 h-px w-4 shrink-0 bg-accent" />
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {section.closing && <p>{section.closing}</p>}
-                  </div>
+                <h3 className="text-[0.95rem] leading-snug font-bold md:text-[1rem]">
+                  {section.title}
+                </h3>
+                <div className="space-y-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
+                  <p>{section.body}</p>
+                  {section.points && (
+                    <ul className="flex flex-wrap gap-x-5 gap-y-2">
+                      {section.points.map((point) => (
+                        <li key={point} className="flex items-center gap-2">
+                          <span className="h-px w-4 shrink-0 bg-accent" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {section.closing && <p>{section.closing}</p>}
                 </div>
               </motion.article>
             ))}
 
             <FadeIn delay={0.2}>
-              <div className="mt-8">
+              <div className="mt-10 border-l-[3px] border-accent pl-5">
                 <span className="font-mono text-[0.6rem] tracking-[0.18em] text-accent uppercase">
                   The One Thing I&apos;d Tell Anyone Applying
                 </span>
