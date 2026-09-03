@@ -43,14 +43,16 @@ export const GlobalTalentVisaGuidanceSections = () => {
                 <div className="space-y-4 text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
                   <p>{section.body}</p>
                   {section.points && (
-                    <ul className="flex flex-wrap gap-x-5 gap-y-2">
+                    <div className="flex flex-wrap gap-2">
                       {section.points.map((point) => (
-                        <li key={point} className="flex items-center gap-2">
-                          <span className="h-px w-4 shrink-0 bg-accent" />
-                          <span>{point}</span>
-                        </li>
+                        <span
+                          key={point}
+                          className="border border-rule px-3 py-1.5 font-mono text-[0.56rem] tracking-[0.12em] text-ink uppercase"
+                        >
+                          {point}
+                        </span>
                       ))}
-                    </ul>
+                    </div>
                   )}
                   {section.closing && <p>{section.closing}</p>}
                 </div>

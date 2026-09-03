@@ -25,19 +25,21 @@ export const GlobalTalentVisaJourney = () => {
                 </p>
                 <p>In reality, it begins years earlier.</p>
 
-                <ul className="space-y-2 py-1">
+                <div className="grid gap-2 py-2 sm:grid-cols-2">
                   {[
-                    "The projects you build.",
-                    "The people you work with.",
-                    "The communities you contribute to.",
-                    "The reputation you earn.",
+                    "Projects you build",
+                    "People you work with",
+                    "Communities you contribute to",
+                    "Reputation you earn",
                   ].map((line) => (
-                    <li key={line} className="flex gap-3">
-                      <span className="mt-3 h-px w-4 shrink-0 bg-accent" />
-                      <span>{line}</span>
-                    </li>
+                    <span
+                      key={line}
+                      className="border-l border-rule py-1.5 pl-4 font-mono text-[0.6rem] tracking-[0.12em] text-ink uppercase"
+                    >
+                      {line}
+                    </span>
                   ))}
-                </ul>
+                </div>
 
                 <p>
                   By the time I submitted my application, the evidence already
