@@ -60,8 +60,8 @@ function ShopProductHero({ product }: { product: ShopProduct }) {
               {product.category}
             </p>
             <h1
-              className="font-playfair leading-[0.9] font-black -tracking-[0.03em]"
-              style={{ fontSize: "clamp(3.8rem, 9vw, 8rem)" }}
+              className="max-w-full font-playfair leading-[0.92] font-black -tracking-[0.02em] text-wrap break-words"
+              style={{ fontSize: "clamp(3rem, 5.7vw, 5.75rem)" }}
             >
               {product.name}
             </h1>
