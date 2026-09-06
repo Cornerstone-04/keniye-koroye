@@ -845,7 +845,7 @@ export const projects: Project[] = [
     client: "Bunka",
     pills: ["Art", "Furniture", "Object Design"],
     bg: "#1a2a1a",
-    thumbnail: "/images/projects/bunka/bunka-totem.webp",
+    thumbnail: "/images/projects/bunka/bunka-totem-public.webp",
     desc: "A sculptural furniture piece made from reclaimed wood sourced in Bayelsa, transforming material linked to ecological harm into quiet resilience.",
     productDetails: {
       headline: "Reclaimed wood shaped into quiet resilience.",
@@ -855,8 +855,8 @@ export const projects: Project[] = [
       role: "Object Design",
       context: "Bunka Series",
       disciplines: ["Art", "Furniture", "Sustainability"],
-      heroImage: "/images/projects/bunka/bunka-totem.webp",
-      gallery: ["/images/projects/bunka/bunka-totem-public.webp"],
+      heroImage: "/images/projects/bunka/bunka-totem-public.webp",
+      // gallery: ["/images/projects/bunka/bunka-totem-public.webp"],
       sections: [
         {
           label: "Context",

@@ -21,7 +21,11 @@ const cardVariants: Variants = {
   },
 };
 
+const containedImageTags = new Set(["fashion", "product", "tech"]);
+
 export function WorkCard({ project }: WorkCardProps) {
+  const shouldContainImage = containedImageTags.has(project.tag);
+
   return (
     <motion.div
       layout
@@ -37,14 +41,18 @@ export function WorkCard({ project }: WorkCardProps) {
       >
         <div
           className="group relative aspect-4/3 overflow-hidden"
-          style={{ background: project.bg }}
+          style={{
+            background: shouldContainImage ? "var(--paper)" : project.bg,
+          }}
         >
           {project.thumbnail ? (
             <Image
               src={project.thumbnail}
               alt={project.title}
               fill
-              className="object-cover opacity-70 transition-all ease-linear group-hover:scale-103"
+              className={`transition-all ease-linear group-hover:scale-103 ${
+                shouldContainImage ? "object-contain p-5" : "object-cover"
+              }`}
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center font-playfair text-[5rem] font-black text-white/5 select-none">

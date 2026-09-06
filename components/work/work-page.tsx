@@ -1,63 +1,56 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { projects } from "@/lib/data";
+import { useMemo, useState } from "react";
+import { projects, type ProjectTag } from "@/lib/data";
 import { WorkHeader } from "./work-header";
 import { WorkFilters } from "./work-filters";
 import { WorkGrid } from "./work-grid";
 import type { Filter } from "./work-types";
 
-const projectList = [
-  "cradle-health",
-  "nugas",
-  "kelvar-dome",
-  "africa-heel",
-  "eight-medical",
-  "spritz-brush",
-  "kelvar-hydrax",
-  "sense",
-  "nupe-energy",
-  "idia-heel",
-  "kelvar-robobot",
-  "jaza-battery",
-  "omi",
-  "equalizer",
-  "cowrie-heel",
-  "bunka-shelf",
-  "bunka-totem",
-  "bunka-plinth",
+type Project = (typeof projects)[number];
+
+const allTabPattern: ProjectTag[] = [
+  "art",
+  "fashion",
+  "software",
+  "product",
+  "hardware",
+  "tech",
 ];
 
-function shuffle<T>(array: T[]): T[] {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+function getPatternedProjects(): Project[] {
+  const groupedProjects = new Map<ProjectTag, Project[]>(
+    allTabPattern.map((tag) => [
+      tag,
+      projects.filter((project) => project.tag === tag),
+    ]),
+  );
 
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+  const maxGroupLength = Math.max(
+    ...Array.from(groupedProjects.values()).map((group) => group.length),
+  );
+
+  return Array.from({ length: maxGroupLength }).flatMap((_, index) => {
+    return allTabPattern
+      .map((tag) => groupedProjects.get(tag)?.[index])
+      .filter((project): project is Project => Boolean(project));
+  });
 }
+
+const allTabProjects = getPatternedProjects();
 
 export default function WorkPage() {
   const [active, setActive] = useState<Filter>("all");
-  const [allTabProjectOrder, setAllTabProjectOrder] = useState(projectList);
-
-  useEffect(() => {
-    setAllTabProjectOrder(shuffle([...projectList]));
-  }, []);
 
   const filtered = useMemo(() => {
     if (active === "all") {
-      return allTabProjectOrder
-        .map((slug) => projects.find((project) => project.slug === slug))
-        .filter((project): project is (typeof projects)[number] =>
-          Boolean(project),
-        );
+      return allTabProjects;
     }
 
     return projects.filter((project) => {
       return project.tag === active;
     });
-  }, [active, allTabProjectOrder]);
+  }, [active]);
 
   return (
     <div className="min-h-screen bg-paper pt-14.25">

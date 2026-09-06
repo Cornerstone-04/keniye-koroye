@@ -6,9 +6,13 @@ import Image from "next/image";
 
 type HomeHeroImageProps = {
   priority?: boolean;
+  compact?: boolean;
 };
 
-export function HomeHeroImage({ priority = false }: HomeHeroImageProps) {
+export function HomeHeroImage({
+  priority = false,
+  compact = false,
+}: HomeHeroImageProps) {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -16,7 +20,9 @@ export function HomeHeroImage({ priority = false }: HomeHeroImageProps) {
       initial={{ opacity: 0, scale: 0.97 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.9, delay: 0.15 }}
-      className="relative mb-6 aspect-3/4 w-full overflow-hidden bg-ink"
+      className={`relative mb-6 w-full overflow-hidden bg-ink ${
+        compact ? "aspect-3/4 max-h-144" : "aspect-3/4"
+      }`}
     >
       <div
         aria-hidden="true"
@@ -31,7 +37,7 @@ export function HomeHeroImage({ priority = false }: HomeHeroImageProps) {
         sizes="(min-width: 768px) 40vw, 100vw"
         priority={priority}
         onLoad={() => setLoaded(true)}
-        className={`object-cover transition-opacity duration-500 ${
+        className={`object-cover object-top transition-opacity duration-500 ${
           loaded ? "opacity-100" : "opacity-0"
         }`}
       />
