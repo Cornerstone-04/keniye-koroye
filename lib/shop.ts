@@ -19,17 +19,17 @@ const shopEnquiryHref = (productName: string) =>
 export const shopProducts: ShopProduct[] = [
   {
     slug: "rive",
-    name: "Rive",
+    name: "Rive “motherland” stool",
     category: "Sculptural Table / Stool",
     description:
-      "The RIVE is part table and part stool. It tells the story of how Africa has been shared like a cake due to colonialism, while still remaining one at the end of the day. The piece brings together technology, craftsmanship in Nigeria, and upcycled materials.",
-    image: "/images/shop/rive/rive-top.jpg",
+      "The Rive “motherland” stool is part table and part stool. It tells the story of how Africa has been shared like a cake due to colonialism, while still remaining one at the end of the day. The piece brings together technology, craftsmanship in Nigeria, and upcycled materials.",
+    image: "/images/shop/rive/shop-rive-hero.jpeg",
     gallery: [
-      "/images/shop/rive/shop-rive-hero.jpeg",
+      "/images/shop/rive/rive-top.jpg",
       "/images/shop/rive/rive-spread.jpg",
       "/images/shop/rive/rive-3d-model.jpg",
     ],
-    enquiryHref: shopEnquiryHref("Rive"),
+    enquiryHref: shopEnquiryHref("Rive “motherland” stool"),
   },
   {
     slug: "sagbama-bench",

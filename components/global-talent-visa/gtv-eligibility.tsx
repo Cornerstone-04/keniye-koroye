@@ -25,12 +25,15 @@ export const GTVEligibility = () => {
 
   return (
     <section className="border-b border-rule px-6 py-10 md:px-12 md:py-14">
-      <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+      <div className="grid gap-10 md:grid-cols-[0.82fr_1.18fr] md:gap-16">
         <FadeIn delay={0.1} className="md:sticky md:top-24 md:self-start">
           <div>
-            <GTVSectionLabel>Eligibility Self-Assessment</GTVSectionLabel>
-            <h2 className="mb-5 text-[1.35rem] leading-tight font-black md:text-2xl">
-              Reflect on your readiness.
+            <GTVSectionLabel>Readiness Check</GTVSectionLabel>
+            <h2
+              className="mb-5 max-w-md font-playfair leading-tight font-black -tracking-[0.02em]"
+              style={{ fontSize: "clamp(1.7rem, 4vw, 3.25rem)" }}
+            >
+              A quick pause before the paperwork.
             </h2>
             <p className="max-w-xl text-[0.78rem] leading-[1.85] text-muted md:text-[0.85rem]">
               This is not a formal eligibility checker or legal advice. It is a
@@ -38,16 +41,19 @@ export const GTVEligibility = () => {
               to show the signals that matter.
             </p>
           </div>
-          <div className="mt-6 max-w-xl border border-rule bg-cream px-5 py-5">
-            <div className="mb-4 flex items-center justify-between gap-4">
-              <span className="font-mono text-[0.6rem] tracking-[0.18em] text-muted uppercase">
-                Readiness Signals
+          <div className="mt-8 max-w-xl border-t border-rule pt-5">
+            <span className="font-mono text-[0.6rem] tracking-[0.18em] text-muted uppercase">
+              Readiness Signals
+            </span>
+            <div className="mt-3 flex items-end gap-4">
+              <span className="font-playfair text-5xl leading-none font-black text-accent">
+                {score}
               </span>
-              <span className="font-playfair text-3xl font-black text-accent">
-                {score}/{globalTalentAssessment.length}
+              <span className="pb-1 font-mono text-[0.62rem] tracking-[0.16em] text-muted uppercase">
+                of {globalTalentAssessment.length} signals
               </span>
             </div>
-            <div className="h-px bg-rule">
+            <div className="mt-5 h-px bg-rule">
               <div
                 className="h-px bg-accent transition-all duration-300"
                 style={{
@@ -62,12 +68,12 @@ export const GTVEligibility = () => {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <div className="border-t border-rule">
+          <div className="space-y-3">
             {globalTalentAssessment.map((item, index) => (
               <label
                 key={item.id}
-                className="group grid items-start gap-4 border-b border-rule py-5 transition-colors hover:bg-cream/45"
-                style={{ gridTemplateColumns: "34px 1fr" }}
+                className="group grid cursor-pointer items-start gap-4 border border-rule px-4 py-4 transition-colors hover:bg-cream/55 md:px-5 md:py-5"
+                style={{ gridTemplateColumns: "32px 1fr" }}
               >
                 <input
                   type="checkbox"
@@ -79,7 +85,7 @@ export const GTVEligibility = () => {
                       ),
                     )
                   }
-                  className="mt-1 h-4 w-4 accent-accent"
+                  className="mt-1 size-4 appearance-none border border-rule bg-paper transition-colors checked:border-accent checked:bg-accent focus-visible:ring-2 focus-visible:ring-accent/30 focus-visible:outline-none"
                 />
                 <span>
                   <span className="block text-[0.82rem] leading-[1.65] text-ink md:text-[0.9rem]">
