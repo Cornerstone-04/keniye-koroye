@@ -12,7 +12,7 @@ export function HomeDesktopLayout() {
   return (
     <div
       className="hidden flex-1 border-b border-rule md:grid"
-      style={{ gridTemplateColumns: "1fr 1px 1.6fr 1px 1fr" }}
+      style={{ gridTemplateColumns: "1.05fr 1px 1.25fr 1px 1.05fr" }}
     >
       <div className="p-10">
         <HomeStats />
@@ -21,7 +21,7 @@ export function HomeDesktopLayout() {
       <div className="bg-rule" />
 
       <div className="p-10">
-        <HomeHeroImage priority />
+        <HomeHeroImage priority compact />
         <HomeQuote />
       </div>
 

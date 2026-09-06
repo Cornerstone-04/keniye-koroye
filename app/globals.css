@@ -107,7 +107,7 @@
   }
 
   body * {
-    @apply cursor-none;
+    @apply md:cursor-none;
   }
 
   body {
